@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosper XO – Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image:
+                radial-gradient(circle at 15% 20%, #ec678c 0%, transparent 40%),
+                radial-gradient(circle at 85% 15%, #5d95eb 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, #f3b86a 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, #69d6e4 0%, transparent 50%),
+                linear-gradient(135deg,
+                    #ec678c 0%,
+                    #c177c3 35%,
+                    #5d95eb 60%,
+                    #69d6e4 80%,
+                    #f3b86a 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .logo:hover {
+            transform: rotate(15deg);
+            /* Rotate slightly on hover */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 400px;
+        }
+
+        .contact a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+            font-weight: 600;
+            transition: transform 0.3s ease, color 0.3s ease;
+            /* Smooth transition for both hover and mouse-out */
+        }
+
+        .contact a:hover {
+            color: #ffe94f;
+            /* Text color */
+            -webkit-text-stroke: 1px black;
+            /* Black text stroke */
+            text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+            /* Drop shadow with 0% blur */
+            transform: scale(1.25);
+            /* Scale to 125% */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #00ffff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="prosper-website-logo.png" alt="Prosper XO" class="logo">
+
+    <img src="assets/text/prosper-website-stylizedtext-tagline.svg" alt="When Artists Prosper, Culture Thrives"
+        style="width: 70%;">
+    <h1>Coming Soon</h1>
+    <p>We’re building something exciting to put artists back at the center of the industry. Stay tuned!</p>
+
+    <div class="contact">
+        <a href="mailto:pr@prosperxo.com">pr@prosperxo.com</a>
+        <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
+    </div>
+
+</body>
+
+</html>
