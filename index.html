@@ -5,13 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosper XO – Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon-multi.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="assets/favicon/favicon-128x128.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180x180.png">
+
+<!-- Android/Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+
+<!-- Web App Manifest (optional) -->
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+    <!-- Open Graph Meta Tags (for Facebook and other platforms) -->
+    <meta property="og:title" content="Prosper XO – Coming Soon">
+    <meta property="og:description"
+        content="We’re building something exciting to put artists back at the center of the industry. Stay tuned!">
+    <meta property="og:image" content="assets/thumbnail/prosper-website-thumbnail.jpg">
+    <meta property="og:url" content="https://www.prosperxo.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prosper XO – Coming Soon">
+    <meta name="twitter:description"
+        content="We’re building something exciting to put artists back at the center of the industry. Stay tuned!">
+    <meta name="twitter:image" content="assets/thumbnail/prosper-website-thumbnail.jpg">
+    <meta name="twitter:url" content="https://www.prosperxo.com">
+
+
+
     <style>
         *,
         *::before,
         *::after {
             box-sizing: border-box;
         }
+
         /* maintains container size even with padding */
 
         html {
@@ -44,7 +81,7 @@
         }
 
         .logo {
-            width: 200px;
+            width: 180px;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
             /* Smooth transition for hover effect */
@@ -61,9 +98,8 @@
         }
 
         p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 400px;
+            font-size: 1rem;
+            max-width: 500px;
         }
 
         .contact a {
@@ -105,12 +141,47 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
 
             p {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
+        }
+
+        /* General button styles */
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            /* Rounded corners */
+            color: #ffe94f;
+            /* Default text color */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            /* Smooth hover effect */
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Add shadow on hover */
+        }
+
+        /* Specific button colors */
+        .btn.red {
+            background-color: #ff5a3c;
+        }
+
+        .btn.red:hover {
+            background-color: #e04e34;
         }
     </style>
 </head>
@@ -119,9 +190,16 @@
     <img src="prosper-website-logo.png" alt="Prosper XO" class="logo">
 
     <img src="assets/text/prosper-website-stylizedtext-tagline.svg" alt="When Artists Prosper, Culture Thrives"
-        style="width: 70%;">
-    <h1>Coming Soon</h1>
-    <p>We’re building something exciting to put artists back at the center of the industry. Stay tuned!</p>
+        style="width: 50%;">
+    <h1>COMING SOON</h1>
+    <p>We’re building something exciting to put artists back at the center of the industry. Stay tuned!<br><br>
+        RSVP for our first event, May 14th at Capital Factory!</p>
+    <div class="read-button-wrap">
+        <!-- You can drop your left arrow SVG here -->
+        <a href="https://lu.ma/8dl5lzo0" class="btn red" target="_blank">RSVP HERE</a>
+    </div>
+
+    <div style="min-height: 15px;"></div>
 
     <div class="contact">
         <a href="mailto:pr@prosperxo.com">pr@prosperxo.com</a>
