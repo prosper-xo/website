@@ -1,0 +1,96 @@
+html,
+body {
+  width: 100%;
+  background: #000;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* .tv-video {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  /* fallback bg */
+  /* overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+} */
+
+/* .tv-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}  */
+/* 
+.tv-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Remove fixed height/width if present */
+  /* width: 100%; */
+  /* max-width: 800px;
+  margin: 0 auto;
+  background: transparent;
+}  */
+
+
+.enter-button {
+  position: relative;
+  display: inline-block;
+  max-width: 300px;
+  width: 80%;
+  padding-bottom: 15%;
+  /* Adjust this value to match your image aspect ratio */
+}
+
+.enter-button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Ensures image maintains aspect ratio */
+  transition: opacity 1s ease;
+  /* Adjust ENTER HERE animation speed here */
+}
+
+.enter-button img.default {
+  opacity: 1;
+  z-index: 1;
+}
+
+.enter-button img.hover {
+  opacity: 0;
+  z-index: 0;
+}
+
+.enter-button:hover img.default {
+  opacity: 0;
+}
+
+.enter-button:hover img.hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tv-video {
+    max-width: 90%;
+  }
+
+  .enter-button {
+    max-width: 250px;
+  }
+}
