@@ -114,6 +114,18 @@ p {
     /* Ensure no underline on hover */
 }
 
+.nav-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
 .nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -750,8 +762,9 @@ p {
 /* Responsive header menu */
 .header-menu {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    flex: 1;
 }
 
 /* Hide nav and social on mobile/tablet by default */

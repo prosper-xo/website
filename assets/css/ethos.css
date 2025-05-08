@@ -1,0 +1,59 @@
+.hero {
+    background: linear-gradient(135deg,
+            #f36c21 0%,
+            /* Bold orange base */
+            #f36c21 20%,
+            /* Hold the orange longer */
+            #f54886 35%,
+            /* Hot pink arc */
+            #a846b9 50%,
+            /* Purple beam */
+            #4a90e2 65%,
+            /* Blue stripe */
+            #4ad9cd 80%,
+            /* Aqua sweep */
+            #f36c21 95%
+            /* Yellow cap */
+        );
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.ethos-title {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.ethos-grid-wrapper {
+    background: #000;
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.ethos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.ethos-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .ethos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .ethos-grid {
+        grid-template-columns: 1fr;
+    }
+}
