@@ -8,3 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 });
+
+const video = document.getElementById('terminalVideo');
+const button = document.getElementById('playPauseBtn');
+
+button.addEventListener('click', () => {
+  if (video.paused) {
+    video.muted = false;
+    video.play();
+    button.textContent = '❚❚';
+  } else {
+    video.pause();
+    button.textContent = '▶︎';
+  }
+});
+
+// ✅ Reset button to ▶︎ when video ends
+video.addEventListener('ended', () => {
+  button.textContent = '▶︎';
+});
