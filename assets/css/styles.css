@@ -98,10 +98,6 @@ p {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-wrap {
-    /* No styles needed unless you want to set width/height */
-}
-
 .btn,
 .btn:visited {
     text-decoration: none;
@@ -647,6 +643,17 @@ p {
     transform: scale(1.1);
 }
 
+.nav-link.nav-ethos {
+    background-image: url('../text/prosper-website-stylizedtext-nav-ethos.svg');
+    width: 100px;
+}
+
+.nav-link.nav-ethos:hover {
+    background-image: url('../text/prosper-website-stylizedtext-nav-ethos-ro.svg');
+    transform: scale(1.1);
+}
+
+
 .nav-link.nav-involved {
     background-image: url('../text/prosper-website-stylizedtext-nav-involved.svg');
     width: 204px;
@@ -697,4 +704,106 @@ p {
     /* Slightly enlarge on hover */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     /* Subtle shadow on hover */
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 8px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 32px;
+    margin: 4px 0;
+    background: #181818;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+/* Hamburger to X animation */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+    background: #181818;
+}
+
+.hamburger.open span:nth-child(2) {
+    transform: scale(0);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+    background: #181818;
+}
+
+/* Responsive header menu */
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Hide nav and social on mobile/tablet by default */
+@media (max-width: 900px) {
+    .header-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #ffef09;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0 1rem 0;
+        z-index: 1001;
+        margin-top: 1rem;
+        /* Add space between logo and menu panel */
+    }
+
+    .header-menu.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+.definitions {
+    width: 700px;
+    max-width: 100%;
+}
+
+.text-header {
+    width: 700px;
+    max-width: 100%;
 }
