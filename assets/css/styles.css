@@ -700,8 +700,8 @@ p {
     /* Black stroke */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth hover effect */
+    padding: 15px 30px; /* Add this line */
 }
-
 /* Blue button specific styles */
 .btn-blue {
     background-color: #75c0e0;
