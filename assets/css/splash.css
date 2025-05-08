@@ -1,10 +1,20 @@
+/* Base styles */
 html,
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
   background: #000;
   font-family: sans-serif;
   overflow: hidden;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .splash-container {
   display: flex;
@@ -12,47 +22,60 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%;
-  padding: 2rem;
-  gap: 2rem;
+  height: 100vh;
+  gap: 0.5rem;           /* Reduced spacing */
+  padding: 0.5rem;        /* Less padding */
+  box-sizing: border-box;
 }
 
-/* .tv-video {
-  width: 100%;
-  max-width: 700px;
-  aspect-ratio: 16 / 9;
-  background: #111;
-  /* fallback bg */
-  /* overflow: hidden;
-  border-radius: 12px;
-  position: relative;
-} */
-
-/* .tv-video iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}  */
-/* 
 .tv-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Remove fixed height/width if present */
-  /* width: 100%; */
-  /* max-width: 800px;
+  width: 100%;
+  max-width: 800px;       /* Give it more room */
   margin: 0 auto;
-  background: transparent;
-}  */
+  text-align: center;
+  padding: 0.5rem;        /* Reduce top/bottom padding */
+  box-sizing: border-box;
+}
 
 
+.tv-video video {
+  width: 100%;
+  max-width: 800px; /* was 640px */
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Custom video controls below video */
+.video-controls {
+  margin-top: 1rem;
+}
+
+.video-button {
+  background: rgba(0, 0, 0, 0.7);
+  color: #0f0;
+  font-size: 2rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.video-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Enter button */
 .enter-button {
   position: relative;
   display: inline-block;
-  max-width: 300px;
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
   padding-bottom: 15%;
-  /* Adjust this value to match your image aspect ratio */
 }
 
 .enter-button img {
@@ -62,9 +85,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Ensures image maintains aspect ratio */
   transition: opacity 1s ease;
-  /* Adjust ENTER HERE animation speed here */
 }
 
 .enter-button img.default {
@@ -85,12 +106,24 @@ body {
   opacity: 1;
 }
 
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .tv-video {
     max-width: 90%;
+    padding: 10px;
+  }
+
+  .tv-video video {
+    width: 100%;
+    max-height: 240px;
   }
 
   .enter-button {
     max-width: 250px;
+  }
+
+  .video-button {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
   }
 }
