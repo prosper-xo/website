@@ -1,4 +1,185 @@
+.team-section {
+    background: linear-gradient(135deg,
+            #ec678c 0%,
+            #c177c3 25%,
+            #5d95eb 50%,
+            #69d6e4 75%,
+            #f3b86a 100%);
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.team-hero {
-  background: linear-gradient(to bottom, #FF9999 0%, #FFCC66 25%, #FFFF99 50%, #99FF99 75%, #99CCFF 100%);
+.card-top {
+    background-color: #d1a8f0;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 3 / 2;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.team-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid black;
+}
+
+.team-card .image-container {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,
+            #ff6b6b,
+            /* soft red */
+            #fcd34d,
+            /* soft yellow */
+            #f9a8d4,
+            /* pink */
+            #a5f3fc,
+            /* light blue */
+            #c4b5fd
+            /* lavender */
+        );
+    background-size: 200% 200%;
+}
+
+.text-container p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+}
+
+.text-container p span.name {
+    font-weight: 600;
+    display: block;
+}
+
+.text-container p span.title {
+    font-size: 75%;
+    display: block;
+}
+
+/* BOTH images are layered */
+.team-card img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+}
+
+/* Hover effects */
+.team-card:hover .default-img {
+    opacity: 0;
+}
+
+/* Card background colors */
+.card-joseph {
+    background-color: #0566db;
+}
+
+.card-jonny {
+    background-color: #78c5a3;
+}
+
+.card-clint {
+    background-color: #f5e96a;
+}
+
+/* Lauren's image */
+.lauren-img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.text-header {
+    margin-bottom: 25px;
+}
+
+.lauren-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+.lauren-container .lauren-img {
+  width: 100%;
+  height: auto;
+}
+
+.lauren-container .text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 0 0 20px 20px;
+  background: linear-gradient(135deg,
+      #ff6b6b,
+      #fcd34d,
+      #f9a8d4,
+      #a5f3fc,
+      #c4b5fd
+  );
+  z-index: 3;
 }
