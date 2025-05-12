@@ -110,10 +110,15 @@ body {
   opacity: 1;
 }
 
-/* === MOBILE TWEAKS === */
 @media (max-width: 600px) {
   .tv-video {
+    width: 100%;
+    max-height: none;
     aspect-ratio: auto;
+  }
+
+  .tv-video video {
+    height: auto;
     max-height: none;
   }
 
