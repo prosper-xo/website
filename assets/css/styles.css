@@ -561,6 +561,7 @@ p {
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+    padding-bottom: 25px;
 }
 
 .read-button-wrap {
@@ -853,6 +854,10 @@ p {
         gap: 20px;
         padding: 20px;
     }
+
+    .three-arrows {
+        display: none;
+    }
 }
 
 .definitions {
@@ -874,9 +879,5 @@ p {
 @media (min-width: 601px) {
     .mobile-width {
         width: 50%;
-    }
-
-    .three-arrows {
-        display: none;
     }
 }

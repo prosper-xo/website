@@ -1,171 +1,181 @@
 .main {
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
 }
 
 .main p a {
-    color: #ffef09;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #ffef09;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .main p a:hover {
-    color: #5525bc;
+  color: #5525bc;
 }
 
 .main p {
-    max-width: 75%;
-    margin: 0 auto; /* Centers the paragraph */
+  max-width: 75%;
+  margin: 0 auto;
+  /* Centers the paragraph */
 }
 
 .btn-lg {
-    display: inline-block;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 15px;
-    /* Rounded corners */
-    border: 3px solid black;
-    /* Black stroke */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth hover effect */
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 3px solid black;
+  /* Black stroke */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
 }
 
 /* Blue button specific styles */
 .btn-blue {
-    background-color: #75c0e0;
-    /* Blue background */
-    color: black;
-    /* Black text */
+  background-color: #75c0e0;
+  /* Blue background */
+  color: black;
+  /* Black text */
 }
 
 /* Hover effect */
 .btn-blue:hover {
-    transform: scale(1.05);
-    /* Slightly enlarge on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow on hover */
 }
 
 .press-section {
-    background: #000;
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .press-header {
-    max-width: 500px;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  
+  background: #000;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.press-header {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.press-body {
+  max-width: 700px;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.press-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.press-cta-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #69d6e4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.press-email {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #fbd44c, #69d6e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.press-email:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+
+  .press-header,
   .press-body {
-    max-width: 700px;
-    width: 80%;
-    margin-bottom: 3rem;
+    max-width: 90%;
   }
-  
-  .press-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .press-cta-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #69d6e4;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+
   .press-email {
-    font-size: 1.4rem;
-    font-weight: 600;
-    background: linear-gradient(to right, #fbd44c, #69d6e4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
+    font-size: 1.1rem;
   }
-  
-  .press-email:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    .press-header,
-    .press-body {
-      max-width: 90%;
-    }
-  
-    .press-email {
-      font-size: 1.1rem;
-    }
-  }
-  
-  .contact-block-lg {
-    text-align: center;
-    margin: 2rem 0;
+}
+
+.contact-block-lg {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .contact-block-lg .contact-label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
 .contact-block-lg .contact-email {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-
-.contact-email-joinus {
-    color: #ffef09;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Poppins', sans-serif; 
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-.contact-email-joinus:hover {
-    color: #5525bc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
-  /* Shrink "Stay connected with Prosper XO" paragraph on mobile */
+  .contact-block-lg .contact-email {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-email-joinus {
+  color: #ffef09;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.contact-email-joinus:hover {
+  color: #5525bc;
+}
+
+
+
+@media (max-width: 768px) {
   .main p {
-    font-size: 60%;
+    font-size: 1rem;
     line-height: 1.4;
   }
 
+
   /* Adjust oversized PRESS INQUIRIES email */
   .contact-email {
-    font-size: 1rem; /* or 14-16px if you're using px */
+    font-size: .8rem;
+    /* or 14-16px if you're using px */
     word-break: break-word;
   }
 
