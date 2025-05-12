@@ -876,3 +876,7 @@ p {
     width: 50%;
   }
 }
+
+.three-arrows {
+    display: none;
+}
