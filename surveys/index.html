@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/why-prosper.css">
 
-    <!-- Inline modal CSS -->
+    <!-- Inline modal & cursor CSS -->
     <style>
         .share-modal {
             position: fixed;
@@ -47,7 +47,7 @@
                     #ec678c 0%,
                     #c177c3 5%,
                     #5d95eb 10%,
-                    #69d6e4 950%,
+                    #69d6e4 95%,
                     #f3b86a 100%);
             border-radius: 8px;
             padding: 1.5rem;
@@ -78,7 +78,11 @@
             width: 32px;
             height: 32px;
             display: inline-block;
-            /* background-size, background-position etc. are already defined in your footer CSS */
+        }
+
+        /* make all .btns show the hand cursor on hover */
+        .btn:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -170,9 +174,12 @@
             <button class="share-modal__close" aria-label="Close modal">&times;</button>
             <h2>Share this page</h2>
             <div class="share-modal__buttons">
-                <a id="shareFacebook" href="#" class="footer-icon instagram" aria-label="Instagram"></a>
-                <a id="shareTwitter" href="#" class="footer-icon x" aria-label="X"></a>
-                <a id="shareLinkedIn" href="#" class="footer-icon linkedin" aria-label="LinkedIn"></a>
+                <a id="shareFacebook" href="#" class="footer-icon instagram" aria-label="Instagram" target="_blank"
+                    rel="noopener noreferrer"></a>
+                <a id="shareTwitter" href="#" class="footer-icon x" aria-label="X" target="_blank"
+                    rel="noopener noreferrer"></a>
+                <a id="shareLinkedIn" href="#" class="footer-icon linkedin" aria-label="LinkedIn" target="_blank"
+                    rel="noopener noreferrer"></a>
             </div>
         </div>
     </div>
