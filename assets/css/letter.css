@@ -1,19 +1,15 @@
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 960px;
-    margin: 3rem auto;
-    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-    overflow: hidden;
+  max-width: 960px;
+  width: 100%;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 0;
 }
