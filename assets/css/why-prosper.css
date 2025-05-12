@@ -32,12 +32,23 @@
 .prosperxo-movement .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   gap: 2.5rem;
   justify-items: center;
   align-items: center;
   margin: 3rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem; /* Optional: Add horizontal padding */
 }
+
+@media (max-width: 768px) {
+  .prosperxo-movement .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .prosperxo-movement .grid-item img {
   width: 220px;
