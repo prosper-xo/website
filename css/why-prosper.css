@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.prosperxo-movement {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff8040, #b35ed3);
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.prosperxo-movement .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.prosperxo-movement .intro,
+.statement {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.prosperxo-movement .headline,
+.welcome {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffef5e;
+  margin-bottom: 3rem;
+}
+
+.prosperxo-movement .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.prosperxo-movement .grid-item img {
+  width: 220px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.prosperxo-movement .grid-item h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #ffff8a;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.welcome-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .prosperxo-movement .headline {
+    font-size: 1.5rem;
+  }
+
+  .prosperxo-movement .intro,
+  .prosperxo-movement .statement {
+    font-size: 1.1rem;
+  }
+
+  .prosperxo-movement .welcome {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .welcome-text {
+    text-align: center;
+  }
+
+  .welcome-logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    gap: 1.5rem;
+  }
+
+  .grid-item img {
+    width: 40vw;
+    max-width: 90vw;
+  }
+
+  .grid-item h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Ensure poster image matches video dimensions */
+.video-wrapper video[poster] {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    width: 100%;
+    padding-top: 56.25%;
+    /* Keep 16:9 aspect ratio */
+  }
+}
