@@ -155,3 +155,24 @@
 .contact-email-joinus:hover {
     color: #5525bc;
 }
+
+@media (max-width: 768px) {
+  /* Shrink "Stay connected with Prosper XO" paragraph on mobile */
+  .main p {
+    font-size: 60%;
+    line-height: 1.4;
+  }
+
+  /* Adjust oversized PRESS INQUIRIES email */
+  .contact-email {
+    font-size: 1rem; /* or 14-16px if you're using px */
+    word-break: break-word;
+  }
+
+  /* Optional: make sure the container adapts */
+  .contact-block-lg,
+  .contact-block {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}

@@ -137,7 +137,10 @@
 }
 
 .text-header {
-    margin-bottom: 25px;
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 25px auto;
 }
 
 /* Shared wrapper for card + bio */

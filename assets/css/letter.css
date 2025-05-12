@@ -1,25 +1,13 @@
 .video-wrapper {
-    width: 50vw;
-    margin: 0 auto;
-    position: relative;
+    max-width: 960px;
+    margin: 3rem auto;
 }
 
 .video-wrapper video {
     width: 100%;
     height: auto;
     display: block;
-}
-
-/* Ensure poster image matches video dimensions */
-.video-wrapper video[poster] {
     object-fit: cover;
-    object-position: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .video-wrapper {
-        width: 100vw;
-        padding: 0 1rem;
-    }
+    /* optional, but cleaner than contain */
+    border-radius: 0;
 }
