@@ -64,11 +64,13 @@ p {
 
 .logo {
     height: 50px;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .logo:hover {
-    transform: rotate(5deg) scale(1.05); /* Rotate by 5 degrees and scale to 105% */
+    transform: rotate(5deg) scale(1.05);
+    /* Rotate by 5 degrees and scale to 105% */
 }
 
 /* General button styles */
@@ -81,15 +83,20 @@ p {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    border-radius: 10px; /* Rounded corners */
-    color: #ffe94f; /* Default text color */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+    border-radius: 10px;
+    /* Rounded corners */
+    color: #ffe94f;
+    /* Default text color */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth hover effect */
 }
 
 /* Button hover effect */
 .btn:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
 }
 
 /* Specific button colors */
@@ -111,7 +118,8 @@ p {
 
 .btn.yellow {
     background-color: #ffe66d;
-    color: #000; /* Black text for contrast */
+    color: #000;
+    /* Black text for contrast */
 }
 
 .btn.yellow:hover {
@@ -229,7 +237,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 2rem;
-     /* breaks the layout - height: 100%; */
+    /* breaks the layout - height: 100%; */
 }
 
 .column {
@@ -237,20 +245,20 @@ p {
     flex-direction: column;
     gap: 2rem;
     animation: scrollLoop 30s linear infinite;
-  }
+}
 
-  .column.down {
+.column.down {
     animation-direction: reverse;
-  }
+}
 
 /* Tan boxes */
 .tan-box {
     position: relative;
     width: 100%;
-    /* breaks the layout - height: 220px; */ 
+    /* breaks the layout - height: 220px; */
     border-radius: 10px;
     overflow: hidden;
-  }
+}
 
 /* Style the images inside tan-box */
 .tan-box img {
@@ -258,47 +266,59 @@ p {
     height: auto;
     display: block;
     object-fit: cover;
-  }
+}
 
 /* Adjust the columns */
-.column.up, .column.down {
+.column.up,
+.column.down {
     display: flex;
-    flex-direction: column; /* Stack tan-boxes vertically */
-    gap: 20px; /* Add spacing between tan-boxes */
+    flex-direction: column;
+    /* Stack tan-boxes vertically */
+    gap: 20px;
+    /* Add spacing between tan-boxes */
 }
 
 
 /* Base animation — loop halfway through doubled content */
 @keyframes scrollLoop {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     100% {
-      transform: translateY(-50%);
+        transform: translateY(-50%);
     }
-  }
+}
 
 @media (max-width: 768px) {
     .scroll-columns {
         display: flex;
-        flex-direction: column; /* Stack columns vertically on smaller screens */
-        gap: 30px; /* Add spacing between columns */
+        flex-direction: column;
+        /* Stack columns vertically on smaller screens */
+        gap: 30px;
+        /* Add spacing between columns */
     }
 
-    .column.up, .column.down {
-        flex-direction: row; /* Display tan-boxes in a row */
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        gap: 15px; /* Adjust spacing for smaller screens */
+    .column.up,
+    .column.down {
+        flex-direction: row;
+        /* Display tan-boxes in a row */
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        gap: 15px;
+        /* Adjust spacing for smaller screens */
     }
 
     .tan-box {
-        width: calc(50% - 15px); /* Two boxes per row with spacing */
+        width: calc(50% - 15px);
+        /* Two boxes per row with spacing */
     }
 }
 
 @media (max-width: 480px) {
     .tan-box {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
+        /* Full width for smaller screens */
     }
 }
 
@@ -342,7 +362,7 @@ p {
     height: auto;
     margin: 0;
     padding: 0;
-  }
+}
 
 /* base rules for every icon */
 .icon {
@@ -420,14 +440,18 @@ p {
 /* Individual poster container */
 .poster {
     position: relative;
-    overflow: hidden; /* Hide overflow for scaling effect */
-    border-radius: 10px; /* Optional: Rounded corners */
-    transition: box-shadow 0.3s ease; /* Smooth outer glow effect */
+    overflow: hidden;
+    /* Hide overflow for scaling effect */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    transition: box-shadow 0.3s ease;
+    /* Smooth outer glow effect */
 }
 
 /* Outer glow on hover */
 .poster:hover {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Outer glow effect */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    /* Outer glow effect */
 }
 
 /* Poster links */
@@ -441,13 +465,16 @@ p {
 .poster img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    object-fit: cover;
+    /* Ensures the image covers the container */
+    transition: transform 0.3s ease;
+    /* Smooth scaling effect */
 }
 
 /* Scale image on hover */
 .poster:hover img {
-    transform: scale(1.05); /* Scale to 105% */
+    transform: scale(1.05);
+    /* Scale to 105% */
 }
 
 /* Responsive Design for Mobile */
@@ -548,7 +575,7 @@ p {
 }
 
 .contact-email:hover {
-    background-image: linear-gradient(90deg,#ff796c,#75c0e0, #ffe66d);
+    background-image: linear-gradient(90deg, #ff796c, #75c0e0, #ffe66d);
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -619,19 +646,26 @@ p {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    border-radius: 15px; /* Rounded corners */
-    border: 3px solid black; /* Black stroke */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border-radius: 15px;
+    /* Rounded corners */
+    border: 3px solid black;
+    /* Black stroke */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
 }
 
 /* Blue button specific styles */
 .btn-blue {
-    background-color: #75c0e0; /* Blue background */
-    color: black; /* Black text */
+    background-color: #75c0e0;
+    /* Blue background */
+    color: black;
+    /* Black text */
 }
 
 /* Hover effect */
 .btn-blue:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow on hover */
 }

@@ -118,13 +118,13 @@ p {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-  }
-  
-  .nav {
+}
+
+.nav {
     display: flex;
     gap: 2rem;
     justify-content: center;
-  }
+}
 
 .nav a {
     margin: 0 10px;
@@ -700,8 +700,10 @@ p {
     /* Black stroke */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth hover effect */
-    padding: 15px 30px; /* Add this line */
+    padding: 15px 30px;
+    /* Add this line */
 }
+
 /* Blue button specific styles */
 .btn-blue {
     background-color: #75c0e0;
