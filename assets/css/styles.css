@@ -11,6 +11,7 @@ body {
     /* let the gradient fill the viewport */
     height: 100%;
     margin: 0;
+
 }
 
 body {
@@ -54,10 +55,30 @@ p {
 
 /* keep your existing layout / padding rules */
 .header {
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    background: transparent;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows wrapping if content gets too tight */
 }
 
 .hero {
@@ -122,8 +143,8 @@ p {
 
 .nav {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .nav a {
@@ -633,7 +654,7 @@ p {
 
 .nav-link {
     display: inline-block;
-    height: 25px;
+    height: 20px;
     /* Set a consistent height */
     background-size: contain;
     background-repeat: no-repeat;
@@ -647,7 +668,7 @@ p {
 
 .nav-link.nav-why {
     background-image: url('../text/prosper-website-stylizedtext-nav-why.svg');
-    width: 207px;
+    width: 165px;
 }
 
 .nav-link.nav-why:hover {
@@ -657,7 +678,7 @@ p {
 
 .nav-link.nav-ethos {
     background-image: url('../text/prosper-website-stylizedtext-nav-ethos.svg');
-    width: 100px;
+    width: 80px;
 }
 
 .nav-link.nav-ethos:hover {
@@ -668,7 +689,7 @@ p {
 
 .nav-link.nav-involved {
     background-image: url('../text/prosper-website-stylizedtext-nav-involved.svg');
-    width: 204px;
+    width: 163px;
 }
 
 .nav-link.nav-involved:hover {
@@ -678,11 +699,22 @@ p {
 
 .nav-link.nav-team {
     background-image: url('../text/prosper-website-stylizedtext-nav-team.svg');
-    width: 147px;
+    width: 118px;
 }
 
 .nav-link.nav-team:hover {
     background-image: url('../text/prosper-website-stylizedtext-nav-team-ro.svg');
+    transform: scale(1.1);
+}
+
+.nav-link.nav-events {
+    background-image: url('../text/prosper-website-stylizedtext-nav-events.svg');
+    width: 96px;
+    /* Adjust width as needed based on your SVG */
+}
+
+.nav-link.nav-events:hover {
+    background-image: url('../text/prosper-website-stylizedtext-nav-events-ro.svg');
     transform: scale(1.1);
 }
 
@@ -720,91 +752,101 @@ p {
     /* Subtle shadow on hover */
 }
 
-/* Hamburger button styles */
+/* Basic hamburger button */
 .hamburger {
     display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1002;
-    padding: 8px;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .hamburger span {
-    display: block;
+    width: 100%;
     height: 3px;
-    width: 32px;
-    margin: 4px 0;
-    background: #181818;
-    border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
+    background-color: #000;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger to X animation */
+/* Updated X animation for symmetry */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
-    background: #181818;
+    transform: translateY(9px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
-    transform: scale(0);
+    opacity: 0;
 }
 
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
-    background: #181818;
+    transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Responsive header menu */
-.header-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+@media (min-width: 901px) {
+
+    .rainbow-top,
+    .rainbow-bottom {
+        display: none !important;
+    }
 }
 
-/* Hide nav and social on mobile/tablet by default */
-@media (max-width: 900px) {
-    .header-menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #6a5ee7;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 2rem 0 1rem 0;
-        z-index: 1001;
-        margin-top: 1rem;
-        /* Add space between logo and menu panel */
-    }
-
-    .header-menu.open {
-        display: flex;
-    }
-
+@media (max-width: 1200px) {
     .hamburger {
         display: flex;
     }
 
+    .header-menu {
+        display: none;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #fcff00, #ff796c, #b729a4);
+        padding: 0;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .header-menu.open {
+        display: block;
+    }
+
+    .header-menu.open .header-right {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .rainbow-top,
+    .rainbow-bottom {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
     .nav {
         flex-direction: column;
-        gap: 1.2rem;
+        align-items: center;
+        gap: 1.5rem;
     }
 
     .social-icons {
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 }
+
 
 @media (max-width: 768px) {
     .hero {

@@ -49,7 +49,6 @@
 }
 
 .team-card .image-container {
-    /* position: relative; */
     width: 100%;
     height: 100%;
     text-align: center;
@@ -71,16 +70,10 @@
     align-items: center;
     background: linear-gradient(135deg,
             #ff6b6b,
-            /* soft red */
             #fcd34d,
-            /* soft yellow */
             #f9a8d4,
-            /* pink */
             #a5f3fc,
-            /* light blue */
-            #c4b5fd
-            /* lavender */
-        );
+            #c4b5fd);
     background-size: 200% 200%;
 }
 
@@ -88,6 +81,7 @@
     margin: 0;
     line-height: 1.4;
     font-size: clamp(0.9rem, 2vw, 1.4rem);
+    font-family: 'Poppins', sans-serif;
 }
 
 .text-container p span.name {
@@ -100,8 +94,9 @@
     display: block;
 }
 
-/* BOTH images are layered */
-.team-card img {
+/* Image layering */
+.team-card img,
+.lauren-card .lauren-img {
     position: absolute;
     top: 0;
     left: 50%;
@@ -110,7 +105,7 @@
     width: auto;
 }
 
-/* Hover effects */
+/* Hover effect */
 .team-card:hover .default-img {
     opacity: 0;
 }
@@ -128,15 +123,7 @@
     background-color: #f5e96a;
 }
 
-/* Lauren's image */
-.lauren-img {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin-bottom: 2rem;
-}
-
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 900px) {
     .team-grid {
         grid-template-columns: 1fr 1fr;
@@ -153,33 +140,123 @@
     margin-bottom: 25px;
 }
 
-.lauren-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 2rem;
+/* Shared wrapper for card + bio */
+.team-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.lauren-container .lauren-img {
-  width: 100%;
-  height: auto;
+/* Shared bio below card */
+.team-bio {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  max-width: 900px;
+  line-height: 1.6;
+  color: #fff;
 }
 
-.lauren-container .text-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  border: 3px solid black;
-  border-radius: 0 0 20px 20px;
-  background: linear-gradient(135deg,
-      #ff6b6b,
-      #fcd34d,
-      #f9a8d4,
-      #a5f3fc,
-      #c4b5fd
-  );
-  z-index: 3;
+
+
+/* Lauren’s layout — no border around image */
+.lauren-card {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 3 / 2;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.lauren-card .image-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lauren-card .lauren-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.lauren-card .text-container {
+    border-radius: 0 0 20px 20px;
+    border: 3px solid black;
+    margin-top: -3px;
+    /* aligns nicely with image edge */
+}
+
+.lauren-card .text-container p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+}
+
+.lauren-card .text-container span.name {
+    font-weight: 600;
+    display: block;
+}
+
+.lauren-card .text-container span.title {
+    font-size: 85%;
+    display: block;
+}
+
+.team-summary-box {
+    background: linear-gradient(135deg, #c34ec9, #ec678c, #f9a84d, #5fdd8f, #69d6e4);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: 3px solid black;
+}
+
+.team-summary {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 1200px; /* updated from 900px */
+    margin: 0 auto;
+}
+
+
+.team-summary p {
+    color: #fff;
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    /* move here */
+    line-height: 1.6;
+    /* move here */
+    margin: 0;
+}
+
+/* Only Lauren's bio gets extra bottom margin */
+.team-card-wrapper:first-of-type .team-bio {
+  margin-bottom: 3rem;
+}
+
+/* Everyone else gets smaller spacing */
+.team-card-wrapper:not(:first-of-type) .team-bio {
+  margin-bottom: 1.5rem;
+}
+
+.team-bio-lauren {
+  max-width: 1200px; /* Match the width of the Lauren card */
+}
+
+@media (max-width: 600px) {
+  .team-card {
+    aspect-ratio: 3 / 2; /* Match Lauren’s aspect ratio */
+  }
 }
