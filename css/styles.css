@@ -865,18 +865,18 @@ p {
     max-width: 100%;
 }
 
-.mobile-width{
-  width: 90%;
-  display: block;
-  margin: 0 auto;
+.mobile-width {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (min-width: 601px) {
-  .mobile-width {
-    width: 50%;
-  }
-}
+    .mobile-width {
+        width: 50%;
+    }
 
-.three-arrows {
-    display: none;
+    .three-arrows {
+        display: none;
+    }
 }
