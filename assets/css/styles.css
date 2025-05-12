@@ -208,14 +208,37 @@ p {
     text-decoration: none;
 }
 
-.survey-buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
-    text-decoration: none;
+.survey-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
+
+.survey-buttons a {
+  display: block;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  border-radius: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .survey-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
 .why-artists-section {
     background: #6a5ee7;
@@ -595,6 +618,11 @@ p {
     color: #ffe94f;
 }
 
+.btn.blue {
+    background-color: #1d21f2;
+    color: #ffe94f;
+}
+
 .btn.pink:hover {
     background-color: #da50a3;
 }
@@ -849,16 +877,6 @@ p {
 }
 
 
-@media (max-width: 768px) {
-    .hero {
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .three-arrows {
-        display: none;
-    }
-}
 
 .definitions {
     width: 700px;
@@ -879,5 +897,33 @@ p {
 @media (min-width: 601px) {
     .mobile-width {
         width: 50%;
+    }
+}
+
+.text-inasystem {
+    width: 60%;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .three-arrows {
+        display: none;
+    }
+
+    .text-inasystem {
+        width: 100%;
+    }
+
+    .survey {
+        padding: 30px;
+    }
+
+    .btn {
+        font-size: 1rem;
     }
 }
