@@ -32,7 +32,9 @@
   <meta name="twitter:url" content="https://www.prosperxo.com">
 
   <style>
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
@@ -57,12 +59,17 @@
     }
 
     .container {
-      margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
-      height: 100%;
+      justify-content: center;
+      /* ⬅ centers vertically */
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      min-height: calc(100vh - 250px);
+      /* fits between header & footer */
     }
 
     h1 {
@@ -119,15 +126,20 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 1.2rem; }
-      p { font-size: 0.8rem; }
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  
-   <header class="header">
+
+  <header class="header">
     <!-- Left Column -->
     <div class="header-left">
       <a href="../welcome/">
@@ -169,28 +181,29 @@
       <span></span>
     </button>
   </header>
-  
-<section class="container">
-  <h1>404 – Page Not Found</h1>
-  <p>This page doesn’t exist… yet.<br><br>But since you're here:<br>RSVP for our first event, May 14th at Capital Factory!<br><br></p>
 
-  <div class="read-button-wrap">
-    <a href="https://lu.ma/8dl5lzo0" class="btn red" target="_blank">RSVP HERE</a>
-  </div>
+  <section class="container">
+    <h1>404 – Page Not Found</h1>
+    <p>This page doesn’t exist… yet.<br><br>But since you're here:<br>RSVP for our first event, May 14th at Capital
+      Factory!<br><br></p>
 
-  <p>Or</p>
-  <a href="/" class="btn red">Return Home</a>
+    <div class="read-button-wrap">
+      <a href="https://lu.ma/8dl5lzo0" class="btn red" target="_blank">RSVP HERE</a>
+    </div>
 
-  <div style="min-height: 15px;"></div>
+    <p>Or</p>
+    <a href="/" class="btn red">Return Home</a>
 
-  <div class="contact">
-    <a href="mailto:pr@prosperxo.com">pr@prosperxo.com</a>
-    <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
-  </div>
+    <div style="min-height: 15px;"></div>
 
-</section>
+    <div class="contact">
+      <a href="mailto:pr@prosperxo.com">pr@prosperxo.com</a>
+      <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
+    </div>
 
-<footer class="footer">
+  </section>
+
+  <footer class="footer">
     <h3>WE WANT TO HEAR FROM YOU</h3>
 
     <section class="contact-section">
@@ -222,7 +235,10 @@
 
     <img src="/assets/logos/prosper-website-logo-alt.png" alt="Prosper XO Logo" style="width: 25%;">
   </footer>
-  
+
+  <script src="../assets/js/script.js"></script> <!-- Updated path to script.js -->
+
+
 </body>
 
 </html>
