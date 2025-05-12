@@ -2,76 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Prosper XO</title>
     <link rel="stylesheet" href="assets/css/splash.css">
 
-    <style>
-        /* 1. Make body/container fill viewport and center everything */
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon-multi.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon/favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-        .splash-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Prosper XO – Coming Soon">
+    <meta property="og:description"
+        content="We’re building something exciting to put artists back at the center of the industry. Stay tuned!">
+    <meta property="og:image" content="assets/thumbnail/prosper-website-thumbnail.jpg">
+    <meta property="og:url" content="https://www.prosperxo.com">
+    <meta property="og:type" content="website">
 
-        /* 2. tv-video should size itself to the video’s intrinsic aspect, up to 100% width */
-        .tv-video {
-            position: relative;
-            width: 100%;
-            max-width: 100vw;
-            /* never exceed viewport width */
-        }
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prosper XO – Coming Soon">
+    <meta name="twitter:description"
+        content="We’re building something exciting to put artists back at the center of the industry. Stay tuned!">
+    <meta name="twitter:image" content="assets/thumbnail/prosper-website-thumbnail.jpg">
+    <meta name="twitter:url" content="https://www.prosperxo.com">
 
-        .tv-video video {
-            display: block;
-            width: 100%;
-            height: auto;
-            transform: scale(1.35);
-            transform-origin: center;
-            /* preserve aspect ratio */
-        }
-
-        /* 3. Center the controls atop the video */
-        .video-controls {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        .video-controls .video-button {
-            pointer-events: auto;
-        }
-
-        /* 4. Hide/show utility */
-        .controls--hidden {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.2s ease;
-        }
-
-        /* 5. Shrink Enter button */
-        .enter-button {
-            display: inline-block;
-            transform: scale(0.70);
-            transform-origin: center;
-            margin-top: 1rem;
-        }
-    </style>
 </head>
+
+
 
 <body>
     <div class="splash-container">
@@ -81,7 +45,7 @@
                 <img src="assets/placeholders/prosper-website-placeholder12.png" alt="Fallback">
             </video>
             <div class="video-controls">
-                <button id="playPauseBtn" class="video-button">▶︎</button>
+                <button id="playPauseBtn" class="video-button">PLAY ▶︎</button>
             </div>
         </div>
 
@@ -111,7 +75,7 @@
                 if (!video.paused) {
                     video.pause();
                     controls.classList.remove('controls--hidden');
-                    btn.textContent = '▶︎';
+                    btn.textContent = 'PLAY ▶︎';
                 }
             });
         });
