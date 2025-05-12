@@ -28,20 +28,29 @@ body {
 .tv-video {
   width: 85%;
   max-width: 720px;
-  max-height: 85vh; /* This might constrain the height if 85vh is less than the width defined by 85%/720px. Aspect-ratio will try to respect this. */
-  aspect-ratio: 1 / 1; /* This is key for the square shape */
+  max-height: 85vh;
+  /* This might constrain the height if 85vh is less than the width defined by 85%/720px. Aspect-ratio will try to respect this. */
+  aspect-ratio: 1 / 1;
+  /* This is key for the square shape */
   position: relative;
-  display: flex; /* Useful if video content isn't 100%x100% and needs centering */
+  display: flex;
+  /* Useful if video content isn't 100%x100% and needs centering */
   align-items: center;
   justify-content: center;
 }
 
 .tv-video video {
   width: 100%;
-  height: 100%; /* Makes the video fill the square .tv-video container */
-  object-fit: contain; /* Ensures video content fits without cropping, letterboxing if video not perfectly square */
+  height: 100%;
+  /* Makes the video fill the square .tv-video container */
+  object-fit: contain;
+  /* Ensures video content fits without cropping, letterboxing if video not perfectly square */
   display: block;
-  background-color: #000; /* Added: Shows black if video doesn't fill its bounds due to object-fit:contain and non-square source/rendering issues */
+  background-color: #000;
+  /* Added: Shows black if video doesn't fill its bounds due to object-fit:contain and non-square source/rendering issues */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
@@ -64,7 +73,8 @@ body {
   border: 2px solid lime;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 11; /* Ensure it's above the video, just in case */
+  z-index: 11;
+  /* Ensure it's above the video, just in case */
 }
 
 .controls--hidden {
@@ -75,10 +85,12 @@ body {
 
 /* === ENTER HERE BUTTON === */
 .enter-button {
-  position: relative; /* For absolute positioning of img children */
+  position: relative;
+  /* For absolute positioning of img children */
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 6 / 1; /* Defines aspect ratio for the button area */
+  aspect-ratio: 6 / 1;
+  /* Defines aspect ratio for the button area */
 }
 
 .enter-button img {
@@ -86,7 +98,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Changed from auto to fill the aspect-ratio container */
+  height: 100%;
+  /* Changed from auto to fill the aspect-ratio container */
   object-fit: contain;
   display: block;
   transition: opacity 0.5s ease;
@@ -99,7 +112,8 @@ body {
 
 .enter-button img.hover {
   opacity: 0;
-  z-index: 2; /* Ensures hover image is on top when visible */
+  z-index: 2;
+  /* Ensures hover image is on top when visible */
 }
 
 .enter-button:hover img.default {
@@ -112,12 +126,18 @@ body {
 
 @media (max-width: 600px) {
   .tv-video {
-    width: 90vw; /* Adjusted for a bit more width on mobile, but not full bleed. Or use 85% like desktop. */
-    max-width: 100%; /* Allow it to use the 90vw fully, overriding desktop max-width if necessary */
-    margin-left: auto; /* Center if width is not 100% */
-    margin-right: auto; /* Center if width is not 100% */
-    max-height: none; /* Remove viewport height restriction on mobile */
-    aspect-ratio: 1 / 1; /* KEY CHANGE: Maintain square aspect ratio for the container */
+    width: 90vw;
+    /* Adjusted for a bit more width on mobile, but not full bleed. Or use 85% like desktop. */
+    max-width: 100%;
+    /* Allow it to use the 90vw fully, overriding desktop max-width if necessary */
+    margin-left: auto;
+    /* Center if width is not 100% */
+    margin-right: auto;
+    /* Center if width is not 100% */
+    max-height: none;
+    /* Remove viewport height restriction on mobile */
+    aspect-ratio: 1 / 1;
+    /* KEY CHANGE: Maintain square aspect ratio for the container */
   }
 
   .tv-video video {
