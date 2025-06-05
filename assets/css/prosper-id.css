@@ -1,0 +1,7 @@
+.btn-gradient {
+  background: linear-gradient(90deg, #ffcc00, #ff3399, #33ccff);
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
