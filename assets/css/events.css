@@ -22,11 +22,10 @@
 /* Layout wrapper */
 .event-flex {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3.5rem;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -73,7 +72,7 @@
 
 /* Flyer image */
 .event-image img {
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   height: auto;
   display: block;
@@ -137,7 +136,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0rem;
+    gap: 1rem;
   }
 
   .event-details {
@@ -145,6 +144,6 @@
   }
 
   .event-image img {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
