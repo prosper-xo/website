@@ -5,3 +5,28 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
+
+.btn-modal {
+  background: #f6543c;
+  color: #ffe94f;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 3px solid #000;
+}
+
+.modal-container {
+  background: linear-gradient(
+    135deg,
+    #ec678c 0%,
+    #c177c3 35%,
+    #5d95eb 60%,
+    #69d6e4 80%,
+    #f3b86a 100%
+  );
+}
+
+.rainbow-separator {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,70 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prosper ID</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/prosper-id.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prosper ID</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/prosper-id.css">
-</head>
-
-<body class="bg-black text-white overflow-hidden h-screen w-screen flex flex-col justify-between">
-
-  <!-- Top Half: Gradient background + portrait -->
-  <div class="relative h-1/2 bg-gradient-to-b from-pink-500 to-black">
-    <div class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-center">
-      <div class="w-32 h-32 rounded-full border-4 border-black overflow-hidden">
-        <img id="userImage" src="" alt="Profile" class="object-cover w-full h-full">
+  <body
+    class="bg-black text-white overflow-hidden h-screen w-screen flex flex-col justify-between"
+  >
+    <!-- Top Half: Gradient background + portrait -->
+    <div class="relative h-1/2 bg-gradient-to-b from-pink-500 to-black">
+      <div
+        class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-center"
+      >
+        <div
+          class="w-32 h-32 rounded-full border-4 border-black overflow-hidden"
+        >
+          <img
+            id="userImage"
+            src=""
+            alt="Profile"
+            class="object-cover w-full h-full"
+          />
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Middle Content -->
-  <div class="text-center px-4">
-    <h1 id="userName" class="text-xl font-bold text-yellow-400">Name Placeholder</h1>
-    <h2 id="userTitle" class="text-md text-white">Title Placeholder</h2>
-    <p id="userBio" class="mt-2 text-sm text-white">Short bio placeholder.</p>
+    <!-- Middle Content -->
+    <div class="text-center px-4">
+      <h1 id="userName" class="text-xl font-bold text-yellow-400">
+        Name Placeholder
+      </h1>
+      <h2 id="userTitle" class="text-md text-white">Title Placeholder</h2>
+      <p id="userBio" class="mt-2 text-sm text-white">Short bio placeholder.</p>
 
-    <img src="/assets/logos/prosperxo-website-logo-melty-rainbow.png" alt="Prosper XO Logo" class="h-24 mx-auto block">
+      <img
+        src="/assets/logos/prosperxo-website-logo-melty-rainbow.png"
+        alt="Prosper XO Logo"
+        class="h-24 mx-auto block"
+      />
 
+      <div id="contactLinks" class="flex justify-center space-x-4 mt-4">
+        <a id="emailLink" href="#"
+          ><img
+            src="/assets/icons/prosper-website-social-email-id.svg"
+            alt="Email"
+            class="h-6"
+        /></a>
+        <a id="phoneLink" href="#"
+          ><img
+            src="/assets/icons/prosper-website-social-phone-id.svg"
+            alt="Phone"
+            class="h-6"
+        /></a>
+        <a id="linkedinLink" href="#" target="_blank"
+          ><img
+            src="/assets/icons/prosper-website-social-linkedin-id.svg"
+            alt="LinkedIn"
+            class="h-6"
+        /></a>
+        <a id="instagramLink" href="#" target="_blank"
+          ><img
+            src="/assets/icons/prosper-website-social-ig-id.svg"
+            alt="Instagram"
+            class="h-6"
+        /></a>
+      </div>
 
-    <div id="contactLinks" class="flex justify-center space-x-4 mt-4">
-      <a id="emailLink" href="#"><img src="/assets/icons/prosper-website-social-email-id.svg" alt="Email"
-          class="h-6"></a>
-      <a id="phoneLink" href="#"><img src="/assets/icons/prosper-website-social-phone-id.svg" alt="Phone"
-          class="h-6"></a>
-      <a id="linkedinLink" href="#" target="_blank"><img src="/assets/icons/prosper-website-social-linkedin-id.svg"
-          alt="LinkedIn" class="h-6"></a>
-      <a id="instagramLink" href="#" target="_blank"><img src="/assets/icons/prosper-website-social-ig-id.svg"
-          alt="Instagram" class="h-6"></a>
+      <div class="flex flex-col space-y-3 mt-6 items-center">
+        <button class="btn-gradient w-64">ADD CONTACT</button>
+        <button class="btn-gradient w-64">LET'S CONNECT</button>
+        <button class="btn-gradient w-64">BOOK A MEETING</button>
+      </div>
     </div>
 
-
-
-    <div class="flex flex-col space-y-3 mt-6 items-center">
-      <button class="btn-gradient w-64">ADD CONTACT</button>
-      <button class="btn-gradient w-64">LET’S CONNECT</button>
-      <button class="btn-gradient w-64">BOOK A MEETING</button>
+    <!-- Bottom Gradient Panel -->
+    <div
+      class="text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-4 px-2"
+    >
+      <h3 class="font-bold text-black">WHAT IS PROSPER XO?</h3>
+      <img
+        src="/assets/text/prosper-website-stylizedtext-tagline.svg"
+        alt="Prosper XO Logo"
+        class="w-24 mx-auto mt-2 mb-4"
+      />
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        <a class="bg-pink-500 px-4 py-2 font-bold" href="/why-prosper">WHY PROSPER</a>
+        <button class="modal-button bg-blue-500 px-4 py-2 font-bold">
+          WATCH INTRO VIDEO
+        </button>
+        <button class="bg-green-500 px-4 py-2 font-bold">
+          SHARE YOUR VOICE
+        </button>
+        <button class="bg-yellow-500 px-4 py-2 font-bold">
+          JOIN THE MOVEMENT
+        </button>
+        <a class="bg-red-500 px-4 py-2 font-bold" href="https://mailchi.mp/d31733a7aa36/prosperxo" target="_blank">
+          JOIN THE NEWSLETTER
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-black">
+        LEARN MORE AT <span class="underline">PROSPERXO.COM</span>
+      </p>
     </div>
-  </div>
 
-  <!-- Bottom Gradient Panel -->
-  <div class="text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-4 px-2">
-    <h3 class="font-bold text-black">WHAT IS PROSPER XO?</h3>
-    <img src="/assets/text/prosper-website-stylizedtext-tagline.svg" alt="Prosper XO Logo"
-      class="w-24 mx-auto mt-2 mb-4">
-    <div class="flex flex-wrap justify-center gap-2 mt-4">
-      <button class="modal-button bg-pink-500 px-4 py-2 font-bold">WHY PROSPER</button>
-      <button class="modal-button bg-blue-500 px-4 py-2 font-bold">WATCH INTRO VIDEO</button>
-      <button class="modal-button bg-green-500 px-4 py-2 font-bold">SHARE YOUR VOICE</button>
-      <button class="modal-button bg-yellow-500 px-4 py-2 font-bold">JOIN THE MOVEMENT</button>
-      <button class="modal-button bg-red-500 px-4 py-2 font-bold">JOIN THE NEWSLETTER</button>
+    <!-- Modal Overlay -->
+    <div
+      id="modalOverlay"
+      class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4"
+    >
+      <div
+        id="modalContainer"
+        class="relative max-w-lg w-full max-h-[100vh] overflow-hidden modal-container"
+      >
+        <!-- Rainbow Top Border -->
+        <img
+          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
+          alt="Rainbow Separator"
+          class="rainbow-separator"
+        />
+
+        <div class="rounded-b-lg rounded-t-lg p-6 h-full overflow-y-auto">
+          <!-- Modal Header -->
+          <div class="relative flex flex-col items-center mb-4">
+            <h2
+              id="modalTitle"
+              class="text-2xl font-extrabold text-black tracking-wide text-center"
+              style="letter-spacing: 1px"
+            ></h2>
+            <button
+              id="closeModal"
+              class="text-black hover:text-yellow-400 text-3xl font-bold absolute top-0 right-0 -mt-2"
+            >
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal Content Area -->
+          <div id="modalContent" class="text-white">
+            <!-- Dynamic content goes here -->
+          </div>
+        </div>
+
+        <!-- Rainbow Bottom Border -->
+        <img
+          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
+          alt="Rainbow Separator"
+          class="rainbow-separator"
+        />
+      </div>
     </div>
-    <p class="mt-2 text-sm text-black">LEARN MORE AT <span class="underline">PROSPERXO.COM</span></p>
-  </div>
 
-  <script src="/assets/js/prosper-id.js"></script>
-</body>
-
+    <script src="/assets/js/prosper-id.js"></script>
+  </body>
 </html>
