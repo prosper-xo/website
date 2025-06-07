@@ -1,7 +1,8 @@
 {
   "0": {
     "thumbnail": "prosperxo-image-prosperid-illustration-lauren.jpg",
-    "name": "Lauren Bruno",
+    "firstName": "Lauren",
+    "lastName": "Bruno",
     "title": "Founder | CEO",
     "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "email": "lauren@prosperxo.com",
@@ -11,7 +12,8 @@
   },
   "7": {
     "thumbnail": "prosperxo-image-prosperid-illustration-joseph.jpg",
-    "name": "Joseph Salazar",
+    "firstName": "Joseph",
+    "lastName": "Salazar",
     "title": "Founder | CXO",
     "bio": "Joseph's bio will be placed here.",
     "email": "joseph@prosperxo.com",

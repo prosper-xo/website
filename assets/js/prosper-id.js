@@ -19,7 +19,9 @@ async function loadUserData(id) {
     document.getElementById(
       "userImage"
     ).src = `/assets/graphics/id-illustrations/${user.thumbnail}`;
-    document.getElementById("userName").textContent = user.name;
+    document.getElementById(
+      "userName"
+    ).textContent = `${user.firstName} ${user.lastName}`;
     document.getElementById("userTitle").textContent = user.title;
     document.getElementById("userBio").textContent = user.bio;
 
@@ -56,16 +58,6 @@ const modalContent = {
       </div>
     `,
   },
-  "book-a-meeting": {
-    title: "BOOK A MEETING",
-    content: `
-
-<!-- Google Calendar Appointment Scheduling begin -->
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2N21YpVcp440YCvX148Gurger66IBAqe3U9sbDJb_XjxBfV4yd3-ID7d_1boyOlq3tGutVdyNb?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
-<!-- end Google Calendar Appointment Scheduling -->
-
-    `,
-  },
 };
 
 // Modal functionality
@@ -94,6 +86,15 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
+function addToContacts(user) {
+  // Create a URL-safe version of the name
+  const safeName = `${user.firstName}_${user.lastName}`
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+  // Open the vCard URL directly
+  window.open(`/assets/vcards/${safeName}.vcf`, "_blank");
+}
+
 // Event listeners
 document.addEventListener("DOMContentLoaded", function () {
   // Close modal events
@@ -104,9 +105,30 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target === this) closeModal();
     });
 
+  // Pop-up blocked modal events
+  document
+    .getElementById("closePopupBlockedModal")
+    .addEventListener("click", function () {
+      document.getElementById("popupBlockedModal").classList.add("hidden");
+      document.getElementById("popupBlockedModal").classList.remove("flex");
+    });
+
+  document
+    .getElementById("popupBlockedModal")
+    .addEventListener("click", function (e) {
+      if (e.target === this) {
+        this.classList.add("hidden");
+        this.classList.remove("flex");
+      }
+    });
+
   // Escape key to close
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") {
+      closeModal();
+      document.getElementById("popupBlockedModal").classList.add("hidden");
+      document.getElementById("popupBlockedModal").classList.remove("flex");
+    }
   });
 
   // Modal trigger buttons
@@ -121,15 +143,64 @@ document.addEventListener("DOMContentLoaded", function () {
       openModal(modalType);
     });
   });
+
+  // Add Contact button functionality
+  const addContactBtn = document.getElementById("addContactBtn");
+  if (addContactBtn) {
+    addContactBtn.addEventListener("click", async function (e) {
+      e.preventDefault();
+      try {
+        const res = await fetch("/assets/data/users.json");
+        const data = await res.json();
+        const user = data[id];
+
+        if (!user) {
+          alert("User data not found");
+          return;
+        }
+
+        // Create a URL-safe version of the name
+        const safeName = `${user.firstName}_${user.lastName}`
+          .toLowerCase()
+          .replace(/\s+/g, "_");
+        const vcardUrl = `/assets/vcards/${safeName}.vcf`;
+
+        // Try to open the vCard
+        const newWindow = window.open(vcardUrl, "_blank");
+
+        // Check if pop-up was blocked
+        if (
+          !newWindow ||
+          newWindow.closed ||
+          typeof newWindow.closed === "undefined"
+        ) {
+          // Pop-up was blocked, show modal with link
+          const vcardLink = document.getElementById("vcardLink");
+          vcardLink.href = vcardUrl;
+          vcardLink.textContent = vcardUrl;
+
+          const popupBlockedModal =
+            document.getElementById("popupBlockedModal");
+          popupBlockedModal.classList.remove("hidden");
+          popupBlockedModal.classList.add("flex");
+        }
+      } catch (err) {
+        console.error("Failed to load user data:", err);
+        alert("Failed to load contact information");
+      }
+    });
+  }
 });
 
 // After openModal function, add this logic to handle modal video controls
 function setupModalVideoControls() {
-  const video = document.getElementById("modalTerminalVideo");
-  const button = document.getElementById("modalPlayPauseBtn");
-  const controls = button && button.closest(".video-controls");
-  const wrapper = video && video.closest(".tv-video");
-  if (!video || !button || !controls || !wrapper) return;
+  const video = document.querySelector("#modalContent video");
+  if (!video) return;
+
+  const button = video.parentElement.querySelector(".video-controls button");
+  const controls = button?.closest(".video-controls");
+  const wrapper = video.closest(".tv-video");
+  if (!button || !controls || !wrapper) return;
 
   button.addEventListener("click", (e) => {
     e.stopPropagation();

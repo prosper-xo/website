@@ -71,9 +71,12 @@
       <div
         class="flex flex-col space-y-2 mt-2 md:mt-4 mb-2 md:mb-2 items-center"
       >
-        <button class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
+        <a
+          id="addContactBtn"
+          class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md text-center"
+        >
           ADD CONTACT
-        </button>
+        </a>
         <button class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
           LET'S CONNECT
         </button>
@@ -84,11 +87,6 @@
         >
           BOOK A MEETING
         </a>
-        <!-- <button
-          class="modal-button btn-gradient w-64 py-2 text-sm md:py-3 md:text-md"
-        >
-          BOOK A MEETING
-        </button> -->
       </div>
     </div>
 
@@ -203,6 +201,42 @@
           alt="Rainbow Separator"
           class="rainbow-separator"
         />
+      </div>
+    </div>
+
+    <!-- Pop-up Blocked Modal -->
+    <div
+      id="popupBlockedModal"
+      class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-2xl max-w-md w-full p-6 text-black">
+        <div class="flex flex-col items-center space-y-4">
+          <h2 class="text-xl font-bold text-center">Pop-up Blocked</h2>
+          <p class="text-center text-gray-600">
+            To add this contact, please allow pop-ups for this site and try
+            again, or click the link below:
+          </p>
+          <a
+            id="vcardLink"
+            href="#"
+            target="_blank"
+            class="text-blue-500 hover:text-blue-700 break-all text-center"
+          >
+            Click here to open contact
+          </a>
+          <p class="text-center text-gray-600 text-sm mt-2">
+            If you see a "Failed to Add Pass" error, try copying the link above
+            and opening it in a different browser (like Chrome or Safari).
+          </p>
+          <div class="w-full space-y-3 mt-4">
+            <button
+              id="closePopupBlockedModal"
+              class="w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
