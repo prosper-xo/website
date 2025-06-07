@@ -12,20 +12,18 @@
     class="bg-black text-white overflow-hidden h-screen w-screen flex flex-col justify-between"
   >
     <!-- Top Half: Gradient background + portrait -->
-    <div class="relative h-1/2 bg-gradient-to-b from-pink-500 to-black">
+    <div
+      class="bg-gradient-to-b from-pink-500 to-black pt-6 pb-2 flex flex-col items-center md:pt-10 md:pb-4"
+    >
       <div
-        class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-center"
+        class="w-24 h-24 rounded-full border-4 border-black overflow-hidden md:w-32 md:h-32"
       >
-        <div
-          class="w-32 h-32 rounded-full border-4 border-black overflow-hidden"
-        >
-          <img
-            id="userImage"
-            src=""
-            alt="Profile"
-            class="object-cover w-full h-full"
-          />
-        </div>
+        <img
+          id="userImage"
+          src=""
+          alt="Profile"
+          class="object-cover w-full h-full"
+        />
       </div>
     </div>
 
@@ -40,10 +38,10 @@
       <img
         src="/assets/logos/prosperxo-website-logo-melty-rainbow.png"
         alt="Prosper XO Logo"
-        class="h-24 mx-auto block"
+        class="h-16 mx-auto block"
       />
 
-      <div id="contactLinks" class="flex justify-center space-x-4 mt-4">
+      <div id="contactLinks" class="flex justify-center space-x-4 mt-1 md:mt-2">
         <a id="emailLink" href="#"
           ><img
             src="/assets/icons/prosper-website-social-email-id.svg"
@@ -70,42 +68,80 @@
         /></a>
       </div>
 
-      <div class="flex flex-col space-y-3 mt-6 items-center">
-        <button class="btn-gradient w-64">ADD CONTACT</button>
-        <button class="btn-gradient w-64">LET'S CONNECT</button>
-        <button class="btn-gradient w-64">BOOK A MEETING</button>
+      <div
+        class="flex flex-col space-y-2 mt-2 md:mt-4 mb-2 md:mb-2 items-center"
+      >
+        <button class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
+          ADD CONTACT
+        </button>
+        <button class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
+          LET'S CONNECT
+        </button>
+        <button class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
+          BOOK A MEETING
+        </button>
       </div>
     </div>
 
     <!-- Bottom Gradient Panel -->
-    <div
-      class="text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-4 px-2"
-    >
-      <h3 class="font-bold text-black">WHAT IS PROSPER XO?</h3>
-      <img
-        src="/assets/text/prosper-website-stylizedtext-tagline.svg"
-        alt="Prosper XO Logo"
-        class="w-24 mx-auto mt-2 mb-4"
-      />
-      <div class="flex flex-wrap justify-center gap-2 mt-4">
-        <a class="bg-pink-500 px-4 py-2 font-bold" href="/why-prosper" target="_blank">WHY PROSPER</a>
-        <button class="modal-button bg-blue-500 px-4 py-2 font-bold">
-          WATCH INTRO VIDEO
-        </button>
-        <a class="bg-green-500 px-4 py-2 font-bold" href="/surveys" target="_blank">
-          SHARE YOUR VOICE
-        </a>
-        <a class="bg-yellow-500 px-4 py-2 font-bold" href="/get-involved" target="_blank">
-          JOIN THE MOVEMENT
-        </a>
-        <a class="bg-red-500 px-4 py-2 font-bold" href="https://mailchi.mp/d31733a7aa36/prosperxo" target="_blank">
-          JOIN THE NEWSLETTER
-        </a>
+    <footer class="mt-auto">
+      <div
+        class="text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-2 md:py-4 px-2"
+      >
+        <h3 class="font-bold text-black text-sm md:text-md">
+          WHAT IS PROSPER XO?
+        </h3>
+        <img
+          src="/assets/text/prosper-website-stylizedtext-tagline.svg"
+          alt="Prosper XO Logo"
+          class="w-48 md:w-64 mx-auto mt-1 md:mt-2 mb-2 md:mb-4"
+        />
+        <div class="flex flex-wrap justify-center gap-1 md:gap-2 mt-2 md:mt-4">
+          <a
+            class="bg-pink-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
+            href="/why-prosper"
+            target="_blank"
+            >WHY PROSPER</a
+          >
+          <button
+            class="modal-button bg-blue-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
+          >
+            WATCH INTRO VIDEO
+          </button>
+          <a
+            class="bg-green-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
+            href="/surveys"
+            target="_blank"
+          >
+            SHARE YOUR VOICE
+          </a>
+          <a
+            class="bg-yellow-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
+            href="/get-involved"
+            target="_blank"
+          >
+            JOIN THE MOVEMENT
+          </a>
+          <a
+            class="bg-red-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
+            href="https://mailchi.mp/d31733a7aa36/prosperxo"
+            target="_blank"
+          >
+            JOIN THE NEWSLETTER
+          </a>
+        </div>
+        <p class="mt-1 md:mt-2 text-sm text-black">
+          LEARN MORE AT <span class="underline">PROSPERXO.COM</span>
+        </p>
       </div>
-      <p class="mt-2 text-sm text-black">
-        LEARN MORE AT <span class="underline">PROSPERXO.COM</span>
-      </p>
-    </div>
+      <div class="w-full">
+        <img
+          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
+          alt="Rainbow Separator"
+          class="w-full h-8"
+        />
+      </div>
+    </footer>
 
     <!-- Modal Overlay -->
     <div

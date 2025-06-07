@@ -51,7 +51,7 @@ const modalContent = {
           </video>
         </div>
         <div class="text-center">
-          <button class="btn-modal w-1/3 mt-4">LEARN MORE</button>
+          <button class="btn-modal w-1/2 md:w-1/3 mt-4">LEARN MORE</button>
         </div>
       </div>
     `,
