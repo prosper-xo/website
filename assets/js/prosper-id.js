@@ -56,6 +56,16 @@ const modalContent = {
       </div>
     `,
   },
+  "book-a-meeting": {
+    title: "BOOK A MEETING",
+    content: `
+
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2N21YpVcp440YCvX148Gurger66IBAqe3U9sbDJb_XjxBfV4yd3-ID7d_1boyOlq3tGutVdyNb?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+
+    `,
+  },
 };
 
 // Modal functionality
@@ -71,7 +81,7 @@ function openModal(type) {
   // Prevent body scroll
   document.body.style.overflow = "hidden";
 
-  if (type === "why-prosper") {
+  if (type === "watch-intro-video") {
     setupModalVideoControls();
   }
 }
@@ -108,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .trim()
         .toLowerCase()
         .replace(/\s+/g, "-");
-       openModal(modalType);
+      openModal(modalType);
     });
   });
 });
