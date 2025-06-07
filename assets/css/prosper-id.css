@@ -6,6 +6,10 @@
   border-radius: 0.5rem;
 }
 
+.btn-gradient:hover {
+  cursor: pointer;
+}
+
 .btn-modal {
   background: #f6543c;
   color: #ffe94f;
