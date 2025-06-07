@@ -165,24 +165,39 @@ document.addEventListener("DOMContentLoaded", function () {
           .replace(/\s+/g, "_");
         const vcardUrl = `/assets/vcards/${safeName}.vcf`;
 
-        // Try to open the vCard
-        const newWindow = window.open(vcardUrl, "_blank");
+        // Check if device is mobile
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        // Check if pop-up was blocked
-        if (
-          !newWindow ||
-          newWindow.closed ||
-          typeof newWindow.closed === "undefined"
-        ) {
-          // Pop-up was blocked, show modal with link
-          const vcardLink = document.getElementById("vcardLink");
-          vcardLink.href = vcardUrl;
-          vcardLink.textContent = vcardUrl;
+        if (isMobile) {
+          // Mobile: Try to open in new window
+          const newWindow = window.open(
+            vcardUrl,
+            "_blank",
+            "noopener,noreferrer,width=600,height=400"
+          );
 
-          const popupBlockedModal =
-            document.getElementById("popupBlockedModal");
-          popupBlockedModal.classList.remove("hidden");
-          popupBlockedModal.classList.add("flex");
+          if (
+            !newWindow ||
+            newWindow.closed ||
+            typeof newWindow.closed === "undefined"
+          ) {
+            const vcardLink = document.getElementById("vcardLink");
+            vcardLink.href = vcardUrl;
+            vcardLink.textContent = vcardUrl;
+
+            const popupBlockedModal =
+              document.getElementById("popupBlockedModal");
+            popupBlockedModal.classList.remove("hidden");
+            popupBlockedModal.classList.add("flex");
+          }
+        } else {
+          // Desktop: Trigger direct download
+          const link = document.createElement("a");
+          link.href = vcardUrl;
+          link.download = `${safeName}.vcf`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
         }
       } catch (err) {
         console.error("Failed to load user data:", err);
