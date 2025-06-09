@@ -43,7 +43,7 @@ loadUserData(id);
 // Modal content definitions
 const modalContent = {
   "watch-intro-video": {
-    title: "WATCH INTRO VIDEO",
+    title: "INTRO VIDEO",
     content: `
       <div class="space-y-4">
         <div class="relative">
@@ -58,29 +58,130 @@ const modalContent = {
       </div>
     `,
   },
+  "let-s-connect": {
+    title: "LET'S CONNECT",
+    content: `
+      <form id="leadForm" class="space-y-4">
+        <div>
+          <label for="fullName" class="block text-sm font-medium mb-1">Name *</label>
+          <input type="text" id="fullName" name="fullName" required
+            class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">How do you prefer to stay updated on news and events from Prosper XO? *</label>
+          <div class="space-x-4">
+            <label class="inline-flex items-center">
+              <input type="radio" name="contactPreference" value="email" required class="mr-2" checked>
+              Email
+            </label>
+            <label class="inline-flex items-center">
+              <input type="radio" name="contactPreference" value="phone" required class="mr-2">
+              Phone
+            </label>
+          </div>
+        </div>
+        <div id="contactContainer">
+          <div id="emailContainer">
+            <label for="emailInput" class="block text-sm font-medium mb-1">Email Address *</label>
+            <input type="email" id="emailInput" name="email" required
+              class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Enter your email address">
+          </div>
+          <div id="phoneContainer" class="hidden">
+            <label for="phoneInput" class="block text-sm font-medium mb-1">Phone Number *</label>
+            <input type="tel" id="phoneInput" name="phone"
+              class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Enter your phone number">
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn-modal w-1/2 md:w-1/3 mt-4">SUBMIT</button>
+        </div>
+      </form>
+    `,
+  },
+  "success-message": {
+    title: "THANK YOU!",
+    content: `
+      <div class="text-center space-y-6 py-4">
+        <div class="text-4xl mb-4">✨</div>
+        <h3 class="text-xl font-semibold">Thank you for connecting with us!</h3>
+        <p class="text-gray-600">We'll be in touch soon.</p>
+        <button class="btn-modal w-1/2 md:w-1/3 mt-4" onclick="closeModal()">CLOSE</button>
+      </div>
+    `,
+  },
+  "loading-state": {
+    title: "SUBMITTING",
+    content: `
+      <div class="text-center space-y-6 py-4">
+        <div class="flex justify-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+        </div>
+        <p class="text-gray-600">Please wait while we process your submission...</p>
+      </div>
+    `,
+  },
 };
 
 // Modal functionality
+let isInteractingWithModal = false;
+
 function openModal(type) {
   const modal = modalContent[type];
-  if (!modal) return;
+  if (!modal) {
+    console.error("Modal type not found:", type);
+    return;
+  }
 
   document.getElementById("modalTitle").textContent = modal.title;
   document.getElementById("modalContent").innerHTML = modal.content;
   document.getElementById("modalOverlay").classList.remove("hidden");
   document.getElementById("modalOverlay").classList.add("flex");
 
+  // Set up modal event listeners
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalContainer = document.getElementById("modalContainer");
+
+  // Track all mouse interactions with modal content
+  modalContainer.addEventListener("mousedown", () => {
+    isInteractingWithModal = true;
+  });
+
+  modalContainer.addEventListener("mouseup", () => {
+    // Small delay to ensure any text selection is complete
+    setTimeout(() => {
+      isInteractingWithModal = false;
+    }, 100);
+  });
+
+  // Close modal events
+  document.getElementById("closeModal").addEventListener("click", closeModal);
+
+  // Handle overlay click
+  modalOverlay.addEventListener("click", function (e) {
+    // Only close if clicking the overlay itself and not interacting with modal content
+    if (e.target === this && !isInteractingWithModal) {
+      closeModal();
+    }
+  });
+
   // Prevent body scroll
   document.body.style.overflow = "hidden";
 
   if (type === "watch-intro-video") {
     setupModalVideoControls();
+  } else if (type === "let-s-connect") {
+    setupLeadForm();
   }
 }
 
 function closeModal() {
   document.getElementById("modalOverlay").classList.add("hidden");
   document.getElementById("modalOverlay").classList.remove("flex");
+
+  // Reset interaction state
+  isInteractingWithModal = false;
 
   // Restore body scroll
   document.body.style.overflow = "";
@@ -97,14 +198,6 @@ function addToContacts(user) {
 
 // Event listeners
 document.addEventListener("DOMContentLoaded", function () {
-  // Close modal events
-  document.getElementById("closeModal").addEventListener("click", closeModal);
-  document
-    .getElementById("modalOverlay")
-    .addEventListener("click", function (e) {
-      if (e.target === this) closeModal();
-    });
-
   // Pop-up blocked modal events
   document
     .getElementById("closePopupBlockedModal")
@@ -137,9 +230,11 @@ document.addEventListener("DOMContentLoaded", function () {
   modalButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const modalType = this.textContent
+        .replace(/\s+/g, " ") // Replace all whitespace (including newlines) with a single space
         .trim()
         .toLowerCase()
-        .replace(/\s+/g, "-");
+        .replace(/['\s]+/g, "-") // Replace both apostrophes and spaces with hyphens
+        .replace(/-+/g, "-"); // Replace multiple hyphens with single hyphen
       openModal(modalType);
     });
   });
@@ -239,5 +334,174 @@ function setupModalVideoControls() {
   });
   video.addEventListener("ended", () => {
     button.textContent = "PLAY ▶︎";
+  });
+}
+
+// Add form handling logic
+function setupLeadForm() {
+  const form = document.getElementById("leadForm");
+  const contactPreferenceInputs = document.querySelectorAll(
+    'input[name="contactPreference"]'
+  );
+  const emailContainer = document.getElementById("emailContainer");
+  const phoneContainer = document.getElementById("phoneContainer");
+  const emailInput = document.getElementById("emailInput");
+  const phoneInput = document.getElementById("phoneInput");
+  const nameInput = document.getElementById("fullName");
+
+  if (
+    !form ||
+    !contactPreferenceInputs.length ||
+    !emailContainer ||
+    !phoneContainer ||
+    !emailInput ||
+    !phoneInput ||
+    !nameInput
+  ) {
+    console.error("Required form elements not found");
+    return;
+  }
+
+  // Function to validate name
+  const validateName = (name) => {
+    if (!name || name.trim().length < 2) {
+      nameInput.setCustomValidity(
+        "Please enter a valid name (at least 2 characters)"
+      );
+      return false;
+    }
+    if (name.trim().length > 100) {
+      nameInput.setCustomValidity("Name is too long (maximum 100 characters)");
+      return false;
+    }
+    nameInput.setCustomValidity("");
+    return true;
+  };
+
+  // Function to validate phone
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!phoneRegex.test(phone)) {
+      phoneInput.setCustomValidity(
+        "Please enter a valid phone number (minimum 10 digits)"
+      );
+      return false;
+    }
+    phoneInput.setCustomValidity("");
+    return true;
+  };
+
+  // Add input validation for name
+  nameInput.addEventListener("input", (e) => {
+    validateName(e.target.value);
+  });
+
+  // Add input validation for phone
+  phoneInput.addEventListener("input", (e) => {
+    validatePhone(e.target.value);
+  });
+
+  // Function to update contact input visibility
+  const updateContactInputs = (type) => {
+    if (type === "email") {
+      emailContainer.classList.remove("hidden");
+      phoneContainer.classList.add("hidden");
+      emailInput.required = true;
+      phoneInput.required = false;
+      phoneInput.value = ""; // Clear phone input when hidden
+    } else if (type === "phone") {
+      emailContainer.classList.add("hidden");
+      phoneContainer.classList.remove("hidden");
+      emailInput.required = false;
+      phoneInput.required = true;
+      emailInput.value = ""; // Clear email input when hidden
+    }
+  };
+
+  // Set initial state
+  updateContactInputs("email");
+
+  // Add change event listeners to radio buttons
+  contactPreferenceInputs.forEach((input) => {
+    input.addEventListener("change", (e) => {
+      updateContactInputs(e.target.value);
+    });
+  });
+
+  // Handle form submission
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Validate all fields
+    const nameValid = validateName(nameInput.value);
+    const contactType = document.querySelector(
+      'input[name="contactPreference"]:checked'
+    )?.value;
+    let contactValid = true;
+
+    if (contactType === "email") {
+      contactValid = emailInput.checkValidity();
+    } else if (contactType === "phone") {
+      contactValid = validatePhone(phoneInput.value);
+    }
+
+    if (nameValid && contactValid) {
+      // Show loading state
+      document.getElementById("modalTitle").textContent =
+        modalContent["loading-state"].title;
+      document.getElementById("modalContent").innerHTML =
+        modalContent["loading-state"].content;
+
+      try {
+        // Prepare form data using URLSearchParams
+        const payload = new URLSearchParams({
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          phone: phoneInput.value.trim(),
+          timestamp: new Date().toISOString(),
+        }).toString();
+
+        // Log the data being sent
+        console.log("Submitting form data:", payload);
+
+        // Send data to Google Apps Script
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbw6s-gpUrH2PAc9Pl4ta9k8AnMQG-vBkwlVEU__3mngfTncOE7WpvSle3Y_lx9GzC9Q/exec",
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: payload,
+          }
+        );
+
+        // Log the response
+        console.log("Form submission response:", response);
+
+        // Show success message
+        document.getElementById("modalTitle").textContent =
+          modalContent["success-message"].title;
+        document.getElementById("modalContent").innerHTML =
+          modalContent["success-message"].content;
+
+        // Reset form
+        form.reset();
+        updateContactInputs("email");
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        // Show error state
+        document.getElementById("modalTitle").textContent = "ERROR";
+        document.getElementById("modalContent").innerHTML = `
+          <div class="text-center space-y-6 py-4">
+            <div class="text-4xl mb-4">⚠️</div>
+            <h3 class="text-xl font-semibold">Something went wrong</h3>
+            <p class="text-gray-600">Please try submitting the form again.</p>
+            <button class="btn-modal w-1/2 md:w-1/3 mt-4" onclick="openModal('let-s-connect')">TRY AGAIN</button>
+          </div>
+        `;
+      }
+    }
   });
 }
