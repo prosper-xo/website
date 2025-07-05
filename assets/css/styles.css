@@ -193,7 +193,7 @@ p {
     background: #000;
     color: #000;
     display: flex;
-    gap: 3em;
+    gap: 1em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
