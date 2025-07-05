@@ -3,14 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take a survey to help us understand how we can better serve artists, venues, brands, and fans in the music industry.">
+    <meta property="og:title" content="Surveys | Prosper XO">
+    <meta property="og:description" content="Help shape the future of the music industry by taking one of our surveys.">
+    <meta property="og:image" content="../assets/logos/prosper-website-logo.png">
+    <meta property="og:url" content="https://prosperxo.com/surveys">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
-    <title>WHY PROSPER? | Prosper XO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>SURVEYS | Prosper XO</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon-multi.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon-192x192.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/why-prosper.css">
 
     <!-- Inline modal & cursor CSS -->
     <style>
@@ -150,22 +165,23 @@
         <img src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator" style="width:100%;">
     </div>
 
-    <!-- Survey buttons -->
-    <section class="survey" style="min-height:600px;">
-        <img src="../assets/text/prosper-website-stylizedtext-survey.svg" alt="Take a Survey Below"
-            style="width:50%; margin-bottom:1.5rem;">
-
-        <div class="survey-buttons">
-            <a href="https://forms.gle/14LM4yptHkYyJiGdA" class="btn red" target="_blank">Artist</a>
-            <a href="https://forms.gle/fEw3hWdYoLfSobPy7" class="btn pink" target="_blank">Venue</a>
-            <a href="https://forms.gle/nMoYZT6Eb5v1i7Vh7" class="btn yellow" target="_blank">Brand</a>
-            <a href="https://forms.gle/qY3A2TAucn7S5p1t6" class="btn blue" target="_blank">Fan</a>
+    <!-- Survey section -->
+    <section class="survey">
+        <div class="w-full lg:w-1/2 mx-auto mb-12">
+            <img src="../assets/text/prosper-website-stylizedtext-survey.svg" alt="Take a Survey Below" class="w-full">
         </div>
 
-        <p style="color: #ffffff; margin-top: 1.5rem;">
+        <div class="survey-buttons">
+            <a href="https://forms.gle/14LM4yptHkYyJiGdA" class="btn red" target="_blank" rel="noopener">Artist</a>
+            <a href="https://forms.gle/fEw3hWdYoLfSobPy7" class="btn pink" target="_blank" rel="noopener">Venue</a>
+            <a href="https://forms.gle/nMoYZT6Eb5v1i7Vh7" class="btn yellow" target="_blank" rel="noopener">Brand</a>
+            <a href="https://forms.gle/qY3A2TAucn7S5p1t6" class="btn blue" target="_blank" rel="noopener">Fan</a>
+        </div>
+
+        <p class="text-white mt-12 mb-6 text-2xl md:text-3xl">
             Share with someone you know!
         </p>
-        <button id="openShare" class="btn yellow">Share</button>
+        <button id="openShare" class="btn yellow text-lg py-3 px-8 mx-auto rounded-lg">Share</button>
     </section>
 
     <!-- Rainbow separator -->
@@ -223,6 +239,8 @@
         </div>
     </div>
 
+    <script src="../assets/js/script.js"></script>
+    
     <script>
         const shareBtn = document.getElementById('openShare');
         const modal = document.getElementById('shareModal');
