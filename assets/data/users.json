@@ -4,21 +4,68 @@
     "firstName": "Lauren",
     "lastName": "Bruno",
     "title": "Founder | CEO",
-    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "email": "lauren@prosperxo.com",
     "phone": "+1-555-123-4567",
     "linkedin": "https://www.linkedin.com/in/lauren-bruno-32658213a/",
     "instagram": "https://instagram.com/lesrav1111"
+  },
+  "1": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-jonny.jpg",
+    "firstName": "David",
+    "lastName": "Cortinas",
+    "title": "Title",
+    "email": "david@prosperxo.com",
+    "phone": "+1-512-422-1731",
+    "linkedin": "https://www.linkedin.com/in/david-cortinas/",
+    "instagram": "https://www.instagram.com/david_curtains/",
+    "meeting": "https://calendar.app.google/7oGZt7Nq49EzX5if9"
+  },
+  "2": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-gabriel.jpg",
+    "firstName": "Gabriel"
+  },
+  "3": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-zeale.jpg",
+    "firstName": "Zeale"
+  },
+  "4": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-sue.jpg",
+    "firstName": "Sue",
+    "lastName": "Koch",
+    "email": "sue@prosperxo.com",
+    "phone": "+1-512-920-2104",
+    "linkedin": "https://www.linkedin.com/in/suekoch/",
+    "instagram": "https://www.instagram.com/suekoch/",
+    "meeting": "https://calendar.app.google/8TSiCR2n1xmWCYpw6"
+  },
+  "5": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-jonny.jpg",
+    "firstName": "Jonny",
+    "lastName": "Johnson",
+    "title": "Founder | CTO",
+    "email": "jonny@prosperxo.com",
+    "phone": "+1-512-422-1731",
+    "linkedin": "https://www.linkedin.com/in/jonathanjohnson2/",
+    "instagram": "https://www.instagram.com/jonnyjohns_n/",
+    "meeting": "https://calendar.app.google/Lp1cNtMjcFSsajcW8"
+  },
+  "6": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-devin.jpg",
+    "firstName": "Devin",
+    "lastName": "Ryan"
   },
   "7": {
     "thumbnail": "prosperxo-image-prosperid-illustration-joseph.jpg",
     "firstName": "Joseph",
     "lastName": "Salazar",
     "title": "Founder | CXO",
-    "bio": "Joseph's bio will be placed here.",
     "email": "joseph@prosperxo.com",
     "phone": "+1-512-422-1731",
     "linkedin": "https://www.linkedin.com/in/josephisaacsalazar/",
     "instagram": "https://instagram.com/josephis___"
+  },
+  "8": {
+    "thumbnail": "prosperxo-image-prosperid-illustration-clinton.jpg",
+    "firstName": "Clinton"
   }
 }
