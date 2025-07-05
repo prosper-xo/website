@@ -726,6 +726,16 @@ p {
     transform: scale(1.1);
 }
 
+.nav-link.nav-home {
+    background-image: url('../text/prosper-website-stylizedtext-nav-home.svg');
+    width: 76px;
+}
+
+.nav-link.nav-home:hover {
+    background-image: url('../text/prosper-website-stylizedtext-nav-home-ro.svg');
+    transform: scale(1.1);
+}
+
 .nav-link.nav-team {
     background-image: url('../text/prosper-website-stylizedtext-nav-team.svg');
     width: 118px;
@@ -834,11 +844,12 @@ p {
     .header-menu {
         display: none;
         position: fixed;
-        top: 100px;
+        top: 80px; /* Reduced from 100px to sit right below the header */
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #fcff00, #ff796c, #b729a4);
         padding: 0;
+        z-index: 1000; /* Ensure it stays above other content */
         z-index: 1000;
         text-align: center;
     }
