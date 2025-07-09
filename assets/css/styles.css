@@ -440,6 +440,10 @@ p {
     background-image: url("../icons/prosper-website-social-ig.svg");
 }
 
+.icon.facebook {
+    background-image: url("../icons/prosper-website-social-fb.svg");
+}
+
 .icon.youtube {
     background-image: url("../icons/prosper-website-social-youtube.svg");
 }
@@ -455,6 +459,10 @@ p {
 
 .footer-icon.instagram {
     background-image: url("../icons/prosper-website-social-ig.svg");
+}
+
+.footer-icon.facebook {
+    background-image: url("../icons/prosper-website-social-fb.svg");
 }
 
 .footer-icon.youtube {
