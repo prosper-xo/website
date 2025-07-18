@@ -38,15 +38,16 @@
 .event-title {
   font-size: 2.2rem;
   font-weight: 600;
+  line-height: 1.2;
   color: #ffef5e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   text-transform: uppercase;
 }
 
 .event-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 

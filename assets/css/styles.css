@@ -193,7 +193,7 @@ p {
     background: #000;
     color: #000;
     display: flex;
-    gap: 3em;
+    gap: 1em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -235,6 +235,17 @@ p {
 @media (max-width: 768px) {
   .survey-buttons {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .survey-buttons a {
+    padding: 1.5rem 1.25rem;
+    font-size: 2rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -429,6 +440,10 @@ p {
     background-image: url("../icons/prosper-website-social-ig.svg");
 }
 
+.icon.facebook {
+    background-image: url("../icons/prosper-website-social-fb.svg");
+}
+
 .icon.youtube {
     background-image: url("../icons/prosper-website-social-youtube.svg");
 }
@@ -444,6 +459,10 @@ p {
 
 .footer-icon.instagram {
     background-image: url("../icons/prosper-website-social-ig.svg");
+}
+
+.footer-icon.facebook {
+    background-image: url("../icons/prosper-website-social-fb.svg");
 }
 
 .footer-icon.youtube {
@@ -726,6 +745,16 @@ p {
     transform: scale(1.1);
 }
 
+.nav-link.nav-home {
+    background-image: url('../text/prosper-website-stylizedtext-nav-home.svg');
+    width: 76px;
+}
+
+.nav-link.nav-home:hover {
+    background-image: url('../text/prosper-website-stylizedtext-nav-home-ro.svg');
+    transform: scale(1.1);
+}
+
 .nav-link.nav-team {
     background-image: url('../text/prosper-website-stylizedtext-nav-team.svg');
     width: 118px;
@@ -834,11 +863,12 @@ p {
     .header-menu {
         display: none;
         position: fixed;
-        top: 100px;
+        top: 80px; /* Reduced from 100px to sit right below the header */
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #fcff00, #ff796c, #b729a4);
         padding: 0;
+        z-index: 1000; /* Ensure it stays above other content */
         z-index: 1000;
         text-align: center;
     }

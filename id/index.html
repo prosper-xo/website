@@ -1,248 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-    />
-    <title>Prosper ID</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/assets/css/prosper-id.css" />
-  </head>
+<html lang="en" class="overflow-x-hidden m-0 p-0">
 
-  <body
-    class="bg-black text-white h-[100dvh] w-screen flex flex-col justify-between overflow-hidden"
-  >
-    <!-- Top Half: Gradient background + portrait -->
-    <div
-      class="bg-gradient-to-b from-pink-500 to-black pt-6 pb-2 flex flex-col items-center md:pt-10 md:pb-4"
-    >
-      <div
-        class="w-24 h-24 rounded-full border-4 border-black overflow-hidden md:w-32 md:h-32"
-      >
-        <img
-          id="userImage"
-          src=""
-          alt="Profile"
-          class="object-cover w-full h-full"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Prosper ID</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/prosper-id.css" />
+</head>
+
+<body class="bg-black text-white min-h-[100dvh] w-full flex flex-col overflow-x-hidden m-0 p-0">
+  <!-- Header with Gradient and Portrait -->
+  <header class="relative">
+    <!-- Gradient Top Section (aligned to image center) -->
+    <div class="h-20 bg-gradient-to-r from-[#f5447d] to-[#7b4cba] md:h-24"></div>
+
+    <!-- Black Bottom Section (extended to image bottom) -->
+    <div class="h-12 bg-black md:h-16"></div>
+
+    <!-- Centered Profile Image -->
+    <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-center">
+      <div class="w-24 h-24 rounded-full border-4 border-black overflow-hidden md:w-32 md:h-32 bg-black">
+        <img id="userImage" src="" alt="Profile" class="object-cover w-full h-full" />
       </div>
     </div>
+  </header>
 
-    <!-- Middle Content -->
-    <div class="text-center px-4 flex-1 flex flex-col justify-center">
-      <h1 id="userName" class="text-xl font-bold text-yellow-400">
+  <!-- Middle Content -->
+  <div class="text-center flex-1 flex flex-col">
+    <div class="flex-1 flex flex-col justify-center w-full px-2">
+    <div class="space-y-2 md:space-y-4">
+      <h1 id="userName" class="text-3xl font-bold text-yellow-400">
         Name Placeholder
       </h1>
-      <h2 id="userTitle" class="text-md text-white">Title Placeholder</h2>
-      <p id="userBio" class="mt-2 text-sm text-white">Short bio placeholder.</p>
+      <h2 id="userTitle" class="text-xl text-white">Title Placeholder</h2>
+    </div>
 
-      <img
-        src="/assets/logos/prosperxo-website-logo-melty-rainbow.png"
-        alt="Prosper XO Logo"
-        class="h-16 mx-auto block"
-      />
+    <div class="py-2 md:py-4">
+      <img src="/assets/logos/prosperxo-website-logo-melty-rainbow.png" alt="Prosper XO Logo"
+        class="h-24 md:h-36 mx-auto block" />
+    </div>
 
-      <div id="contactLinks" class="flex justify-center space-x-4 mt-1 md:mt-2">
-        <a id="emailLink" href="#"
-          ><img
-            src="/assets/icons/prosper-website-social-email-id.svg"
-            alt="Email"
-            class="h-6"
-        /></a>
-        <a id="phoneLink" href="#"
-          ><img
-            src="/assets/icons/prosper-website-social-phone-id.svg"
-            alt="Phone"
-            class="h-6"
-        /></a>
-        <a id="linkedinLink" href="#" target="_blank"
-          ><img
-            src="/assets/icons/prosper-website-social-linkedin-id.svg"
-            alt="LinkedIn"
-            class="h-6"
-        /></a>
-        <a id="instagramLink" href="#" target="_blank"
-          ><img
-            src="/assets/icons/prosper-website-social-ig-id.svg"
-            alt="Instagram"
-            class="h-6"
-        /></a>
+    <div class="space-y-4 md:space-y-6">
+      <div id="contactLinks" class="flex justify-center space-x-6">
+        <a id="emailLink" href="#" class="group relative">
+          <img src="/assets/icons/prosper-website-social-email-id.svg" alt="Email"
+            class="h-6 md:h-7 transition-all duration-200 group-hover:opacity-0 absolute" />
+          <img src="/assets/icons/prosper-website-social-email-id-ro.svg" alt="Email"
+            class="h-6 md:h-7 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+        </a>
+        <a id="phoneLink" href="#" class="group relative">
+          <img src="/assets/icons/prosper-website-social-phone-id.svg" alt="Phone"
+            class="h-6 md:h-7 transition-all duration-200 group-hover:opacity-0 absolute" />
+          <img src="/assets/icons/prosper-website-social-phone-id-ro.svg" alt="Phone"
+            class="h-6 md:h-7 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+        </a>
+        <a id="linkedinLink" href="#" target="_blank" class="group relative">
+          <img src="/assets/icons/prosper-website-social-linkedin-id.svg" alt="LinkedIn"
+            class="h-6 md:h-7 transition-all duration-200 group-hover:opacity-0 absolute" />
+          <img src="/assets/icons/prosper-website-social-linkedin-id-ro.svg" alt="LinkedIn"
+            class="h-6 md:h-7 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+        </a>
+        <a id="instagramLink" href="#" target="_blank" class="group relative">
+          <img src="/assets/icons/prosper-website-social-ig-id.svg" alt="Instagram"
+            class="h-6 md:h-7 transition-all duration-200 group-hover:opacity-0 absolute" />
+          <img src="/assets/icons/prosper-website-social-ig-id-ro.svg" alt="Instagram"
+            class="h-6 md:h-7 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+        </a>
       </div>
 
-      <div
-        class="flex flex-col space-y-2 mt-2 md:mt-4 mb-2 md:mb-2 items-center"
-      >
-        <a
-          id="addContactBtn"
-          class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md text-center hover:cursor-pointer"
-        >
-          ADD CONTACT
-        </a>
-        <button class="modal-button btn-gradient w-64 py-2 text-sm md:py-3 md:text-md">
-          LET'S CONNECT
+    <div class="w-full">
+      <div id="buttonContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full px-4 max-w-md mx-auto">
+        <button id="addContactBtn" class="group relative w-3/5 md:w-4/5 mx-auto px-4 py-2 text-sm text-center font-bold text-black bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 rounded-lg border-2 border-black transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-red-600 hover:via-yellow-500 hover:to-blue-500">
+          <span class="relative z-10">ADD CONTACT</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-yellow-500 to-blue-500 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></div>
         </button>
-        <a
-          class="btn-gradient w-64 py-2 text-sm md:py-3 md:text-md"
-          href="https://calendar.app.google/7oGZt7Nq49EzX5if9"
-          target="_blank"
-        >
-          BOOK A MEETING
+        <button class="modal-button group relative w-3/5 md:w-4/5 mx-auto px-4 py-2 text-sm font-bold text-black bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 rounded-lg border-2 border-black transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-red-600 hover:via-yellow-500 hover:to-blue-500">
+          <span class="relative z-10">LET'S CONNECT</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-yellow-500 to-blue-500 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></div>
+        </button>
+        <!-- Meeting button will be added here by JavaScript if needed -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Gradient Panel -->
+  <div class="flex-grow pb-6 md:pb-10"></div>
+  <footer class="sticky bottom-0 w-full">
+    <div class="w-full text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-2 md:py-4">
+      <h3 class="font-bold text-black text-sm md:text-md">
+        WHAT IS PROSPER XO?
+      </h3>
+      <img src="/assets/text/prosper-website-stylizedtext-tagline.svg" alt="Prosper XO Logo"
+        class="w-80 md:w-64 mx-auto mt-1 md:mt-2 mb-2 md:mb-4" />
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4 mt-2 md:mt-4">
+        <a class="bg-pink-500 px-2 md:px-4 py-2 md:py-2 font-bold text-xs md:text-md rounded-lg border-2 border-black transition-all duration-200 hover:scale-110 hover:opacity-80 transform hover:border-red-500" href="/why-prosper"
+          target="_blank">WHY PROSPER</a>
+        <a class="bg-green-500 px-2 md:px-4 py-2 md:py-2 font-bold text-xs md:text-md rounded-lg border-2 border-black transition-all duration-200 hover:scale-110 hover:opacity-80 transform hover:border-red-500" href="/surveys"
+          target="_blank">
+          SHARE YOUR VOICE
+        </a>
+        <a class="bg-yellow-500 px-2 md:px-4 py-2 md:py-2 font-bold text-xs md:text-md rounded-lg border-2 border-black transition-all duration-200 hover:scale-110 hover:opacity-80 transform hover:border-red-500" href="/get-involved"
+          target="_blank">
+          JOIN THE MOVEMENT
         </a>
       </div>
+      <p class="mt-1 md:mt-2 text-base md:text-md text-black">
+        LEARN MORE AT
+        <a href="https://prosperxo.com/welcome" class="text-[#ff0000] hover:text-[#ffef09] font-black no-underline" target="_blank" rel="noopener">PROSPERXO.COM</a>
+      </p>
     </div>
+    <div class="w-full">
+      <img src="/assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator" class="w-full h-8" />
+    </div>
+  </footer>
 
-    <!-- Bottom Gradient Panel -->
-    <footer class="w-full mt-auto">
-      <div
-        class="text-center bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 py-2 md:py-4 px-2"
-      >
-        <h3 class="font-bold text-black text-sm md:text-md">
-          WHAT IS PROSPER XO?
-        </h3>
-        <img
-          src="/assets/text/prosper-website-stylizedtext-tagline.svg"
-          alt="Prosper XO Logo"
-          class="w-48 md:w-64 mx-auto mt-1 md:mt-2 mb-2 md:mb-4"
-        />
-        <div class="flex flex-wrap justify-center gap-1 md:gap-2 mt-2 md:mt-4">
-          <a
-            class="bg-pink-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
-            href="/why-prosper"
-            target="_blank"
-            >WHY PROSPER</a
-          >
-          <button
-            class="modal-button bg-blue-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
-          >
-            WATCH INTRO VIDEO
+  <!-- Modal Overlay -->
+  <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+    <div id="modalContainer" class="relative max-w-lg w-full max-h-[100vh] overflow-hidden modal-container">
+      <!-- Rainbow Top Border -->
+      <img src="/assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator" class="rainbow-separator" />
+
+      <div class="rounded-b-lg rounded-t-lg p-6 h-full overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="relative flex flex-col items-center mb-4">
+          <h2 id="modalTitle" class="text-2xl font-extrabold text-black tracking-wide text-center"
+            style="letter-spacing: 1px"></h2>
+          <button id="closeModal"
+            class="text-black hover:text-yellow-400 text-3xl font-bold absolute top-0 right-0 -mt-2">
+            &times;
           </button>
-          <a
-            class="bg-green-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
-            href="/surveys"
-            target="_blank"
-          >
-            SHARE YOUR VOICE
-          </a>
-          <a
-            class="bg-yellow-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
-            href="/get-involved"
-            target="_blank"
-          >
-            JOIN THE MOVEMENT
-          </a>
-          <a
-            class="bg-red-500 px-1.5 md:px-4 py-0.5 md:py-2 font-bold text-xs md:text-md"
-            href="https://mailchi.mp/d31733a7aa36/prosperxo"
-            target="_blank"
-          >
-            JOIN THE NEWSLETTER
-          </a>
         </div>
-        <p class="mt-1 md:mt-2 text-xs md:text-sm text-black">
-          LEARN MORE AT
-          <a
-            href="https://prosperxo.com/welcome"
-            class="underline"
-            target="_blank"
-            rel="noopener"
-            >PROSPERXO.COM</a
-          >
+
+        <!-- Modal Content Area -->
+        <div id="modalContent" class="text-white">
+          <!-- Dynamic content goes here -->
+        </div>
+      </div>
+
+      <!-- Rainbow Bottom Border -->
+      <img src="/assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator" class="rainbow-separator" />
+    </div>
+  </div>
+
+  <!-- Pop-up Blocked Modal -->
+  <div id="popupBlockedModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-black">
+      <div class="flex flex-col items-center space-y-4">
+        <h2 class="text-xl font-bold text-center">Pop-up Blocked</h2>
+        <p class="text-center text-gray-600">
+          To add this contact, please allow pop-ups for this site and try
+          again, or click the link below:
         </p>
-      </div>
-      <div class="w-full">
-        <img
-          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
-          alt="Rainbow Separator"
-          class="w-full h-8"
-        />
-      </div>
-    </footer>
-
-    <!-- Modal Overlay -->
-    <div
-      id="modalOverlay"
-      class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4"
-    >
-      <div
-        id="modalContainer"
-        class="relative max-w-lg w-full max-h-[100vh] overflow-hidden modal-container"
-      >
-        <!-- Rainbow Top Border -->
-        <img
-          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
-          alt="Rainbow Separator"
-          class="rainbow-separator"
-        />
-
-        <div class="rounded-b-lg rounded-t-lg p-6 h-full overflow-y-auto">
-          <!-- Modal Header -->
-          <div class="relative flex flex-col items-center mb-4">
-            <h2
-              id="modalTitle"
-              class="text-2xl font-extrabold text-black tracking-wide text-center"
-              style="letter-spacing: 1px"
-            ></h2>
-            <button
-              id="closeModal"
-              class="text-black hover:text-yellow-400 text-3xl font-bold absolute top-0 right-0 -mt-2"
-            >
-              &times;
-            </button>
-          </div>
-
-          <!-- Modal Content Area -->
-          <div id="modalContent" class="text-white">
-            <!-- Dynamic content goes here -->
-          </div>
-        </div>
-
-        <!-- Rainbow Bottom Border -->
-        <img
-          src="/assets/graphics/prosper-website-sep-rainbow.jpg"
-          alt="Rainbow Separator"
-          class="rainbow-separator"
-        />
-      </div>
-    </div>
-
-    <!-- Pop-up Blocked Modal -->
-    <div
-      id="popupBlockedModal"
-      class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4"
-    >
-      <div class="bg-white rounded-2xl max-w-md w-full p-6 text-black">
-        <div class="flex flex-col items-center space-y-4">
-          <h2 class="text-xl font-bold text-center">Pop-up Blocked</h2>
-          <p class="text-center text-gray-600">
-            To add this contact, please allow pop-ups for this site and try
-            again, or click the link below:
-          </p>
-          <a
-            id="vcardLink"
-            href="#"
-            target="_blank"
-            class="text-blue-500 hover:text-blue-700 break-all text-center"
-          >
-            Click here to open contact
-          </a>
-          <p class="text-center text-gray-600 text-sm mt-2">
-            If you see a "Failed to Add Pass" error, try copying the link above
-            and opening it in a different browser (like Chrome or Safari).
-          </p>
-          <div class="w-full space-y-3 mt-4">
-            <button
-              id="closePopupBlockedModal"
-              class="w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
-            >
-              Close
-            </button>
-          </div>
+        <a id="vcardLink" href="#" target="_blank" class="text-blue-500 hover:text-blue-700 break-all text-center">
+          Click here to open contact
+        </a>
+        <p class="text-center text-gray-600 text-sm mt-2">
+          If you see a "Failed to Add Pass" error, try copying the link above
+          and opening it in a different browser (like Chrome or Safari).
+        </p>
+        <div class="w-full space-y-3 mt-4">
+          <button id="closePopupBlockedModal"
+            class="w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors">
+            Close
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="/assets/js/prosper-id.js"></script>
-  </body>
+  <script src="/assets/js/prosper-id.js"></script>
+</body>
+
 </html>

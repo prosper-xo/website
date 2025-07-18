@@ -1,11 +1,29 @@
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.header-menu');
+    const body = document.body;
+    
     hamburger.addEventListener('click', function () {
         const isOpen = menu.classList.toggle('open');
         hamburger.classList.toggle('open');
         hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        
+        // Toggle body scroll lock when menu is open
+        if (isOpen) {
+            body.style.overflow = 'hidden';
+            // Save current scroll position
+            body.style.position = 'fixed';
+            body.style.top = `-${window.scrollY}px`;
+            body.style.width = '100%';
+        } else {
+            // Restore scroll position
+            const scrollY = body.style.top;
+            body.style.position = '';
+            body.style.top = '';
+            body.style.width = '';
+            body.style.overflow = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
     });
 });
 

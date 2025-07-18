@@ -3,13 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
-    <title>WHY PROSPER? | Prosper XO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take a survey to help us understand how we can better serve artists, venues, brands, and fans in the music industry.">
+    <meta property="og:title" content="Surveys | Prosper XO">
+    <meta property="og:description" content="Help shape the future of the music industry by taking one of our surveys.">
+    <meta property="og:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg">
+    <meta property="og:url" content="https://prosperxo.com/surveys">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Surveys | Prosper XO">
+    <meta name="twitter:description" content="Help shape the future of the music industry by taking one of our surveys.">
+    <meta name="twitter:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>SURVEYS | Prosper XO</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon-multi.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="../assets/favicon/favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon-192x192.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/why-prosper.css">
 
     <!-- Inline modal & cursor CSS -->
     <style>
@@ -86,82 +107,86 @@
         }
     </style>
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-E00NWTHP4Q');
-</script>
+        gtag('config', 'G-E00NWTHP4Q');
+    </script>
 </head>
 
 <body>
     <header class="header">
-    <!-- Left Column -->
-    <div class="header-left">
-      <a href="../welcome/">
-        <img src="../assets/logos/prosper-website-logo.png" alt="Prosper XO" class="logo">
-      </a>
-    </div>
-
-    <!-- Right Column -->
-    <div class="header-menu">
-      <img class="rainbow-top" src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator">
-
-      <div class="header-right">
-        <!-- Navigation Links -->
-        <nav class="nav">
-          <a href="../why-prosper" class="nav-link nav-why">Why Prosper</a>
-          <a href="../team" class="nav-link nav-team">Our Team</a>
-          <a href="../ethos" class="nav-link nav-ethos">Ethos</a>
-          <a href="../events" class="nav-link nav-events">Events</a>
-          <a href="../get-involved" class="nav-link nav-involved">Get Involved</a>
-        </nav>
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-          <a class="icon x" href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"></a>
-          <a class="icon instagram" href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank"></a>
-          <a class="icon youtube" href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank"></a>
-          <a class="icon linkedin" href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn"
-            target="_blank"></a>
+        <!-- Left Column -->
+        <div class="header-left">
+            <a href="../welcome/">
+                <img src="../assets/logos/prosper-website-logo.png" alt="Prosper XO" class="logo">
+            </a>
         </div>
-      </div>
-      <img class="rainbow-top" src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator">
 
-    </div>
+        <!-- Right Column -->
+        <div class="header-menu">
+            <img class="rainbow-top" src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator">
 
-    <!-- Mobile Menu Button -->
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
+            <div class="header-right">
+                <!-- Navigation Links -->
+                <nav class="nav">
+                    <a href="../welcome" class="nav-link nav-home md:hidden block">HOME</a>
+                    <a href="../why-prosper" class="nav-link nav-why">Why Prosper</a>
+                    <a href="../team" class="nav-link nav-team">Our Team</a>
+                    <a href="../ethos" class="nav-link nav-ethos">Ethos</a>
+                    <a href="../events" class="nav-link nav-events">Events</a>
+                    <a href="../get-involved" class="nav-link nav-involved">Get Involved</a>
+                  </nav>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a class="icon x" href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"></a>
+                    <a class="icon instagram" href="https://instagram.com/prosperxo" aria-label="Instagram"
+                        target="_blank"></a>
+                    <a class="icon youtube" href="https://youtube.com/@prosperxo" aria-label="YouTube"
+                        target="_blank"></a>
+                    <a class="icon linkedin" href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn"
+                        target="_blank"></a>
+                </div>
+            </div>
+            <img class="rainbow-top" src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator">
+
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
     <!-- Rainbow separator -->
     <div class="separator">
         <img src="../assets/graphics/prosper-website-sep-rainbow.jpg" alt="Rainbow Separator" style="width:100%;">
     </div>
 
-    <!-- Survey buttons -->
-    <section class="survey" style="min-height:600px;">
-        <img src="../assets/text/prosper-website-stylizedtext-survey.svg" alt="Take a Survey Below"
-            style="width:50%; margin-bottom:1.5rem;">
-
-        <div class="survey-buttons">
-            <a href="https://forms.gle/14LM4yptHkYyJiGdA" class="btn red" target="_blank">Artist</a>
-            <a href="https://forms.gle/fEw3hWdYoLfSobPy7" class="btn pink" target="_blank">Venue</a>
-            <a href="https://forms.gle/nMoYZT6Eb5v1i7Vh7" class="btn yellow" target="_blank">Brand</a>
-            <a href="https://forms.gle/qY3A2TAucn7S5p1t6" class="btn blue" target="_blank">Fan</a>
+    <!-- Survey section -->
+    <section class="survey">
+        <div class="w-full lg:w-1/2 mx-auto mb-3 md:mb-12">
+            <img src="../assets/text/prosper-website-stylizedtext-survey.svg" alt="Take a Survey Below" class="w-full">
         </div>
 
-        <p style="color: #ffffff; margin-top: 1.5rem;">
+        <div class="survey-buttons">
+            <a href="https://forms.gle/14LM4yptHkYyJiGdA" class="btn red" target="_blank" rel="noopener">Artist</a>
+            <a href="https://forms.gle/fEw3hWdYoLfSobPy7" class="btn pink" target="_blank" rel="noopener">Venue</a>
+            <a href="https://forms.gle/nMoYZT6Eb5v1i7Vh7" class="btn yellow" target="_blank" rel="noopener">Brand</a>
+            <a href="https://forms.gle/qY3A2TAucn7S5p1t6" class="btn blue" target="_blank" rel="noopener">Fan</a>
+        </div>
+
+        <p class="text-white mt-6 md:mt-12 mb-6 text-2xl md:text-3xl">
             Share with someone you know!
         </p>
-        <button id="openShare" class="btn yellow">Share</button>
+        <button id="openShare" class="btn yellow text-lg py-3 px-8 mx-auto rounded-lg">Share</button>
     </section>
 
     <!-- Rainbow separator -->
@@ -170,28 +195,37 @@
     </div>
 
     <footer class="footer">
+        <h3>WE WANT TO HEAR FROM YOU</h3>
+    
         <section class="contact-section">
-            <div class="contact-block">
-                <div class="contact-label">PRESS INQUIRIES</div>
-                <a href="mailto:pr@prosperxo.com" class="contact-email gradient1">pr@prosperxo.com</a>
-            </div>
-            <div class="contact-block">
-                <div class="contact-label">GET INVOLVED</div>
-                <a href="mailto:info@prosperxo.com" class="contact-email gradient2">info@prosperxo.com</a>
-            </div>
+          <div class="contact-block">
+            <div class="contact-label">PRESS INQUIRIES</div>
+            <a href="mailto:pr@prosperxo.com" class="contact-email gradient1">
+              pr@prosperxo.com
+            </a>
+          </div>
+    
+          <div class="contact-block">
+            <div class="contact-label">GET INVOLVED</div>
+            <a href="mailto:info@prosperxo.com" class="contact-email gradient2">
+              info@prosperxo.com
+            </a>
+          </div>
         </section>
+    
         <div class="social-icons">
-            <a class="footer-icon x" href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"></a>
-            <a class="footer-icon instagram" href="https://instagram.com/prosperxo" aria-label="Instagram"
-                target="_blank"></a>
-            <a class="footer-icon youtube" href="https://youtube.com/@prosperxo" aria-label="YouTube"
-                target="_blank"></a>
-            <a class="footer-icon linkedin" href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn"
-                target="_blank"></a>
+          <a class="footer-icon x" href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"></a>
+          <a class="footer-icon instagram" href="https://instagram.com/prosperxo" aria-label="Instagram"
+            target="_blank"></a>
+          <a class="footer-icon youtube" href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank"></a>
+          <a class="footer-icon linkedin" href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn"
+            target="_blank"></a>
         </div>
-        <br><br>
-        <img src="../assets/logos/prosper-website-logo-alt.png" alt="Prosper XO Logo" style="width:25%;">
-    </footer>
+        <br>
+        <br>
+    
+        <img src="../assets/logos/prosper-website-logo-alt.png" alt="Prosper XO Logo" class="block mx-auto w-[70%] md:w-1/4">
+      </footer>
 
     <!-- Share Modal -->
     <div id="shareModal" class="share-modal">
@@ -200,7 +234,7 @@
             <button class="share-modal__close" aria-label="Close modal">&times;</button>
             <h2>Share this page</h2>
             <div class="share-modal__buttons">
-                <a id="shareFacebook" href="#" class="footer-icon instagram" aria-label="Instagram" target="_blank"
+                <a id="shareFacebook" href="#" class="footer-icon facebook" aria-label="Facebook" target="_blank"
                     rel="noopener noreferrer"></a>
                 <a id="shareTwitter" href="#" class="footer-icon x" aria-label="X" target="_blank"
                     rel="noopener noreferrer"></a>
@@ -210,6 +244,8 @@
         </div>
     </div>
 
+    <script src="../assets/js/script.js"></script>
+    
     <script>
         const shareBtn = document.getElementById('openShare');
         const modal = document.getElementById('shareModal');

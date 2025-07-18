@@ -9,10 +9,23 @@ async function loadUserData(id) {
     const res = await fetch("/assets/data/users.json");
     const data = await res.json();
     const user = data[id];
+    console.log('User data:', user);
+    console.log('ID:', id);
 
     if (!user) {
+      console.error('User not found for ID:', id);
       document.getElementById("userName").textContent = "User not found.";
       return;
+    }
+
+    // Update page title
+    document.title = `${user.firstName} ${user.lastName} | PROSPER ID`;
+    
+    // Debug: Check if elements exist
+    const userNameEl = document.getElementById("userName");
+    console.log('userName element:', userNameEl);
+    if (!userNameEl) {
+      console.error('Could not find element with id "userName"');
     }
 
     // Populate elements
@@ -23,22 +36,46 @@ async function loadUserData(id) {
       "userName"
     ).textContent = `${user.firstName} ${user.lastName}`;
     document.getElementById("userTitle").textContent = user.title;
-    document.getElementById("userBio").textContent = user.bio;
 
     // Set social/contact links
     document.getElementById("emailLink").href = `mailto:${user.email}`;
     document.getElementById("phoneLink").href = `tel:${user.phone}`;
     document.getElementById("linkedinLink").href = user.linkedin;
     document.getElementById("instagramLink").href = user.instagram;
+
+    // Handle meeting button
+    const buttonContainer = document.getElementById('buttonContainer');
+
+    if (user.meeting) {
+      // Create meeting button
+      const meetingBtn = document.createElement('a');
+      meetingBtn.className = 'group relative w-3/5 md:w-4/5 mx-auto px-4 py-2 text-sm text-center font-bold text-black bg-gradient-to-r from-red-500 via-yellow-400 to-blue-400 rounded-lg border-2 border-black transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-red-600 hover:via-yellow-500 hover:to-blue-500';
+      meetingBtn.href = user.meeting;
+      meetingBtn.target = '_blank';
+      meetingBtn.innerHTML = '<span class="relative z-10">BOOK A MEETING</span><div class="absolute inset-0 bg-gradient-to-r from-red-600 via-yellow-500 to-blue-500 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></div>';
+
+      // Add the meeting button to the container
+      buttonContainer.appendChild(meetingBtn);
+
+      // Update container for 3 buttons
+      buttonContainer.classList.remove('md:grid-cols-2');
+      buttonContainer.classList.add('md:grid-cols-3');
+      buttonContainer.classList.remove('max-w-md');
+      buttonContainer.classList.add('max-w-2xl');
+    }
+
   } catch (err) {
     console.error("Failed to load user data:", err);
     document.getElementById("userName").textContent = "Error loading profile.";
   }
 }
 
-// Run it
-const id = getQueryParam("id") || "0";
-loadUserData(id);
+// Wait for the DOM to be fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+  const id = getQueryParam("id") || "0";
+  console.log('DOM fully loaded, loading user data for ID:', id);
+  loadUserData(id);
+});
 
 // Modal content definitions
 const modalContent = {
