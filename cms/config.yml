@@ -1,4 +1,20 @@
 backend:
   name: github
-  repo: 111project/250421
+  repo: 1111project/250421
   branch: main
+
+media_folder: "assets/blog/uploads"
+public_folder: "/assets/blog"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "assets/blog/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
