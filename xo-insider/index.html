@@ -10,7 +10,7 @@
   <div id="post-body"></div>
 
   <script>
-    fetch('/assets/blog/posts/first-post.md')
+    fetch('../assets/blog/posts/first-post.md')
       .then(response => response.text())
       .then(fileContent => {
         // Split frontmatter and body
