@@ -1,5 +1,5 @@
 ---
-title: "My First Blog Post...it's working!"
+title: "My First Blog Post...it's working!!"
 draft: false
 date: "2025-07-19T07:00:00Z"
 cover_image: "/assets/blog/uploads/example-image.jpg"
