@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Blog</title>
+</head>
+<body>
+  <h1 id="post-title"></h1>
+  <img id="post-image" style="max-width: 300px;" />
+  <div id="post-body"></div>
+
+  <script>
+    fetch('/assets/blog/posts/first-post.md')
+      .then(response => response.text())
+      .then(fileContent => {
+        // Split frontmatter and body
+        const parts = fileContent.split('---');
+        const frontmatterRaw = parts[1].trim();
+        const body = parts.slice(2).join('---').trim();
+
+        // Parse frontmatter manually (simple)
+        const frontmatterLines = frontmatterRaw.split('\n');
+        const frontmatter = {};
+        frontmatterLines.forEach(line => {
+          const [key, ...valueParts] = line.split(':');
+          frontmatter[key.trim()] = valueParts.join(':').trim().replace(/(^"|"$)/g, '');
+        });
+
+        // Display values
+        document.getElementById('post-title').innerText = frontmatter.title || 'No Title';
+        document.getElementById('post-image').src = frontmatter.cover_image || '';
+        document.getElementById('post-body').innerText = body;
+      });
+  </script>
+</body>
+</html>
