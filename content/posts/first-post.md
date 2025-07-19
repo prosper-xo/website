@@ -2,7 +2,7 @@
 title: "My First Blog Post...it's working!!"
 draft: false
 date: "2025-07-19T07:00:00Z"
-cover_image: "uploads/example-image.jpg"
+cover_image: "/content/uploads/example-image.jpg"
 category: "Updates"
 tags:
   - test
