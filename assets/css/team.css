@@ -258,8 +258,83 @@
   max-width: 1200px; /* Match the width of the Lauren card */
 }
 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.name-title {
+    margin-bottom: 10px; /* Adjust spacing between title and icons */
+}
+
+.name-title .name, .name-title .title, .text-container .name, .text-container .title {
+    color: #000;
+}
+
+.name-title .name, .text-container .name {
+    font-size: 22px;
+    font-weight: 700; /* Bold */
+    display: block;
+    line-height: 1.2;
+}
+
+.name-title .title, .text-container .title {
+    font-size: 16px;
+    display: block;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.social-link {
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  color: #333333;
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-link i {
+  font-size: 18px;
+}
+
 @media (max-width: 600px) {
   .team-card {
-    aspect-ratio: 3 / 2; /* Match Lauren’s aspect ratio */
+    aspect-ratio: 3 / 2; /* Match Lauren's aspect ratio */
+  }
+  
+  .social-icons {
+    gap: 12px;
+  }
+  
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .social-link i {
+    font-size: 14px;
   }
 }
