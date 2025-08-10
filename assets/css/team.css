@@ -31,8 +31,8 @@
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     width: 100%;
@@ -103,6 +103,7 @@
     transform: translateX(-50%);
     height: 100%;
     width: auto;
+    object-fit: contain; /* Prevents image distortion */
 }
 
 /* Hover effect */
@@ -123,18 +124,18 @@
     background-color: #f5e96a;
 }
 
-/* Responsive layout */
-@media (max-width: 900px) {
-    .team-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+.card-zeale {
+    background-color: #feaa4a;
 }
 
-@media (max-width: 600px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
+.card-david {
+    background-color: #c9cabd;
 }
+
+/* Responsive layout */
+
+
+
 
 .text-header {
     display: block;
@@ -149,6 +150,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex: 0 1 350px; /* Set a basis for the flex items */
 }
 
 /* Shared bio below card */
@@ -297,44 +299,44 @@
 
 .social-link {
   color: #000000;
-  font-size: 20px;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: color 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+  position: relative;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
 }
 
 .social-link:hover {
-  color: #333333;
+  background-color: #000;
+  color: #ffef09;
   transform: scale(1.1);
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .social-link i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 18px;
 }
 
 @media (max-width: 600px) {
   .team-card {
-    aspect-ratio: 3 / 2; /* Match Lauren's aspect ratio */
+    aspect-ratio: 3 / 4; /* Use a taller aspect ratio for mobile */
   }
   
   .social-icons {
-    gap: 12px;
+    gap: 18px;
   }
   
   .social-link {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+    width: 44px;
+    height: 44px;
   }
   
   .social-link i {
-    font-size: 14px;
+    font-size: 22px;
   }
 }
