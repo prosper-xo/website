@@ -13,6 +13,15 @@ body {
   margin: 0;
 }
 
+@font-face {
+  /* Give the font a custom name to reference it later */
+  font-family: "Feu de camp Timber";
+  /* Point to the location of your font file */
+  src: url("fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  /* Set font-display for better performance options: swap, block, fallback, optional */
+  font-display: block;
+}
+
 body {
   /* — rainbow wash — */
   background-image: radial-gradient(
