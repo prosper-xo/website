@@ -132,6 +132,14 @@
     background-color: #c9cabd;
 }
 
+.card-devin {
+    background-color: #cc7a00;
+}
+
+.card-sue {
+    background-color: #9b59b6;
+}
+
 /* Responsive layout */
 
 
@@ -325,6 +333,28 @@
 @media (max-width: 600px) {
   .team-card {
     aspect-ratio: 3 / 4; /* Use a taller aspect ratio for mobile */
+  }
+  
+  /* Fix Lauren's card for mobile */
+  .lauren-card {
+    aspect-ratio: 1 / 1; /* Make it more square on mobile */
+  }
+  
+  .lauren-card .lauren-img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensure the full image is visible */
+    position: relative;
+    transform: none;
+    left: auto;
+  }
+  
+  .lauren-card .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   
   .social-icons {
