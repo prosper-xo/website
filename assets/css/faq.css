@@ -368,7 +368,7 @@
 
 /* Get Involved Section */
 .get-involved-section {
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 0;
   margin-bottom: 3rem;
 }
 
@@ -388,86 +388,66 @@
 
 .involvement-options {
   display: grid;
-  gap: 1.5rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .involvement-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background: #ffef09;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f59e0b;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.involvement-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
 
 .involvement-label {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #1f1.8rem937;
 }
 
 .involvement-action {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #dc2626;
+  font-size: 2.1rem;
+  color: #fe0000;
   font-weight: 600;
 }
 
 /* Contact Section */
 .contact-section {
-  padding: 3rem 2rem;
+  padding: 0 2rem;
   margin-bottom: 3rem;
 }
 
 .contact-options {
   display: grid;
-  gap: 1.5rem;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .contact-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background: #ffef09;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f59e0b;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  padding: 0 2rem;
 }
 
 .contact-label {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #000000;
 }
 
-.contact-email {
+.contact-section .contact-email {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 2.1rem;
   font-weight: 500;
-  color: #dc2626;
+  color: #fe0000;
   font-weight: 600;
+  -webkit-text-fill-color: #fe0000;
+  background-clip: unset;
+  -webkit-background-clip: unset;
 }
 
 /* Footer */
@@ -475,7 +455,6 @@
   background: #0f0f0f;
   padding: 3rem 2rem;
   text-align: center;
-  margin-top: 4rem;
 }
 
 .footer-content {
@@ -496,7 +475,7 @@
 .footer-contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 15rem;
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
