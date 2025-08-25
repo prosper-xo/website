@@ -36,7 +36,6 @@
   cursor: pointer;
   padding: 8px;
   z-index: 1001;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -624,12 +623,13 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 .contact-section {
   padding: 0 2rem;
   margin-bottom: 3rem;
+  gap: 1rem; 
 }
 
 .contact-options {
   display: grid;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 2.5rem;
 }
 
 .contact-item {
@@ -696,26 +696,55 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
   margin: 0;
 }
 
+/* Apply gradient to PRESS INQUIRIES text */
+.press-inquiries {
+  background: linear-gradient(90deg, #fcc80e, #5caba4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fcc80e; /* Fallback color */
+}
+
+/* Apply gradient to GET INVOLVED text */
+.get-involved {
+  background: linear-gradient(90deg, #d96f65, #c64a96, #fe6c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #d96f65; /* Fallback color */
+}
+
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  padding-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .footer-social a {
   display: inline-block;
   transition: transform 0.2s ease;
+  color: #fced18;
 }
 
 .footer-social a:hover {
   transform: scale(1.1);
+  color: #fced18;
 }
 
 .footer-social img {
   width: 30px;
   height: 30px;
-  filter: brightness(0) invert(1);
+  /* Apply yellow filter to make icons yellow instead of white */
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(1000%)
+    hue-rotate(0deg) brightness(1.1) contrast(1.1);
+}
+
+/* Ensure all social links maintain the yellow color */
+.footer-social a:visited,
+.footer-social a:active {
+  color: #fced18;
 }
 
 .footer-logo {
