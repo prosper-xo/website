@@ -35,6 +35,15 @@
   gap: 4px;
   cursor: pointer;
   padding: 8px;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .hamburger-menu span {
@@ -47,6 +56,207 @@
 
 .hamburger-menu:hover span {
   background: #333;
+}
+
+/* Secondary Navigation Menu */
+.secondary-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #000;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  padding-top: 4rem;
+  /* Debug: ensure content is visible */
+  color: #fff;
+  /* Ensure menu items are visible */
+  min-height: 100vh;
+}
+
+/* Menu header with close button */
+.secondary-nav::after {
+  content: "×";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.secondary-nav::after:hover {
+  color: #ff7a75;
+  transform: scale(1.1);
+}
+
+/* Backdrop overlay when menu is open */
+.secondary-nav::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.secondary-nav.nav-open::before {
+  opacity: 1;
+}
+
+/* Add a subtle animation to menu items */
+.secondary-nav a {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block !important;
+  width: 100% !important;
+  /* Debug: ensure visibility */
+  visibility: visible !important;
+  color: #fff !important;
+  background: transparent !important;
+  margin: 0.5rem 0 !important;
+  padding: 1.5rem 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-family: "Feu de camp Timber", serif !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  /* Additional debug styles */
+  min-height: 50px !important;
+  line-height: 1.2 !important;
+}
+
+/* Ensure menu items are visible even with conflicting CSS */
+.new-header .main-header .secondary-nav a {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Apply the same colors to secondary nav menu items */
+.secondary-nav .text-nav-why {
+  color: #ec0caa !important;
+  text-shadow: 0 0 10px rgba(236, 12, 170, 0.5);
+}
+
+/* More specific selector to ensure visibility */
+.new-header .main-header .secondary-nav .text-nav-why {
+  color: #ec0caa !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Force WHY PROSPER link to be visible with maximum specificity and gradient */
+.secondary-nav .text-nav-why,
+.new-header .main-header .secondary-nav .text-nav-why,
+body .new-header .main-header .secondary-nav .text-nav-why,
+html body .new-header .main-header .secondary-nav .text-nav-why {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: #ec0caa !important; /* Fallback color */
+  font-weight: bold !important;
+  /* Force text to be visible */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.secondary-nav .text-nav-team {
+  color: #fa2dfd !important;
+}
+
+.secondary-nav .text-nav-ethos {
+  color: #44fe7a !important;
+}
+
+.secondary-nav .text-nav-events {
+  color: #2ff5ff !important;
+}
+
+.secondary-nav .text-nav-involved {
+  color: #ffb344 !important;
+}
+
+.secondary-nav .text-nav-press {
+  color: #45ff79 !important;
+}
+
+.secondary-nav .text-nav-insider {
+  color: #d674ff !important;
+}
+
+.secondary-nav.nav-open {
+  left: 0;
+}
+
+.secondary-nav a {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-nav a:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+/* Hover effects for colored menu items */
+.secondary-nav a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure gradient text works properly on hover */
+.secondary-nav .text-nav-why:hover {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .logo-container {
@@ -199,17 +409,14 @@
     text-align: center;
   }
 
-  /* Hamburger animation */
-  .hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  /* Mobile-specific styles for secondary nav */
+  .secondary-nav {
+    width: 100%;
+    left: -100%;
   }
 
-  .hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+  .secondary-nav.nav-open {
+    left: 0;
   }
 }
 
@@ -529,6 +736,11 @@
     padding: 1rem;
   }
 
+  .hamburger-menu {
+    left: 1rem;
+    top: 50%;
+  }
+
   .logo-text {
     font-size: 1.5rem;
   }
@@ -544,17 +756,6 @@
   .social-icons img {
     width: 20px;
     height: 20px;
-  }
-
-  .secondary-nav {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .secondary-nav .nav-link {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.5rem;
   }
 
   /* FAQ content responsive */
@@ -601,6 +802,16 @@
 }
 
 @media (max-width: 480px) {
+  .hamburger-menu {
+    left: 0.5rem;
+    padding: 6px;
+  }
+
+  .hamburger-menu span {
+    width: 20px;
+    height: 2px;
+  }
+
   .faq-title {
     font-size: 2rem;
   }

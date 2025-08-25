@@ -106,14 +106,14 @@
           <span></span>
         </div>
 
-        <div class="hamburger-menu-options">
-          <a href="../why-prosper" class="hamburger-menu-option">WHY PROSPER</a>
-          <a href="../team" class="hamburger-menu-option">TEAM</a>
-          <a href="../ethos" class="hamburger-menu-option">ETHOS</a>
-          <a href="../events" class="hamburger-menu-option">EVENTS</a>
-          <a href="../get-involved" class="hamburger-menu-option">GET INVOLVED</a>
-          <a href="../press" class="hamburger-menu-option">PRESS</a>
-          <a href="../xo-insider" class="hamburger-menu-option">XO INSIDER</a>
+        <div class="secondary-nav">
+          <a href="../why-prosper" class="text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-involved">GET INVOLVED</a>
+          <a href="../press" class="text-nav-press">PRESS</a>
+          <a href="../xo-insider" class="text-nav-insider">XO INSIDER</a>
         </div>
 
         <div class="logo-container">
@@ -561,10 +561,35 @@
       document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.querySelector(".hamburger-menu");
         const secondaryNav = document.querySelector(".secondary-nav");
+        const body = document.body;
 
-        hamburger.addEventListener("click", function () {
+        console.log("Hamburger element:", hamburger);
+        console.log("Secondary nav element:", secondaryNav);
+        console.log("Menu items:", secondaryNav.querySelectorAll("a"));
+
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation();
           secondaryNav.classList.toggle("nav-open");
           hamburger.classList.toggle("active");
+          
+          console.log("Menu toggled. nav-open class:", secondaryNav.classList.contains("nav-open"));
+          console.log("Menu items visible:", secondaryNav.querySelectorAll("a").length);
+          
+          // Prevent body scroll when menu is open
+          if (secondaryNav.classList.contains("nav-open")) {
+            body.style.overflow = "hidden";
+          } else {
+            body.style.overflow = "";
+          }
+        });
+
+        // Close menu when clicking on a link or close button
+        secondaryNav.addEventListener("click", function (e) {
+          if (e.target.tagName === "A" || e.target === secondaryNav) {
+            secondaryNav.classList.remove("nav-open");
+            hamburger.classList.remove("active");
+            body.style.overflow = "";
+          }
         });
 
         // Close menu when clicking outside
@@ -575,6 +600,16 @@
           ) {
             secondaryNav.classList.remove("nav-open");
             hamburger.classList.remove("active");
+            body.style.overflow = "";
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && secondaryNav.classList.contains("nav-open")) {
+            secondaryNav.classList.remove("nav-open");
+            hamburger.classList.remove("active");
+            body.style.overflow = "";
           }
         });
       });
