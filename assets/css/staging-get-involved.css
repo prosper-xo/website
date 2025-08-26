@@ -1,0 +1,801 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Font Face Declaration for Feu de camp Timber */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+/* New Header Design */
+.new-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main Header Bar */
+.main-header {
+  background: #ff7a75; /* Light coral/salmon pink */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2rem;
+  top: 45%;
+  transform: translateY(-50%);
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover span {
+  background: #333;
+}
+
+/* Secondary Navigation Menu */
+.secondary-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #000;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  padding-top: 4rem;
+  /* Debug: ensure content is visible */
+  color: #fff;
+  /* Ensure menu items are visible */
+  min-height: 100vh;
+}
+
+/* Menu header with close button */
+.secondary-nav::after {
+  content: "×";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.secondary-nav::after:hover {
+  color: #ff7a75;
+  transform: scale(1.1);
+}
+
+/* Backdrop overlay when menu is open */
+.secondary-nav::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.secondary-nav.nav-open::before {
+  opacity: 1;
+}
+
+/* Add a subtle animation to menu items */
+.secondary-nav a {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block !important;
+  width: 100% !important;
+  /* Debug: ensure visibility */
+  visibility: visible !important;
+  color: #fff !important;
+  background: transparent !important;
+  margin: 0.5rem 0 !important;
+  padding: 1.5rem 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-family: "Feu de camp Timber", serif !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  /* Additional debug styles */
+  min-height: 50px !important;
+  line-height: 1.2 !important;
+}
+
+/* Ensure menu items are visible even with conflicting CSS */
+.new-header .main-header .secondary-nav a {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Apply the same colors to secondary nav menu items */
+.secondary-nav .text-nav-why {
+  color: #ec0caa !important;
+  text-shadow: 0 0 10px rgba(236, 12, 170, 0.5);
+}
+
+/* More specific selector to ensure visibility */
+.new-header .main-header .secondary-nav .text-nav-why {
+  color: #ec0caa !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Force WHY PROSPER link to be visible with maximum specificity and gradient */
+.secondary-nav .text-nav-why,
+.new-header .main-header .secondary-nav .text-nav-why,
+body .new-header .main-header .secondary-nav .text-nav-why,
+html body .new-header .main-header .secondary-nav .text-nav-why {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: #ec0caa !important; /* Fallback color */
+  font-weight: bold !important;
+  /* Force text to be visible */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.secondary-nav .text-nav-team {
+  color: #fa2dfd !important;
+}
+
+.secondary-nav .text-nav-ethos {
+  color: #44fe7a !important;
+}
+
+.secondary-nav .text-nav-events {
+  color: #2ff5ff !important;
+}
+
+.secondary-nav .text-nav-involved {
+  color: #ffb344 !important;
+}
+
+.secondary-nav .text-nav-press {
+  color: #45ff79 !important;
+}
+
+.secondary-nav .text-nav-insider {
+  color: #d674ff !important;
+}
+
+.secondary-nav.nav-open {
+  left: 0;
+}
+
+.secondary-nav a {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-nav a:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+/* Hover effects for colored menu items */
+.secondary-nav a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure gradient text works properly on hover */
+.secondary-nav .text-nav-why:hover {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo-xo img {
+  width: 150px;
+  height: auto;
+}
+
+.social-icons {
+  gap: 0.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.social-icons a {
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0); /* Make icons black */
+}
+
+/* Text-based Secondary Navigation Bar */
+.text-nav {
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 5rem 1rem 8rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text-based navigation links */
+.text-nav .text-nav-link {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.text-nav .text-nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Text navigation link colors */
+.text-nav-why {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ec0caa; /* Fallback color */
+}
+
+.text-nav-team {
+  color: #fa2dfd !important;
+}
+
+.text-nav-ethos {
+  color: #44fe7a !important;
+}
+
+.text-nav-events {
+  color: #2ff5ff !important;
+}
+
+.text-nav-involved {
+  color: #ffb344 !important;
+}
+
+.text-nav-press {
+  color: #45ff79 !important;
+}
+
+.text-nav-insider {
+  color: #d674ff !important;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .text-nav {
+    position: fixed;
+    top: 80px; /* Height of main header */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #000;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .text-nav.nav-open {
+    left: 0;
+  }
+
+  .text-nav .text-nav-link {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Mobile-specific styles for secondary nav */
+  .secondary-nav {
+    width: 100%;
+    left: -100%;
+  }
+
+  .secondary-nav.nav-open {
+    left: 0;
+  }
+}
+
+/* get-invovled Page Specific Styles */
+.get-invovled-container {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* get-invovled Header */
+.get-invovled-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+}
+
+.get-invovled-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* get-invovled Content */
+.get-invovled-content {
+  font-size: 2.2rem;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.btn-lg {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 3px solid black;
+  /* Black stroke */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+/* Blue button specific styles */
+.btn-blue {
+  background-color: #1E98F5;
+  /* Blue background */
+  color: black;
+  /* Black text */
+}
+
+.separator {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(90deg, #4AC0E3, #8971F1, #F33CB6, #FD5851, #FC6379);
+}
+
+.separator-2 {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(90deg, #FD5851, #F33CB6, #8971F1, #4AC0E3);
+}
+
+.beta-access-section {
+  text-align: center;
+  padding: 2rem;
+  background: #6a5de8;
+}
+
+.beta-access-content-container {
+  font-size: 2.2rem;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.get-invovled-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 1.5rem 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.get-invovled-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.get-invovled-list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1f2937;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.get-invovled-list li:before {
+  content: "•";
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.get-invovled-list li strong {
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.get-invovled-fact {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+.get-involved-contact-container {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg preserveAspectRatio='none' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='0'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='1'%3E%3C/stop%3E%3C/linearGradient%3E%3Cmask id='m'%3E%3Crect x='0' y='0' width='1' height='1' fill='url(%23g)'%3E%3C/rect%3E%3C/mask%3E%3ClinearGradient id='a' gradientTransform='rotate(90)'%3E%3Cstop offset='0' stop-color='%23006CF6'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%2390E8F4'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientTransform='rotate(90)'%3E%3Cstop offset='0' stop-color='%23FFABEE'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23FEB44B'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' width='1' height='1' fill='url(%23a)' mask='url(%23m)'%3E%3C/rect%3E%3Crect x='0' y='0' width='1' height='1' fill='url(%23b)' mask='url(%23m)' transform='translate(1,1) rotate(180)'%3E%3C/rect%3E%3C/svg%3E ");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Get Involved Section */
+.get-involved-section {
+  padding: 3rem 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  color: #ffef09;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+}
+
+.work-with-us-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  background: #0f0f0f;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-column p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+/* Apply gradient to PRESS INQUIRIES text */
+.press-inquiries {
+  background: linear-gradient(90deg, #fcc80e, #5caba4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fcc80e; /* Fallback color */
+}
+
+/* Apply gradient to GET INVOLVED text */
+.get-involved {
+  background: linear-gradient(90deg, #d96f65, #c64a96, #fe6c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #d96f65; /* Fallback color */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  color: #fced18;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+  color: #fced18;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  /* Apply yellow filter to make icons yellow instead of white */
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(1000%)
+    hue-rotate(0deg) brightness(1.1) contrast(1.1);
+}
+
+/* Ensure all social links maintain the yellow color */
+.footer-social a:visited,
+.footer-social a:active {
+  color: #fced18;
+}
+
+.footer-logo {
+  margin-top: 2rem;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Header responsive */
+  .main-header {
+    padding: 1rem;
+  }
+
+  .hamburger-menu {
+    left: 1rem;
+    top: 50%;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .logo-xo img {
+    width: 30px;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* get-invovled content responsive */
+  .get-invovled-container {
+    padding: 1rem;
+  }
+
+  .get-invovled-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .get-invovled-question {
+    font-size: 1.4rem;
+  }
+
+  .get-invovled-answer {
+    padding: 1.5rem;
+  }
+
+  .get-invovled-answer p {
+    font-size: 1rem;
+  }
+
+  .involvement-item,
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer-contact {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-menu {
+    left: 0.5rem;
+    padding: 6px;
+  }
+
+  .hamburger-menu span {
+    width: 20px;
+    height: 2px;
+  }
+
+  .get-invovled-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .get-invovled-question {
+    font-size: 1.2rem;
+  }
+
+  .get-invovled-item {
+    padding: 1.5rem;
+  }
+
+  .get-invovled-answer {
+    padding: 1rem;
+  }
+
+  .get-involved-section,
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+}
