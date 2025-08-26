@@ -59,7 +59,7 @@
 
 .press-section {
   background: #000;
-  padding: 4rem 2rem;
+  width: 100%;
   text-align: center;
   color: #fff;
   display: flex;
@@ -68,13 +68,13 @@
 }
 
 .press-header {
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
+  width: 90%;
   margin-bottom: 2rem;
 }
 
 .press-body {
-  max-width: 700px;
+  max-width: 500px;
   width: 80%;
   margin-bottom: 3rem;
 }
@@ -109,7 +109,7 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 100%) {
 
   .press-header,
   .press-body {
