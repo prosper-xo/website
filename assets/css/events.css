@@ -47,8 +47,23 @@
 .event-subtitle {
   font-size: 1.5rem;
   color: #fff;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-weight: 600;
+}
+
+.event-body-head {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
+/* Portrait mobile devices only */
+@media (max-width: 768px) and (orientation: portrait) {
+    .event-body-head {
+        text-align: center;
+    }
 }
 
 .event-body {
@@ -56,6 +71,14 @@
   line-height: 1.6;
   color: #fff;
   margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Portrait mobile devices only */
+@media (max-width: 768px) and (orientation: portrait) {
+    .event-body {
+        text-align: justify;
+    }
 }
 
 /* RSVP link styled like flyer */
