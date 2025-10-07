@@ -37,3 +37,16 @@
   for = "/*.json"
   [headers.values]
     Cache-Control = "public, max-age=300"
+
+# Redirect /admin to CMS
+[[redirects]]
+  from = "/admin"
+  to = "/cms/"
+  status = 200
+  force = true
+
+# Serve CMS config as YAML
+[[headers]]
+  for = "/cms/config.yml"
+  [headers.values]
+    Content-Type = "text/yaml"

@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Specify Ruby version (GitHub Pages requires Ruby 2.7+)
-ruby ">= 2.7.0"
+# Specify Ruby version (GitHub Pages compatible)
+ruby "2.7.2"
 
 # GitHub Pages gem (includes Jekyll and all compatible plugins)
 # Commenting out standalone jekyll as recommended by GitHub Pages docs

@@ -35,6 +35,7 @@ keep_files:
   - beta-signup
   - content
   - assets
+  - cms
   - 404.html
   - CNAME
   - robots.txt
