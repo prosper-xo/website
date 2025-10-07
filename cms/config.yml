@@ -9,15 +9,20 @@ public_folder: "/assets/blog"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "assets/blog/posts"
+    folder: "_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - {
+          label: "Cover Image",
+          name: "cover_image",
+          widget: "image",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
-

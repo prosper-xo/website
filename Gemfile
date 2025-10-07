@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-# Specify Ruby version (Jekyll 4.3+ requires Ruby 2.7+)
+# Specify Ruby version (GitHub Pages requires Ruby 2.7+)
 ruby ">= 2.7.0"
 
-# Jekyll
-gem "jekyll", "~> 4.3"
+# GitHub Pages gem (includes Jekyll and all compatible plugins)
+# Commenting out standalone jekyll as recommended by GitHub Pages docs
+# gem "jekyll", "~> 4.3"
 
-# Jekyll plugins
+gem "github-pages", "~> 228", group: :jekyll_plugins
+
+# Additional plugins (already included in github-pages but listed for clarity)
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap", "~> 1.4"
