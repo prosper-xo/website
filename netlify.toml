@@ -1,7 +1,13 @@
 # Production build settings
 [build]
+  base = "/"
   publish = "_site"
   command = "bundle install && npm install && npm run build"
+  ignore = "/bin/false"  # Don't auto-cancel builds
+
+[build.environment]
+  NODE_VERSION = "18"
+  RUBY_VERSION = "2.7.2"
 
 # Deploy Previews (for pull requests)
 [context.deploy-preview]
@@ -50,3 +56,9 @@
   for = "/cms/config.yml"
   [headers.values]
     Content-Type = "text/yaml"
+
+# Netlify Dev configuration (optional - for local dev)
+[dev]
+  command = "./docker-jekyll.sh"
+  targetPort = 4000
+  autoLaunch = false

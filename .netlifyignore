@@ -1,0 +1,22 @@
+# Files/directories to ignore during Netlify build detection
+# These will still be published, but won't affect build tool detection
+
+# Don't let CMS directory affect build detection
+cms/mise.toml
+cms/.ruby-version
+cms/.node-version
+cms/.python-version
+
+# Build artifacts
+.bundle/
+vendor/
+node_modules/
+
+# Git
+.git/
+.github/
+
+# Temp files
+*.log
+.DS_Store
+

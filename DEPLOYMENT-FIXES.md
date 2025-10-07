@@ -1,5 +1,21 @@
 # Deployment Fixes Applied
 
+## 🚨 CRITICAL: Dashboard Configuration Override
+
+**The most important fix is in the Netlify Dashboard!**
+
+Your Netlify dashboard settings are overriding the `netlify.toml` file. You MUST update these settings:
+
+1. Go to Netlify Dashboard → Your Site → **Site configuration**
+2. Go to **Build & deploy** → **Build settings**
+3. Change **Publish directory** from `cms` to `_site`
+4. Set **Build command** to: `bundle install && npm install && npm run build`
+5. Leave **Base directory** empty
+
+**See NETLIFY-DASHBOARD-FIX.md for detailed step-by-step instructions.**
+
+---
+
 ## ✅ Issues Fixed
 
 ### 1. **Conflicting netlify.toml Files**
