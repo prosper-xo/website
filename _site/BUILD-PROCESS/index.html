@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build Process Documentation - Prosper XO</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/prosperxo_header.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/prosperxo_footer.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/styles.css"
+    />
+    
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/favicon/favicon-multi.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/favicon/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="/assets/favicon/favicon-128x128.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/favicon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/favicon/favicon-192x192.png"
+    />
+    <link
+      rel="manifest"
+      href="/assets/favicon/site.webmanifest"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Build Process Documentation"
+    />
+    <meta
+      property="og:description"
+      content="We're building something exciting to put artists back at the center of the industry. Stay tuned!"
+    />
+    <meta
+      property="og:image"
+      content="http://0.0.0.0:4000/assets/thumbnail/prosper-website-thumbnail.jpg"
+    />
+    <meta property="og:url" content="http://0.0.0.0:4000/BUILD-PROCESS/" />
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Build Process Documentation"
+    />
+    <meta
+      name="twitter:description"
+      content="We're building something exciting to put artists back at the center of the industry. Stay tuned!"
+    />
+    <meta
+      name="twitter:image"
+      content="http://0.0.0.0:4000/assets/thumbnail/prosper-website-thumbnail.jpg"
+    />
+    <meta name="twitter:url" content="http://0.0.0.0:4000/BUILD-PROCESS/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-E00NWTHP4Q");
+    </script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="header-top-bottom-container">
+        <div class="header-top">
+          <div class="logo-container">
+            <div class="logo-xo">
+              <a href="/">
+                <img
+                  src="/assets/logos/prosper-website-logo.png"
+                  alt="XO"
+                />
+              </a>
+            </div>
+            <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!--Social Media-->
+          <div class="social-icons">
+            <a
+              href="https://instagram.com/prosperxo"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <img
+                src="/assets/icons/prosper-website-social-ig.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a
+              href="https://x.com/prosperxoxoxo"
+              aria-label="X"
+              target="_blank"
+            >
+              <img
+                src="/assets/icons/prosper-website-social-x.svg"
+                alt="X"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/prosper-xo/"
+              aria-label="LinkedIn"
+              target="_blank"
+            >
+              <img
+                src="/assets/icons/prosper-website-social-linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://youtube.com/@prosperxo"
+              aria-label="YouTube"
+              target="_blank"
+            >
+              <img
+                src="/assets/icons/prosper-website-social-youtube.svg"
+                alt="YouTube"
+              />
+            </a>
+            <a
+              href="https://facebook.com/prosperxo"
+              aria-label="Facebook"
+              target="_blank"
+            >
+              <img
+                src="/assets/icons/prosper-website-social-fb.svg"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="header-bottom-nav">
+          <nav class="text-nav">
+            <a
+              href="/why-prosper"
+              class="text-nav-link text-nav-why"
+              >WHY PROSPER</a
+            >
+            <a
+              href="/team"
+              class="text-nav-link text-nav-team"
+              >TEAM</a
+            >
+            <a
+              href="/ethos"
+              class="text-nav-link text-nav-ethos"
+              >ETHOS</a
+            >
+            <a
+              href="/events"
+              class="text-nav-link text-nav-events"
+              >EVENTS</a
+            >
+            <a
+              href="/get-involved"
+              class="text-nav-link text-nav-involved"
+              >GET INVOLVED</a
+            >
+            <a
+              href="/blog"
+              class="text-nav-link text-nav-blog"
+              >BLOG</a
+            >
+          </nav>
+          <!-- Text-based Secondary Navigation Bar -->
+          <div class="secondary-nav">
+            <a href="/why-prosper" class="text-nav-why"
+              >WHY PROSPER</a
+            >
+            <a href="/team" class="text-nav-team"
+              >TEAM</a
+            >
+            <a href="/ethos" class="text-nav-ethos"
+              >ETHOS</a
+            >
+            <a href="/events" class="text-nav-events"
+              >EVENTS</a
+            >
+            <a
+              href="/get-involved"
+              class="text-nav-involved"
+              >GET INVOLVED</a
+            >
+            <a href="/blog" class="text-nav-blog"
+              >BLOG</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main><h1 id="build-process-documentation">Build Process Documentation</h1>
+
+<h2 id="-overview">🎯 Overview</h2>
+
+<p>This project combines a <strong>static HTML website</strong> with a <strong>Jekyll-powered blog</strong>. The build process ensures that:</p>
+
+<ul>
+  <li>✅ Your static site (<code class="language-plaintext highlighter-rouge">/welcome</code>, <code class="language-plaintext highlighter-rouge">/team</code>, etc.) remains completely untouched</li>
+  <li>✅ Jekyll only adds the blog functionality at <code class="language-plaintext highlighter-rouge">/blog/</code></li>
+  <li>✅ All assets and routes work correctly</li>
+</ul>
+
+<h2 id="️-how-the-build-works">🏗️ How the Build Works</h2>
+
+<h3 id="step-1-copy-static-site">Step 1: Copy Static Site</h3>
+
+<p>All your existing static files are copied to the <code class="language-plaintext highlighter-rouge">_site/</code> directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rsync <span class="nt">-av</span> <span class="o">[</span>static files] _site/
+</code></pre></div></div>
+
+<h3 id="step-2-build-jekyll-blog">Step 2: Build Jekyll Blog</h3>
+
+<p>Jekyll then runs and adds ONLY the blog files to <code class="language-plaintext highlighter-rouge">_site/</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
+</code></pre></div></div>
+
+<p>Jekyll’s <code class="language-plaintext highlighter-rouge">keep_files</code> configuration ensures it doesn’t overwrite the static files that were copied in Step 1.</p>
+
+<h3 id="step-3-build-posts-index">Step 3: Build Posts Index</h3>
+
+<p>The posts index JSON is generated for any dynamic blog features:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run build:posts
+</code></pre></div></div>
+
+<h2 id="-directory-structure">📁 Directory Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/
+├── _site/                    # Final output (published to Netlify)
+│   ├── index.html           # Your static homepage
+│   ├── welcome/             # Your static pages
+│   ├── team/
+│   ├── blog/                # Jekyll-generated blog
+│   │   ├── index.html       # Blog index
+│   │   └── 2025/09/04/...   # Individual posts
+│   └── assets/              # All assets
+├── _posts/                   # Blog post source files
+├── _layouts/                 # Jekyll templates
+└── blog.html                # Blog index source
+</code></pre></div></div>
+
+<h2 id="-deployment">🚀 Deployment</h2>
+
+<h3 id="netlify-configuration">Netlify Configuration</h3>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[build]</span>
+  <span class="py">publish</span> <span class="p">=</span> <span class="s">"_site"</span>
+  <span class="py">command</span> <span class="p">=</span> <span class="s">"bundle install &amp;&amp; npm install &amp;&amp; npm run build"</span>
+</code></pre></div></div>
+
+<p>This ensures:</p>
+
+<ol>
+  <li>Ruby gems are installed</li>
+  <li>Node packages are installed</li>
+  <li>The build script runs</li>
+  <li>The <code class="language-plaintext highlighter-rouge">_site/</code> directory is published</li>
+</ol>
+
+<h2 id="-what-gets-preserved">✅ What Gets Preserved</h2>
+
+<p>Your entire static site remains untouched:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/</code> - Splash page with video</li>
+  <li><code class="language-plaintext highlighter-rouge">/welcome/</code> - Main site</li>
+  <li><code class="language-plaintext highlighter-rouge">/team/</code> - Team page</li>
+  <li><code class="language-plaintext highlighter-rouge">/events/</code> - Events page</li>
+  <li><code class="language-plaintext highlighter-rouge">/why-prosper/</code> - Why Prosper page</li>
+  <li>All other static routes</li>
+  <li>All assets (images, CSS, JS, fonts, etc.)</li>
+</ul>
+
+<h2 id="-what-gets-added">📝 What Gets Added</h2>
+
+<p>Jekyll adds:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/blog/</code> - Blog index page</li>
+  <li><code class="language-plaintext highlighter-rouge">/blog/YYYY/MM/DD/title/</code> - Individual blog posts</li>
+  <li>RSS feed</li>
+  <li>Sitemap (blog entries)</li>
+</ul>
+
+<h2 id="-local-development">🔧 Local Development</h2>
+
+<h3 id="run-the-full-build">Run the full build:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run build
+</code></pre></div></div>
+
+<h3 id="test-locally">Test locally:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>_site
+python3 <span class="nt">-m</span> http.server 8000
+</code></pre></div></div>
+
+<h3 id="or-use-docker-for-jekyll">Or use Docker for Jekyll:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./docker-jekyll.sh
+</code></pre></div></div>
+
+<h2 id="️-important-notes">⚠️ Important Notes</h2>
+
+<ol>
+  <li><strong>Never run <code class="language-plaintext highlighter-rouge">jekyll build --destination .</code></strong> - This would overwrite your static site!</li>
+  <li><strong>Always publish <code class="language-plaintext highlighter-rouge">_site/</code></strong> on Netlify, not the root directory</li>
+  <li><strong>The <code class="language-plaintext highlighter-rouge">keep_files</code> list in <code class="language-plaintext highlighter-rouge">_config.yml</code></strong> protects your static files</li>
+  <li><strong>Blog posts go in <code class="language-plaintext highlighter-rouge">_posts/</code></strong> with Jekyll naming: <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code></li>
+</ol>
+
+<h2 id="-troubleshooting">🐛 Troubleshooting</h2>
+
+<h3 id="static-routes-return-404">Static routes return 404</h3>
+
+<ul>
+  <li>Check that <code class="language-plaintext highlighter-rouge">_site/</code> contains your static files</li>
+  <li>Verify <code class="language-plaintext highlighter-rouge">keep_files</code> list in <code class="language-plaintext highlighter-rouge">_config.yml</code> includes the route</li>
+  <li>Ensure build script copied files correctly</li>
+</ul>
+
+<h3 id="blog-doesnt-work">Blog doesn’t work</h3>
+
+<ul>
+  <li>Check that <code class="language-plaintext highlighter-rouge">blog.html</code> is being processed</li>
+  <li>Verify <code class="language-plaintext highlighter-rouge">_posts/</code> directory has posts with correct frontmatter</li>
+  <li>Check Jekyll build logs for errors</li>
+</ul>
+
+<h3 id="assets-not-loading">Assets not loading</h3>
+
+<ul>
+  <li>Verify <code class="language-plaintext highlighter-rouge">assets/</code> directory is in <code class="language-plaintext highlighter-rouge">_site/</code></li>
+  <li>Check that asset paths are relative (not absolute)</li>
+  <li>Ensure <code class="language-plaintext highlighter-rouge">keep_files</code> includes <code class="language-plaintext highlighter-rouge">assets</code></li>
+</ul>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
+        <div class="footer-contact">
+          <div class="footer-column">
+            <p class="press-inquiries">
+              PRESS INQUIRIES
+              <a href="mailto:press@prosperxo.com">press@prosperxo.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <p class="get-involved">
+              GET INVOLVED
+              <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.tiktok.com/@prosper_xo_"
+            aria-label="tiktok"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/prosper-website-social-tiktok.svg"
+              alt="tiktok"
+            />
+          </a>
+          <a
+            href="https://instagram.com/prosperxo"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/prosper-website-social-ig.svg"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
+            <img
+              src="/assets/icons/prosper-website-social-x.svg"
+              alt="X"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/prosper-xo/"
+            aria-label="LinkedIn"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/prosper-website-social-linkedin.svg"
+              alt="LinkedIn"
+            />
+          </a>
+          <a
+            href="https://youtube.com/@prosperxo"
+            aria-label="YouTube"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/prosper-website-social-youtube.svg"
+              alt="YouTube"
+            />
+          </a>
+          <a
+            href="https://facebook.com/prosperxo"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/prosper-website-social-fb.svg"
+              alt="Facebook"
+            />
+          </a>
+        </div>
+        <div class="footer-logo">
+          <img
+            src="/assets/logos/prosperxo-website-logo-melty-rainbow.png"
+            alt="Prosper XO"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/hamburger-menu.js"></script>
+  </body>
+</html>

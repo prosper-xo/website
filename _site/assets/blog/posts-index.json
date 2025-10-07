@@ -1,0 +1,23 @@
+{
+  "generated_at": "2025-09-26T16:50:00.283Z",
+  "total_posts": 1,
+  "posts": [
+    {
+      "filename": "test-post-from-cms-admin-panel.md",
+      "path": "test-post-from-cms-admin-panel.md",
+      "title": "Test Post From CMS Admin Panel",
+      "summary": "Testing functionality of blog posts from Netlify's CMS admin panel.",
+      "date": "2025-09-04T21:22:49.999Z",
+      "draft": false,
+      "tags": [
+        "test",
+        "post",
+        "new"
+      ],
+      "cover_image": "/assets/blog/uploads/prosper-website-logo-face.png",
+      "category": "",
+      "word_count": 28,
+      "reading_time": 1
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+.events-section {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Header (use your SVG in place of h2 if desired) */
+.events-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffef5e;
+  margin-bottom: 3rem;
+}
+
+/* Purple event panel */
+.event-item {
+  background-color: #7314ca;
+  color: white;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+/* Layout wrapper */
+.event-flex {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Text column */
+.event-details {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.event-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffef5e;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.event-subtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.event-body-head {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
+.event-body-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.event-body-list li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.event-body-list li:before {
+  content: "•";
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+}
+
+/* Portrait mobile devices only */
+@media (max-width: 768px) and (orientation: portrait) {
+    .event-body-head {
+        text-align: left;
+    }
+
+    .event-title {
+      font-size: 1.7rem;
+    }
+}
+
+.event-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.event-speakers {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
+/* Portrait mobile devices only */
+@media (max-width: 768px) and (orientation: portrait) {
+    .event-body {
+        text-align: justify;
+    }
+
+    .event-speakers {
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+
+}
+
+/* RSVP link styled like flyer */
+.event-rsvp {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #5dd6ff;
+  text-decoration: none;
+}
+
+.event-rsvp:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Flyer image */
+.event-image img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Gradient call-to-action block */
+.follow-box {
+  background: linear-gradient(135deg,
+    #f36c21 0%,
+    #f36c21 20%,
+    #f54886 35%,
+    #a846b9 50%,
+    #4a90e2 65%,
+    #4ad9cd 80%,
+    #f36c21 95%);
+  padding: 4rem 2rem;
+  color: white;
+  width: 100%;
+}
+
+.follow-box .follow-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.follow-text {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Button (shared style) */
+.btn {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.btn-yellow {
+  background-color: #ffef5e;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .event-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .event-details {
+    text-align: center;
+  }
+
+  .event-image img {
+    margin-bottom: 2rem;
+  }
+}

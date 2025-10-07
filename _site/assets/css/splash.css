@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 100%; removed as it's redundant with width: 100% */
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+/* === VIDEO WRAPPER === */
+.tv-video {
+  width: 85%;
+  max-width: 720px;
+  max-height: 85vh;
+  /* This might constrain the height if 85vh is less than the width defined by 85%/720px. Aspect-ratio will try to respect this. */
+  aspect-ratio: 1 / 1;
+  /* This is key for the square shape */
+  position: relative;
+  display: flex;
+  /* Useful if video content isn't 100%x100% and needs centering */
+  align-items: center;
+  justify-content: center;
+}
+
+.tv-video video {
+  width: 100%;
+  height: 100%;
+  /* Makes the video fill the square .tv-video container */
+  object-fit: contain;
+  /* Ensures video content fits without cropping, letterboxing if video not perfectly square */
+  display: block;
+  background-color: #000;
+  /* Added: Shows black if video doesn't fill its bounds due to object-fit:contain and non-square source/rendering issues */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* === CUSTOM PLAY BUTTON === */
+.video-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.video-button {
+  pointer-events: auto;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: black;
+  color: lime;
+  border: 2px solid lime;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 11;
+  /* Ensure it's above the video, just in case */
+}
+
+.controls--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* === ENTER HERE BUTTON === */
+.enter-button {
+  position: relative;
+  /* For absolute positioning of img children */
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 6 / 1;
+  /* Defines aspect ratio for the button area */
+}
+
+.enter-button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Changed from auto to fill the aspect-ratio container */
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.enter-button img.default {
+  opacity: 1;
+  z-index: 1;
+}
+
+.enter-button img.hover {
+  opacity: 0;
+  z-index: 2;
+  /* Ensures hover image is on top when visible */
+}
+
+.enter-button:hover img.default {
+  opacity: 0;
+}
+
+.enter-button:hover img.hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tv-video {
+    width: 90vw;
+    /* Adjusted for a bit more width on mobile, but not full bleed. Or use 85% like desktop. */
+    max-width: 100%;
+    /* Allow it to use the 90vw fully, overriding desktop max-width if necessary */
+    margin-left: auto;
+    /* Center if width is not 100% */
+    margin-right: auto;
+    /* Center if width is not 100% */
+    max-height: none;
+    /* Remove viewport height restriction on mobile */
+    aspect-ratio: 1 / 1;
+    /* KEY CHANGE: Maintain square aspect ratio for the container */
+  }
+
+  .tv-video video {
+    /* Styles like width: 100%; height: 100%; object-fit: contain; are inherited.
+       No need to override to height: auto; as the container (.tv-video)
+       is now correctly enforcing a square shape. The video will fill this. */
+    /* max-height: none; (from your original mobile CSS) can be removed as it's inherited or not needed if parent controls size */
+  }
+
+  .video-button {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .enter-button {
+    max-width: 180px;
+    /* aspect-ratio will be inherited, which is fine */
+  }
+}

@@ -31,7 +31,12 @@ find . -maxdepth 1 -mindepth 1 \
 
 # Step 3: Build Jekyll blog (this will add blog files to _site)
 echo "📝 Building Jekyll blog..."
-bundle exec jekyll build
+if [ -n "$JEKYLL_CONFIG" ]; then
+  echo "Using custom Jekyll config: $JEKYLL_CONFIG"
+  bundle exec jekyll build --config "$JEKYLL_CONFIG"
+else
+  bundle exec jekyll build
+fi
 
 # Step 4: Build posts index
 echo "📊 Building posts index..."

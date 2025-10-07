@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prosper XO Blog</title>
+    <style>
+      /* Import Poppins font */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      /* Font Face Declaration for Feu de camp Timber */
+      @font-face {
+        font-family: "Feu de camp Timber";
+        src: url("../assets/fonts/feudecamp-timber-webfont.woff2")
+          format("woff2");
+        font-display: block;
+      }
+
+      /* Blog post content styling - Target #post-body ID */
+      #post-body h1,
+      #post-body h2,
+      #post-body h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      #post-body h1 {
+        font-family: "Feu de camp Timber", serif;
+        font-size: 2.2em;
+        color: #333;
+        font-weight: bold;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      #post-body h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5em;
+        color: #555;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      #post-body h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.3em;
+        color: #666;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      #post-body p {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 400;
+        color: #333;
+      }
+
+      #post-body code {
+        background: #f5f5f5;
+        color: #333;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Monaco", "Consolas", monospace;
+        font-size: 0.9em;
+      }
+
+      #post-body pre {
+        background: #f8f8f8;
+        color: #333;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding: 15px;
+        overflow-x: auto;
+        margin: 15px 0;
+        text-align: left;
+        font-size: 0.9em;
+      }
+
+      #post-body pre code {
+        background: none;
+        padding: 0;
+        color: #333;
+      }
+
+      #post-body ul,
+      #post-body ol {
+        margin: 15px 0;
+        padding-left: 0;
+        text-align: center;
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #post-body li {
+        margin-bottom: 5px;
+        line-height: 1.5;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #post-body blockquote {
+        border-left: 4px solid #ddd;
+        margin: 15px 0;
+        padding: 10px 20px;
+        background: #f9f9f9;
+        font-style: italic;
+        color: #555;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+      }
+
+      #post-body a {
+        color: #0066cc;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #post-body a:hover {
+        text-decoration: underline;
+      }
+
+      #post-body hr {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+
+      #post-body strong {
+        font-weight: 600;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #post-body em {
+        font-style: italic;
+        color: #555;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #post-body del {
+        text-decoration: line-through;
+        color: #999;
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="posts-container">
+      <h1
+        style="
+          font-family: 'Feu de camp Timber', serif;
+          font-size: 3em;
+          color: #333;
+          text-align: center;
+          margin-bottom: 30px;
+        "
+      >
+        Prosper XO Blog
+      </h1>
+      <div id="loading">Loading posts...</div>
+    </div>
+
+    <script>
+      // Function to create a post element
+      function createPostElement(post) {
+        const postDiv = document.createElement("div");
+        postDiv.className = "post";
+        postDiv.style.border = "1px solid #e0e0e0";
+        postDiv.style.margin = "20px 0";
+        postDiv.style.padding = "25px";
+        postDiv.style.borderRadius = "12px";
+        postDiv.style.backgroundColor = "#fff";
+        postDiv.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
+
+        const title = document.createElement("h2");
+        title.textContent = post.title;
+        title.style.marginTop = "0";
+        title.style.color = "#333";
+        title.style.fontSize = "1.8em";
+        title.style.fontFamily = "'Feu de camp Timber', serif";
+        title.style.textAlign = "center";
+        title.style.fontWeight = "bold";
+        title.style.borderBottom = "2px solid #333";
+        title.style.paddingBottom = "10px";
+        title.style.marginBottom = "15px";
+
+        const meta = document.createElement("div");
+        meta.style.marginBottom = "15px";
+        meta.style.fontSize = "0.9em";
+        meta.style.color = "#666";
+
+        const date = document.createElement("span");
+        date.textContent = `Published: ${new Date(
+          post.date
+        ).toLocaleDateString()}`;
+
+        const readingTime = document.createElement("span");
+        readingTime.textContent = ` • ${post.reading_time} min read`;
+        readingTime.style.marginLeft = "10px";
+
+        meta.appendChild(date);
+        meta.appendChild(readingTime);
+
+        const image = document.createElement("img");
+        if (post.cover_image) {
+          image.src = post.cover_image;
+          image.style.maxWidth = "100%";
+          image.style.height = "auto";
+          image.style.marginBottom = "15px";
+          image.style.borderRadius = "8px";
+          image.style.display = "block";
+          image.style.marginLeft = "auto";
+          image.style.marginRight = "auto";
+        }
+
+        const summary = document.createElement("div");
+        summary.textContent = post.summary || "No summary available";
+        summary.style.fontStyle = "italic";
+        summary.style.marginBottom = "15px";
+        summary.style.color = "#555";
+
+        const postBody = document.createElement("div");
+        postBody.id = "post-body";
+        postBody.style.marginTop = "15px";
+        postBody.style.lineHeight = "1.6";
+        postBody.innerHTML =
+          '<div style="text-align: center; color: #666;">Loading post content...</div>';
+
+        const tags = document.createElement("div");
+        if (post.tags && post.tags.length > 0) {
+          tags.innerHTML = post.tags
+            .map(
+              (tag) =>
+                `<span style="background: #f0f8ff; color: #0066cc; padding: 4px 8px; margin: 2px; border-radius: 4px; font-size: 0.8em; border: 1px solid #e0f0ff;">${tag}</span>`
+            )
+            .join(" ");
+          tags.style.marginTop = "15px";
+        }
+
+        postDiv.appendChild(title);
+        postDiv.appendChild(meta);
+        if (post.cover_image) {
+          postDiv.appendChild(image);
+        }
+        postDiv.appendChild(summary);
+        postDiv.appendChild(postBody);
+        if (post.tags && post.tags.length > 0) {
+          postDiv.appendChild(tags);
+        }
+
+        // Store the postDiv reference for later content loading
+        postDiv._postData = post;
+
+        return postDiv;
+      }
+
+      // Function to load individual post content
+      function loadPostContent(postDiv) {
+        const postData = postDiv._postData;
+        const postBody = postDiv.querySelector("#post-body");
+
+        fetch(`../assets/blog/posts/${postData.filename}`)
+          .then((response) => response.text())
+          .then((fileContent) => {
+            // Parse frontmatter to get the body
+            const parts = fileContent.split("---");
+            const body = parts.slice(2).join("---").trim();
+
+            // Convert markdown to HTML
+            const htmlBody = convertMarkdownToHtml(body);
+            postBody.innerHTML = htmlBody;
+          })
+          .catch((error) => {
+            console.error(
+              `Error loading post content for ${postData.filename}:`,
+              error
+            );
+            postBody.innerHTML =
+              '<div style="color: red;">Error loading post content</div>';
+          });
+      }
+
+      // Enhanced markdown to HTML converter
+      function convertMarkdownToHtml(markdown) {
+        return (
+          markdown
+            // Code blocks (```code```)
+            .replace(/```([\s\S]*?)```/g, "<pre><code>$1</code></pre>")
+            // Inline code (`code`)
+            .replace(/`([^`]+)`/g, "<code>$1</code>")
+            // Headers
+            .replace(/^### (.*$)/gim, "<h3>$1</h3>")
+            .replace(/^## (.*$)/gim, "<h2>$1</h2>")
+            .replace(/^# (.*$)/gim, "<h1>$1</h1>")
+            // Bold - multiple formats (**, __, and HTML <strong>)
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+            .replace(/__(.*?)__/g, "<strong>$1</strong>")
+            .replace(/<strong>(.*?)<\/strong>/g, "<strong>$1</strong>")
+            // Italic - multiple formats (*, _, and HTML <em>)
+            .replace(/\*(.*?)\*/g, "<em>$1</em>")
+            .replace(/_(.*?)_/g, "<em>$1</em>")
+            .replace(/<em>(.*?)<\/em>/g, "<em>$1</em>")
+            // Strikethrough
+            .replace(/~~(.*?)~~/g, "<del>$1</del>")
+            // Links [text](url)
+            .replace(
+              /\[([^\]]+)\]\(([^)]+)\)/g,
+              '<a href="$2" target="_blank" rel="noopener">$1</a>'
+            )
+            // Lists
+            .replace(/^\* (.*$)/gim, "<li>$1</li>")
+            .replace(/^- (.*$)/gim, "<li>$1</li>")
+            .replace(/^(\d+)\. (.*$)/gim, "<li>$1. $2</li>")
+            // Blockquotes
+            .replace(/^> (.*$)/gim, "<blockquote>$1</blockquote>")
+            // Horizontal rules
+            .replace(/^---$/gim, "<hr>")
+            .replace(/^\*\*\*$/gim, "<hr>")
+            // Line breaks and paragraphs
+            .replace(/\n\n/gim, "</p><p>")
+            .replace(/\n/gim, "<br>")
+            // Wrap in paragraphs
+            .replace(/^(.*)$/gim, "<p>$1</p>")
+            // Clean up empty paragraphs and fix lists
+            .replace(/<p><\/p>/gim, "")
+            .replace(/<p><br><\/p>/gim, "")
+            .replace(/<p>(<li>.*<\/li>)<\/p>/gim, "<ul>$1</ul>")
+            .replace(/<p>(<blockquote>.*<\/blockquote>)<\/p>/gim, "$1")
+            .replace(/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/gim, "$1")
+            .replace(/<p>(<pre>.*<\/pre>)<\/p>/gim, "$1")
+            .replace(/<p>(<hr>)<\/p>/gim, "$1")
+        );
+      }
+
+      // Load and display all posts
+      fetch("../assets/blog/posts-index.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const container = document.getElementById("posts-container");
+          const loading = document.getElementById("loading");
+
+          // Remove loading message
+          loading.remove();
+
+          // Add posts count
+          const countDiv = document.createElement("p");
+          countDiv.textContent = `Found ${data.total_posts} posts`;
+          countDiv.style.color = "#666";
+          countDiv.style.marginBottom = "30px";
+          container.appendChild(countDiv);
+
+          // Display each post
+          data.posts.forEach((post) => {
+            const postElement = createPostElement(post);
+            container.appendChild(postElement);
+
+            // Load the post content asynchronously
+            loadPostContent(postElement);
+          });
+
+          // If no posts, show message
+          if (data.posts.length === 0) {
+            const noPosts = document.createElement("p");
+            noPosts.textContent = "No posts found. Check back later!";
+            noPosts.style.textAlign = "center";
+            noPosts.style.color = "#666";
+            noPosts.style.fontStyle = "italic";
+            container.appendChild(noPosts);
+          }
+        })
+        .catch((error) => {
+          console.error("Error loading posts:", error);
+          const container = document.getElementById("posts-container");
+          const loading = document.getElementById("loading");
+          loading.textContent = "Error loading posts. Please try again later.";
+          loading.style.color = "red";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Jekyll Preview Configuration
+# This overrides the production config for preview deployments
+# Use with: jekyll build --config _config.yml,_config_preview.yml
+
+# Preview URL - Netlify will use deploy-preview URLs
+url: "" # Empty for relative URLs in preview
+baseurl: ""
+
+# Enable draft posts in preview
+show_drafts: true

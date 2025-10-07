@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Font Face Declaration for Feu de camp Timber */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  /* — rainbow wash — */
+  background-image: radial-gradient(
+      circle at 15% 20%,
+      #e34471 0%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 15%, #216cdc 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, #ff9f22 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, #1fcae0 0%, transparent 50%),
+    linear-gradient(
+      135deg,
+      #e34471 0%,
+      #c177c3 35%,
+      #216cdc 60%,
+      #1fcae0 80%,
+      #ff9f22 100%
+    );
+  background-size: cover;
+  background-attachment: fixed;
+  /* keeps it seamless on scroll */
+}
+
+main p {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.separator-2 {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(90deg, #fe6177, #fe603b, #fa3ba5, #4bc1e2);
+  border-top: 2px solid #a199f1;
+}
+
+/* Beta Sign-Up Page Specific Styles */
+.beta-signup-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.beta-signup-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 auto 1.5rem auto;
+}
+
+#cohort-info {
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+  margin: 2rem;
+}
+
+.cohort-container {
+  margin: 1rem;
+}
+
+.cohort-type {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cohort-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.xo-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.xo-icon img {
+  width: 120px;
+  height: auto;
+  max-width: none;
+  min-width: 120px;
+}
+
+.xo-icon img {
+  width: 80px;
+  height: auto;
+}

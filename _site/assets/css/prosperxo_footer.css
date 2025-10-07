@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Font Face Declaration for Feu de camp Timber */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+/* Footer */
+.footer {
+  background: #000000;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-column p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+/* Apply gradient to PRESS INQUIRIES text */
+.press-inquiries {
+  background: linear-gradient(90deg, #fcc80e, #5caba4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fcc80e; /* Fallback color */
+}
+
+/* Apply gradient to GET INVOLVED text */
+.get-involved {
+  background: linear-gradient(90deg, #d96f65, #c64a96, #fe6c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #d96f65; /* Fallback color */
+}
+
+/* footer social elements */
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  color: #fced18;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+  color: #fced18;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  /* Apply yellow filter to make icons yellow instead of white */
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(1000%)
+    hue-rotate(0deg) brightness(1.1) contrast(1.1);
+}
+
+/* Ensure all social links maintain the yellow color */
+.footer-social a:visited,
+.footer-social a:active {
+  color: #fced18;
+}
+
+.footer-logo {
+  margin-top: 2rem;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* beta-signup content responsive */
+
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-contact {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

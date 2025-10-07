@@ -1,6 +1,31 @@
+# Production build settings
 [build]
   publish = "_site"
   command = "bundle install && npm install && npm run build"
+
+# Deploy Previews (for pull requests)
+[context.deploy-preview]
+  publish = "_site"
+  command = "bundle install && npm install && JEKYLL_ENV=preview npm run build"
+
+[context.deploy-preview.environment]
+  JEKYLL_CONFIG = "_config.yml,_config_preview.yml"
+
+# Branch deploys (for non-production branches)
+[context.branch-deploy]
+  publish = "_site"
+  command = "bundle install && npm install && JEKYLL_ENV=preview npm run build"
+
+[context.branch-deploy.environment]
+  JEKYLL_CONFIG = "_config.yml,_config_preview.yml"
+
+# Staging branch (optional - for testing before production)
+[context.staging]
+  publish = "_site"
+  command = "bundle install && npm install && JEKYLL_ENV=staging npm run build"
+
+[context.staging.environment]
+  JEKYLL_CONFIG = "_config.yml,_config_preview.yml"
 
 # Headers for better caching
 [[headers]]

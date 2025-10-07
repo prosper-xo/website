@@ -1,0 +1,344 @@
+/* Blog Styles for Prosper XO */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../assets/fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Blog Posts Grid */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Individual Post Preview */
+.blog-post-preview {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-preview-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+.post-preview-image img {
+  width: 40%;
+  height: 40%;
+}
+
+.post-preview-content {
+  padding: 1.5rem;
+}
+
+.post-preview-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.post-preview-title a {
+  color: #ffef09;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-preview-title a:hover {
+  color: #007bff;
+}
+
+.post-preview-summary {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-preview-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-preview-date {
+  font-family: "Poppins", sans-serif;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.post-preview-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.read-more {
+  font-family: "Poppins", sans-serif;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+/* Individual Post Page */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.post-header {
+  margin-bottom: 3rem;
+}
+
+.post-cover {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #f8f9fa; */
+}
+
+.post-cover img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.post-meta {
+  text-align: center;
+}
+
+.post-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.post-summary {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.post-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.post-date {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-content {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.post-content h1 {
+  font-size: 2.5rem;
+}
+
+.post-content h2 {
+  font-size: 2rem;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #007bff;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #666;
+}
+
+.post-content code {
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.post-content pre {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-navigation {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.back-to-blog {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.back-to-blog:hover {
+  color: #0056b3;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-posts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .post-preview-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-container {
+    padding: 1rem;
+  }
+
+  .blog-post {
+    padding: 1rem;
+  }
+}

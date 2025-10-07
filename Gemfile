@@ -9,6 +9,9 @@ ruby ">= 2.7.0"
 
 gem "github-pages", "~> 228", group: :jekyll_plugins
 
+# Required for Jekyll serve with Ruby 3.0+
+gem "webrick", "~> 1.8"
+
 # Additional plugins (already included in github-pages but listed for clarity)
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
