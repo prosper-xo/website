@@ -1,23 +1,52 @@
 {
   "name": "prosper-xo-website",
-  "version": "1.0.0",
-  "description": "Prosper XO website with blog posts",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Prosper XO website - Next.js conversion",
+  "private": true,
   "scripts": {
-    "build": "bash scripts/build-site.sh",
-    "build:posts": "node scripts/build-posts.js",
-    "build:jekyll": "node scripts/build-jekyll.js",
-    "dev": "npm run build && python -m http.server 8000",
-    "preview": "python -m http.server 8000"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "migrate-posts": "ts-node scripts/migrate-posts.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
-  "keywords": [
-    "blog",
-    "static-site",
-    "prosper-xo"
-  ],
-  "author": "Prosper XO",
-  "license": "MIT",
+  "dependencies": {
+    "contentlayer": "^0.3.4",
+    "date-fns": "^3.0.0",
+    "next": "^14.2.0",
+    "next-contentlayer": "^0.3.4",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
   "devDependencies": {
-    "gray-matter": "^4.0.3"
+    "@tailwindcss/typography": "^0.5.10",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.5.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0",
+    "gray-matter": "^4.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.0",
+    "prettier": "^3.2.0",
+    "prettier-plugin-tailwindcss": "^0.5.0",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }

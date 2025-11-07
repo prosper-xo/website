@@ -1,0 +1,130 @@
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.menuButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburgerIcon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuContent {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 45;
+  padding: 1rem;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenu.open .menuContent {
+  transform: translateY(0);
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menuNavItem {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.menuNavItem:hover {
+  background-color: rgba(236, 103, 140, 0.1);
+}
+
+.menuNavLink {
+  display: block;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menuNavLink:hover {
+  color: #ec678c;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .menuContent {
+    max-height: calc(100vh - 70px);
+  }
+}
