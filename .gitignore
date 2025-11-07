@@ -6,6 +6,42 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Next.js
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Contentlayer
+.contentlayer
+
+# Build outputs
+_site/
+*.log
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
 
 # IDE files
 .vscode/
@@ -14,25 +50,12 @@ Thumbs.db
 *.swo
 *~
 
-# Node modules (if using Node.js)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build outputs
-dist/
-build/
-_site/
-*.log
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # Temporary files
 *.tmp
 *.temp
+
+# Caches
+.cache/
+
+# Misc (OS)
+Thumbs.db

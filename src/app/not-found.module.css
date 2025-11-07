@@ -1,0 +1,139 @@
+.notFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 400px);
+  padding: 2rem;
+}
+
+.notFoundContent {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  color: #ec678c;
+  text-shadow: 0 4px 20px rgba(236, 103, 140, 0.3);
+}
+
+.errorTitle {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #000;
+}
+
+.errorDescription {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.suggestions {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.suggestions p {
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  color: #000;
+}
+
+.suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.suggestions li {
+  margin: 0;
+}
+
+.suggestions a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #5d95eb;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.suggestions a:hover {
+  background-color: #4073d6;
+  transform: translateX(4px);
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ctaSection p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+.emailLink {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #ec678c;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.emailLink:hover {
+  background-color: #d84d6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 103, 140, 0.3);
+}
+
+@media (max-width: 768px) {
+  .notFoundContainer {
+    padding: 1.5rem;
+    min-height: calc(100vh - 300px);
+  }
+
+  .errorCode {
+    font-size: 5rem;
+  }
+
+  .errorTitle {
+    font-size: 1.75rem;
+  }
+
+  .errorDescription {
+    font-size: 1rem;
+  }
+
+  .suggestions {
+    padding: 1.5rem;
+  }
+
+  .suggestions a {
+    display: block;
+    text-align: center;
+  }
+}

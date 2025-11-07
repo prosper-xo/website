@@ -1,0 +1,180 @@
+.section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.videoWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover {
+  transform: translateY(-4px);
+}
+
+.gridImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.gridTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.statement {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.mobileBreak {
+  display: none;
+}
+
+.welcomeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 100%);
+  border-radius: 1rem;
+}
+
+.welcomeText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.welcomeLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gridItem {
+    padding: 0.5rem;
+  }
+
+  .gridImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gridTitle {
+    font-size: 1rem;
+  }
+
+  .statement {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .mobileBreak {
+    display: block;
+  }
+
+  .welcomeGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .welcome {
+    font-size: 1.75rem;
+  }
+
+  .logoImage {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+  }
+
+  .statement {
+    font-size: 0.95rem;
+  }
+}

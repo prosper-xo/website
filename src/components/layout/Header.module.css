@@ -18,21 +18,33 @@
   gap: 1rem;
 }
 
-.logo {
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoXo {
   position: relative;
-  width: 120px;
+  width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
 }
 
-.socialLinks {
+.logoXo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.socialLink {
+.socialIcons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -42,53 +54,40 @@
   transition: all 0.3s ease;
 }
 
-.socialLink:hover {
+.socialIcons a:hover {
   background-color: rgba(236, 103, 140, 0.1);
   transform: scale(1.1);
 }
 
-.socialLink svg {
-  width: 20px;
-  height: 20px;
+.socialIcons img {
+  width: 24px;
+  height: 24px;
 }
 
-.mobileMenuToggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobileMenuToggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 0.5rem;
-}
-
-.headerBottom {
+.headerBottomNav {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.nav {
+.textNav {
   display: flex;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.navLink {
+.textNavLink {
   position: relative;
   font-weight: 600;
   color: #000;
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.navLink::after {
+.textNavLink::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -99,20 +98,24 @@
   transition: width 0.3s ease;
 }
 
-.navLink:hover {
+.textNavLink:hover {
   color: #ec678c;
 }
 
-.navLink:hover::after {
+.textNavLink:hover::after {
   width: 100%;
 }
 
+.secondaryNav {
+  display: none;
+}
+
 @media (max-width: 1024px) {
-  .headerBottom {
+  .headerBottomNav {
     gap: 2rem;
   }
 
-  .nav {
+  .textNav {
     gap: 1.5rem;
   }
 }
@@ -127,20 +130,16 @@
     justify-content: space-between;
   }
 
-  .mobileMenuToggle {
-    display: flex;
-  }
-
-  .socialLinks {
+  .socialIcons {
     display: none;
   }
 
-  .headerBottom {
+  .headerBottomNav {
     display: none;
   }
 
-  .logo {
-    width: 100px;
-    height: 40px;
+  .logoXo {
+    width: 50px;
+    height: 50px;
   }
 }

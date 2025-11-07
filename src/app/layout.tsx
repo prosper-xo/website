@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const timber = localFont({
-  src: '../public/assets/fonts/feudecamp-timber-webfont.woff2',
+  src: '../../assets/fonts/feudecamp-timber-webfont.woff2',
   variable: '--font-timber',
 });
 

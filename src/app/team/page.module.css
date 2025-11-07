@@ -1,0 +1,336 @@
+.teamSection {
+  background: linear-gradient(
+    135deg,
+    #ec678c 0%,
+    #c177c3 25%,
+    #5d95eb 50%,
+    #69d6e4 75%,
+    #f3b86a 100%
+  );
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.textHeader {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 25px auto;
+}
+
+/* Lauren's special card */
+.laurenCard {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 3 / 2;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.laurenCard .imageContainer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.laurenImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  object-fit: cover;
+}
+
+.laurenCard .textContainer {
+  border-radius: 0 0 20px 20px;
+  border: 3px solid black;
+  margin-top: -3px;
+}
+
+.laurenCard .textContainer .name {
+  font-weight: 600;
+  display: block;
+}
+
+.laurenCard .textContainer .title {
+  font-size: 85%;
+  display: block;
+}
+
+/* Team Grid */
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Shared wrapper for card + bio */
+.teamCardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 350px;
+}
+
+/* Team Cards */
+.teamCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid black;
+}
+
+.teamCard .imageContainer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Text Container */
+.textContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #ff6b6b,
+    #fcd34d,
+    #f9a8d4,
+    #a5f3fc,
+    #c4b5fd
+  );
+  background-size: 200% 200%;
+}
+
+.nameTitle {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  color: #000;
+}
+
+.title {
+  font-size: 16px;
+  display: block;
+  color: #000;
+}
+
+/* Social Icons */
+.teamSocialIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.socialLink {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLink:hover {
+  background-color: #000;
+  color: #ffef09;
+  transform: scale(1.1);
+}
+
+.socialLink i {
+  font-size: 18px;
+}
+
+/* Team Bio */
+.teamBio {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  max-width: 900px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.teamBioLauren {
+  max-width: 1200px;
+  margin-bottom: 3rem;
+}
+
+/* Card Background Colors */
+.cardJoseph {
+  background-color: #0566db;
+}
+
+.cardJonny {
+  background-color: #78c5a3;
+}
+
+.cardGabe {
+  background-color: #8b9a8c;
+}
+
+.cardClint {
+  background-color: #f5e96a;
+}
+
+.cardZeale {
+  background-color: #feaa4a;
+}
+
+.cardDavid {
+  background-color: #c9cabd;
+}
+
+.cardDevin {
+  background-color: #cc7a00;
+}
+
+.cardCourtney {
+  background-color: #6e5a91;
+}
+
+.cardSue {
+  background-color: #9b59b6;
+}
+
+.cardMonica {
+  background-color: #e8b4cb;
+}
+
+/* Team Summary Box */
+.teamSummaryBox {
+  background: linear-gradient(
+    135deg,
+    #c34ec9,
+    #ec678c,
+    #f9a84d,
+    #5fdd8f,
+    #69d6e4
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border: 3px solid black;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.teamSummary {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamSummary p {
+  color: #fff;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .teamCard {
+    aspect-ratio: 3 / 4;
+  }
+
+  .laurenCard {
+    aspect-ratio: 1 / 1;
+  }
+
+  .laurenImg {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    position: relative;
+    transform: none;
+    left: auto;
+  }
+
+  .laurenCard .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .teamSocialIcons {
+    gap: 12px;
+    padding: 0 15px;
+  }
+
+  .socialLink {
+    width: 44px;
+    height: 44px;
+  }
+
+  .socialLink i {
+    font-size: 22px;
+  }
+}

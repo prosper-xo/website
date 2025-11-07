@@ -81,6 +81,12 @@ export default function Header() {
 
         <nav className={styles.headerBottomNav}>
           <div className={styles.textNav}>
+            <Link href="/" className={styles.textNavLink}>
+              HOME
+            </Link>
+            <Link href="/welcome" className={styles.textNavLink}>
+              WELCOME
+            </Link>
             <Link href="/why-prosper" className={styles.textNavLink}>
               WHY PROSPER
             </Link>
@@ -96,14 +102,20 @@ export default function Header() {
             <Link href="/get-involved" className={styles.textNavLink}>
               GET INVOLVED
             </Link>
+            <Link href="/blog" className={styles.textNavLink}>
+              BLOG
+            </Link>
           </div>
 
           <div className={styles.secondaryNav}>
+            <Link href="/">HOME</Link>
+            <Link href="/welcome">WELCOME</Link>
             <Link href="/why-prosper">WHY PROSPER</Link>
             <Link href="/team">TEAM</Link>
             <Link href="/ethos">ETHOS</Link>
             <Link href="/events">EVENTS</Link>
             <Link href="/get-involved">GET INVOLVED</Link>
+            <Link href="/blog">BLOG</Link>
           </div>
         </nav>
       </div>

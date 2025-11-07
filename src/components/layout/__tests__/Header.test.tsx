@@ -19,8 +19,8 @@ describe('Header Component', () => {
     render(<Header />);
     const navLinks = ['Home', 'Welcome', 'Why Prosper', 'Team', 'Ethos', 'Events', 'Get Involved'];
     navLinks.forEach((linkText) => {
-      const link = screen.getByRole('link', { name: new RegExp(linkText, 'i') });
-      expect(link).toBeInTheDocument();
+      const links = screen.getAllByRole('link', { name: new RegExp(linkText, 'i') });
+      expect(links.length).toBeGreaterThan(0);
     });
   });
 
@@ -33,8 +33,8 @@ describe('Header Component', () => {
 
   it('renders blog link', () => {
     render(<Header />);
-    const blogLink = screen.getByRole('link', { name: /blog/i });
-    expect(blogLink).toBeInTheDocument();
+    const blogLinks = screen.getAllByRole('link', { name: /blog/i });
+    expect(blogLinks.length).toBeGreaterThan(0);
   });
 
   it('has responsive menu button', () => {
@@ -47,7 +47,10 @@ describe('Header Component', () => {
 
   it('navigation links have correct hrefs', () => {
     render(<Header />);
-    const welcomeLink = screen.getByRole('link', { name: /welcome/i });
-    expect(welcomeLink).toHaveAttribute('href', '/welcome');
+    const welcomeLinks = screen.getAllByRole('link', { name: /welcome/i });
+    // Should have at least one Welcome link with correct href
+    expect(welcomeLinks.some((link) => link.getAttribute('href') === '/welcome')).toBe(
+      true
+    );
   });
 });

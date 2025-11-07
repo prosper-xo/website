@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-import type {} from '@testing-library/jest-dom';
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({

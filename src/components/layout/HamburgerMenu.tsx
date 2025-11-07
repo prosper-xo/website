@@ -44,6 +44,7 @@ export default function HamburgerMenu() {
         className={`${styles.hamburger} ${isOpen ? styles.active : ''}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
+        aria-expanded={isOpen}
       >
         <span />
         <span />
@@ -54,11 +55,14 @@ export default function HamburgerMenu() {
         className={`${styles.secondaryNav} ${isOpen ? styles.navOpen : ''}`}
         onClick={closeMenu}
       >
+        <Link href="/">HOME</Link>
+        <Link href="/welcome">WELCOME</Link>
         <Link href="/why-prosper">WHY PROSPER</Link>
         <Link href="/team">TEAM</Link>
         <Link href="/ethos">ETHOS</Link>
         <Link href="/events">EVENTS</Link>
         <Link href="/get-involved">GET INVOLVED</Link>
+        <Link href="/blog">BLOG</Link>
       </nav>
 
       {isOpen && (
