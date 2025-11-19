@@ -1,0 +1,64 @@
+.tvVideo {
+  width: 85%;
+  max-width: 720px;
+  max-height: 85vh;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tvVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videoControls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.videoButton {
+  pointer-events: auto;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: black;
+  color: lime;
+  border: 2px solid lime;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.controlsHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .tvVideo {
+    width: 90vw;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: none;
+    aspect-ratio: 1 / 1;
+  }
+
+  .videoButton {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,145 +1,357 @@
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("/assets/fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
 .header {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .headerTop {
+  background: #ff7482;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  position: relative;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+}
+
+.logoContainer a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logoXo {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.logoXo a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logoXo img {
+  width: clamp(100px, 15vw, 150px);
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.logoXo a:hover img {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2rem;
+  top: 45%;
+  transform: translateY(-50%);
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1003;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.hamburgerMenu:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.hamburgerMenu span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.hamburgerMenu:hover span {
+  background: #333;
+}
+
+.hamburgerMenu.active {
+  position: fixed;
+  top: 45px;
+  left: 2rem;
+  z-index: 2000;
+  transform: none;
+}
+
+.hamburgerMenu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburgerMenu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerMenu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .socialIcons {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  align-items: end;
+  gap: 0.5rem;
+  position: absolute;
+  right: 2rem;
 }
 
 .socialIcons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .socialIcons a:hover {
-  background-color: rgba(236, 103, 140, 0.1);
   transform: scale(1.1);
 }
 
 .socialIcons img {
   width: 24px;
   height: 24px;
+  filter: brightness(0);
 }
 
 .headerBottomNav {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+  background: black;
+  position: relative;
+  padding: 1rem 0;
 }
 
 .textNav {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .textNavLink {
-  position: relative;
-  font-weight: 600;
-  color: #000;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  font-family: "Feu de camp Timber", serif;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-decoration: none;
-}
-
-.textNavLink::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ec678c;
-  transition: width 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #fff;
 }
 
 .textNavLink:hover {
-  color: #ec678c;
+  transform: translateY(-1px);
 }
 
-.textNavLink:hover::after {
-  width: 100%;
+.textNavWhy {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ec0caa;
+}
+
+.textNavWhy:hover {
+  -webkit-text-fill-color: #ffef09;
+}
+
+.textNavTeam {
+  color: #fa2dfd !important;
+}
+
+.textNavTeam:hover {
+  color: #ffef09 !important;
+}
+
+.textNavEthos {
+  color: #44fe7a !important;
+}
+
+.textNavEthos:hover {
+  color: #ffef09 !important;
+}
+
+.textNavEvents {
+  color: #2ff5ff !important;
+}
+
+.textNavEvents:hover {
+  color: #ffef09 !important;
+}
+
+.textNavInvolved {
+  color: #ffb344 !important;
+}
+
+.textNavInvolved:hover {
+  color: #ffef09 !important;
 }
 
 .secondaryNav {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #000;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  padding-top: 4rem;
+  color: #fff;
+  min-height: 100vh;
 }
 
-@media (max-width: 1024px) {
-  .headerBottomNav {
-    gap: 2rem;
-  }
+.secondaryNav::after {
+  content: "×";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
 
-  .textNav {
-    gap: 1.5rem;
-  }
+.secondaryNav::after:hover {
+  color: #ff7a75;
+  transform: scale(1.1);
+}
+
+.secondaryNav::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.secondaryNav.navOpen::before {
+  opacity: 1;
+}
+
+.secondaryNav a {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block !important;
+  width: 100% !important;
+  visibility: visible !important;
+  color: #fff !important;
+  background: transparent !important;
+  margin: 0.5rem 0 !important;
+  padding: 1.5rem 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-family: "Feu de camp Timber", serif !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  min-height: 50px !important;
+  line-height: 1.2 !important;
+}
+
+.secondaryNav a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.secondaryNav a:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+.secondaryNav .textNavWhy {
+  color: #ec0caa !important;
+  text-shadow: 0 0 10px rgba(236, 12, 170, 0.5);
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.secondaryNav .textNavWhy:hover {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.secondaryNav .textNavTeam {
+  color: #fa2dfd !important;
+}
+
+.secondaryNav .textNavEthos {
+  color: #44fe7a !important;
+}
+
+.secondaryNav .textNavEvents {
+  color: #2ff5ff !important;
+}
+
+.secondaryNav .textNavInvolved {
+  color: #ffb344 !important;
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 1rem;
-    gap: 0.5rem;
+  .headerBottomNav {
+    height: 50%;
   }
 
-  .headerTop {
-    justify-content: space-between;
+  .textNavLink {
+    display: none;
   }
 
   .socialIcons {
     display: none;
   }
 
-  .headerBottomNav {
-    display: none;
+  .secondaryNav {
+    width: 100%;
+    left: -100%;
   }
 
-  .logoXo {
-    width: 50px;
-    height: 50px;
+  .secondaryNav.navOpen {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoXo img {
+    width: clamp(80px, 20vw, 100px);
   }
 }

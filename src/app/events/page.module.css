@@ -1,0 +1,230 @@
+.eventsSection {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Purple event panel */
+.eventItem {
+  background-color: #7314ca;
+  color: white;
+  width: 100%;
+  padding: 4rem 0rem;
+}
+
+/* Layout wrapper */
+.eventFlex {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Text column */
+.eventDetails {
+  text-align: left;
+  max-width: 900px;
+  padding-bottom: 2rem;
+}
+
+.eventTitle {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffef5e;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.eventSubtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.eventBodyHead {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
+.eventBodyList {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.eventBodyList li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.eventBodyList li::before {
+  content: "•";
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+}
+
+.eventBody {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.eventSpeakers {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
+/* Flyer image */
+.eventImage {
+  flex-shrink: 0;
+}
+
+.eventImageImg {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Past Events Section */
+.pastEventsContainer {
+  position: relative;
+  background-color: #7314ca;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.pastText p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.pastFlyers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  padding: 0.5rem;
+}
+
+.poster {
+  max-width: 300px;
+  width: 100%;
+}
+
+.posterImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gradient call-to-action block */
+.followBox {
+  background: linear-gradient(
+    135deg,
+    #f36c21 0%,
+    #f36c21 20%,
+    #f54886 35%,
+    #a846b9 50%,
+    #4a90e2 65%,
+    #4ad9cd 80%,
+    #f36c21 95%
+  );
+  padding: 4rem 2rem;
+  color: white;
+  width: 100%;
+}
+
+.followBox .followInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.followText {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Button styles */
+.btnLg {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btnBlue {
+  background-color: #5dd6ff;
+  color: #000;
+  border: none;
+}
+
+.btnLg:hover,
+.btnLg:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .eventFlex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .eventDetails {
+    text-align: center;
+  }
+
+  .eventImage {
+    margin-bottom: 2rem;
+  }
+
+  .eventTitle {
+    font-size: 1.7rem;
+  }
+}
+
+/* Portrait mobile devices only */
+@media (max-width: 768px) and (orientation: portrait) {
+  .eventBodyHead {
+    text-align: center;
+  }
+
+  .eventBody {
+    text-align: justify;
+  }
+
+  .eventSpeakers {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+}

@@ -1,41 +1,100 @@
+# ==============================================================================
+# Prosper XO - .gitignore
+# ==============================================================================
+# This file prevents sensitive and generated files from being committed to Git
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------------------------
+
 # macOS
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
 .AppleDouble
 .LSOverride
+Icon
 
-# Node
+# Windows
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+.directory
+
+# ------------------------------------------------------------------------------
+# Node.js & Package Managers
+# ------------------------------------------------------------------------------
+
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-yarn.lock
+lerna-debug.log*
+.pnpm-debug.log*
 
+# ------------------------------------------------------------------------------
 # Next.js
+# ------------------------------------------------------------------------------
+
+# Build outputs
 .next/
 out/
 build/
 dist/
-*.tsbuildinfo
 
-# Contentlayer
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Production build files
+.vercel
+.netlify
+
+# ------------------------------------------------------------------------------
+# Contentlayer (Blog CMS)
+# ------------------------------------------------------------------------------
+
+.contentlayer/
 .contentlayer
 
-# Build outputs
-_site/
-*.log
+# ------------------------------------------------------------------------------
+# Jekyll (Legacy - can be removed after full migration)
+# ------------------------------------------------------------------------------
 
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# ------------------------------------------------------------------------------
 # Testing
+# ------------------------------------------------------------------------------
+
 coverage/
 .nyc_output/
+*.lcov
 
-# Environment files
+# Test results
+junit.xml
+test-results/
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+
+# Never commit these files!
 .env
 .env.local
 .env.development.local
@@ -43,19 +102,110 @@ coverage/
 .env.production.local
 .env.*.local
 
-# IDE files
+# Netlify CLI
+.netlify/
+
+# ------------------------------------------------------------------------------
+# IDE & Editor Files
+# ------------------------------------------------------------------------------
+
+# Visual Studio Code
 .vscode/
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
 .idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
 *.swp
 *.swo
 *~
+.vim/
 
-# Temporary files
+# Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+
+# ------------------------------------------------------------------------------
+# Temporary Files
+# ------------------------------------------------------------------------------
+
 *.tmp
 *.temp
+*.bak
+*.backup
+*.old
 
+# ------------------------------------------------------------------------------
 # Caches
-.cache/
+# ------------------------------------------------------------------------------
 
-# Misc (OS)
-Thumbs.db
+.cache/
+.parcel-cache/
+.turbo/
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache
+
+# StyleLint cache
+.stylelintcache
+
+# ------------------------------------------------------------------------------
+# Deployment & CI/CD
+# ------------------------------------------------------------------------------
+
+# Netlify build logs
+netlify-debug.log
+
+# Vercel (if used for testing)
+.vercel/
+
+# ------------------------------------------------------------------------------
+# Database & Logs (if applicable in future)
+# ------------------------------------------------------------------------------
+
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# ------------------------------------------------------------------------------
+# Miscellaneous
+# ------------------------------------------------------------------------------
+
+# Debug files
+*.stackdump
+debug.log
+*.dmp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Security scan results
+.scannerwork/
+
+# Sentry
+.sentryclirc
+
+# ==============================================================================
+# IMPORTANT: Review before deployment
+# ==============================================================================
+# Make sure no sensitive data (API keys, credentials, etc.) is committed
+# Check that all build artifacts are properly ignored
+# Verify that .env files are not tracked
+# ==============================================================================

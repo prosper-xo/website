@@ -2,21 +2,17 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import HamburgerMenu from './HamburgerMenu';
+import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const socialLinks = [
     {
       href: 'https://instagram.com/prosperxo',
       src: '/assets/icons/prosper-website-social-ig.svg',
       alt: 'Instagram',
-    },
-    {
-      href: 'https://www.tiktok.com/@prosper_xo_',
-      src: '/assets/icons/prosper-website-social-tiktok.svg',
-      alt: 'TikTok',
     },
     {
       href: 'https://x.com/prosperxoxoxo',
@@ -34,11 +30,40 @@ export default function Header() {
       alt: 'YouTube',
     },
     {
-      href: 'https://facebook.com/prosperxoxo',
+      href: 'https://facebook.com/prosperxo',
       src: '/assets/icons/prosper-website-social-fb.svg',
       alt: 'Facebook',
     },
   ];
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Body scroll lock
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMenu();
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -46,17 +71,26 @@ export default function Header() {
         <div className={styles.headerTop}>
           <div className={styles.logoContainer}>
             <div className={styles.logoXo}>
-              <Link href="/">
+              <Link href="/welcome">
                 <Image
                   src="/assets/logos/prosper-website-logo.png"
                   alt="Prosper XO"
-                  width={50}
-                  height={50}
+                  width={150}
+                  height={150}
                   priority
                 />
               </Link>
             </div>
-            <HamburgerMenu />
+            <button
+              className={`${styles.hamburgerMenu} ${isMenuOpen ? styles.active : ''}`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
 
           <div className={styles.socialIcons}>
@@ -81,41 +115,29 @@ export default function Header() {
 
         <nav className={styles.headerBottomNav}>
           <div className={styles.textNav}>
-            <Link href="/" className={styles.textNavLink}>
-              HOME
-            </Link>
-            <Link href="/welcome" className={styles.textNavLink}>
-              WELCOME
-            </Link>
-            <Link href="/why-prosper" className={styles.textNavLink}>
+            <Link href="/why-prosper" className={`${styles.textNavLink} ${styles.textNavWhy}`}>
               WHY PROSPER
             </Link>
-            <Link href="/team" className={styles.textNavLink}>
+            <Link href="/team" className={`${styles.textNavLink} ${styles.textNavTeam}`}>
               TEAM
             </Link>
-            <Link href="/ethos" className={styles.textNavLink}>
+            <Link href="/ethos" className={`${styles.textNavLink} ${styles.textNavEthos}`}>
               ETHOS
             </Link>
-            <Link href="/events" className={styles.textNavLink}>
+            <Link href="/events" className={`${styles.textNavLink} ${styles.textNavEvents}`}>
               EVENTS
             </Link>
-            <Link href="/get-involved" className={styles.textNavLink}>
+            <Link href="/get-involved" className={`${styles.textNavLink} ${styles.textNavInvolved}`}>
               GET INVOLVED
-            </Link>
-            <Link href="/blog" className={styles.textNavLink}>
-              BLOG
             </Link>
           </div>
 
-          <div className={styles.secondaryNav}>
-            <Link href="/">HOME</Link>
-            <Link href="/welcome">WELCOME</Link>
-            <Link href="/why-prosper">WHY PROSPER</Link>
-            <Link href="/team">TEAM</Link>
-            <Link href="/ethos">ETHOS</Link>
-            <Link href="/events">EVENTS</Link>
-            <Link href="/get-involved">GET INVOLVED</Link>
-            <Link href="/blog">BLOG</Link>
+          <div className={`${styles.secondaryNav} ${isMenuOpen ? styles.navOpen : ''}`} onClick={closeMenu}>
+            <Link href="/why-prosper" className={styles.textNavWhy}>WHY PROSPER</Link>
+            <Link href="/team" className={styles.textNavTeam}>TEAM</Link>
+            <Link href="/ethos" className={styles.textNavEthos}>ETHOS</Link>
+            <Link href="/events" className={styles.textNavEvents}>EVENTS</Link>
+            <Link href="/get-involved" className={styles.textNavInvolved}>GET INVOLVED</Link>
           </div>
         </nav>
       </div>

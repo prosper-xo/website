@@ -39,7 +39,7 @@ export default function ShareModalClient() {
       </button>
 
       {isOpen && (
-        <div className={styles.shareModal}>
+        <div className={styles.shareModal} role="dialog" aria-modal="true">
           <div
             className={styles.shareModalBackdrop}
             onClick={() => setIsOpen(false)}

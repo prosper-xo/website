@@ -43,6 +43,7 @@ export default function WelcomePage() {
           width={800}
           height={200}
           className={styles.textHeader}
+          style={{ width: '100%', height: 'auto' }}
         />
         <div className={styles.definitionsContainer}>
           <Image
@@ -51,6 +52,7 @@ export default function WelcomePage() {
             width={300}
             height={300}
             className={styles.definitions}
+            style={{ width: '100%', height: 'auto' }}
           />
           <Image
             src="/assets/definitions/prosper-website-definition2.jpg"
@@ -58,6 +60,7 @@ export default function WelcomePage() {
             width={300}
             height={300}
             className={styles.definitions}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
         <Image
@@ -66,6 +69,7 @@ export default function WelcomePage() {
           width={600}
           height={150}
           className={styles.rootedText}
+          style={{ width: '100%', height: 'auto' }}
         />
       </section>
 
@@ -88,6 +92,7 @@ export default function WelcomePage() {
           width={600}
           height={150}
           className={styles.textInasystem}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <Image
@@ -96,6 +101,7 @@ export default function WelcomePage() {
           width={400}
           height={100}
           className={styles.readMeText}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <div className={styles.readButtonWrap}>

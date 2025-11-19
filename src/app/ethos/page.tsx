@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -37,9 +35,7 @@ export const metadata: Metadata = {
 export default function EthosPage() {
   return (
     <>
-      <Header />
-      <main>
-        <section className={styles.hero}>
+      <section className={styles.hero}>
           <Image
             src="/assets/graphics/prosper-website-ethos-hero.png"
             alt="Prosper XO Ethos Title"
@@ -96,8 +92,6 @@ export default function EthosPage() {
             />
           </div>
         </section>
-      </main>
-      <Footer />
     </>
   );
 }

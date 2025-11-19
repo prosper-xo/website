@@ -1,22 +1,123 @@
+# Netlify Configuration for Next.js 14+ (Prosper XO)
+# This configuration is optimized for Next.js static export deployment
+
 [build]
-  publish = "_site"
-  command = "bundle install && npm install && npm run build"
+  publish = ".next"
+  command = "npm run build"
+
+# Node.js version - matches package.json engines requirement
+[build.environment]
+  NODE_VERSION = "18.0.0"
+  NPM_VERSION = "9.0.0"
+
+# Enable Next.js runtime for dynamic features (if needed in future)
+[functions]
+  node_bundler = "esbuild"
 
 # Redirect Netlify subdomain to custom domain
-# Temporarily disabled until custom domain is fully ready
+# Enable when custom domain is ready
 # [[redirects]]
 #   from = "https://prosper-xo-blog.netlify.app/*"
 #   to = "https://prosperxo.com/:splat"
 #   status = 301
 #   force = true
 
-# Headers for better caching
+# Clean URL redirects (remove .html extensions)
+[[redirects]]
+  from = "/:path*.html"
+  to = "/:path*"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = false
+
+# Blog post redirects (preserve Jekyll URL structure if needed)
+[[redirects]]
+  from = "/blog/:year/:month/:day/:slug"
+  to = "/blog/:slug"
+  status = 301
+  force = false
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    
+    # Content Security Policy - adjust as needed for your integrations
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://identity.netlify.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https: blob:;
+      connect-src 'self' https://www.google-analytics.com https://*.netlify.app;
+      frame-src 'self' https://www.youtube.com https://identity.netlify.com;
+      media-src 'self' blob:;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://docs.google.com;
+      frame-ancestors 'self';
+      upgrade-insecure-requests;
+    """
+
+# Cache headers for static assets (1 year)
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000"
+    Cache-Control = "public, max-age=31536000, immutable"
 
+# Cache headers for images
+[[headers]]
+  for = "/_next/image/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for static files from Next.js
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for fonts
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for favicon
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Short cache for API/dynamic content
 [[headers]]
   for = "/*.json"
   [headers.values]
-    Cache-Control = "public, max-age=300"
+    Cache-Control = "public, max-age=300, s-maxage=600"
+
+# HTML files - no cache (for SPA routing)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Plugin configuration for Netlify Identity (CMS)
+[[plugins]]
+  package = "netlify-plugin-inline-source"

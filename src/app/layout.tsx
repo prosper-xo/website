@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -69,21 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${timber.variable} ${poppins.variable}`}>
       <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-E00NWTHP4Q');
-          `}
-        </Script>
-
-        {/* Netlify Identity */}
+        {/* Netlify Identity Widget for CMS Authentication */}
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="afterInteractive"
@@ -106,6 +93,8 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* Google Analytics - Using Next.js recommended approach */}
+        <GoogleAnalytics gaId="G-E00NWTHP4Q" />
       </body>
     </html>
   );
