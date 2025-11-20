@@ -56,6 +56,9 @@
 - [x] **Performance:**
     - [x] Optimize image loading (verify `priority` usage).
     - [x] Check bundle size.
+- [x] **Visual Polish:**
+    - [x] Fixed Welcome page alignment (Why Artists Don't Prosper, Bottom Cards).
+    - [x] Resolved background gradient banding issues.
 
 ## Completed Tasks
 - **Project Completion:** Successfully converted Prosper XO from Jekyll to React & Next.js.

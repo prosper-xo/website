@@ -59,31 +59,25 @@ export default function ShareModalClient() {
                   handleShare('facebook');
                   setIsOpen(false);
                 }}
-                className={styles.shareButton}
+                className={`${styles.footerIcon} ${styles.facebook}`}
                 aria-label="Share on Facebook"
-              >
-                f
-              </button>
+              />
               <button
                 onClick={() => {
                   handleShare('twitter');
                   setIsOpen(false);
                 }}
-                className={styles.shareButton}
+                className={`${styles.footerIcon} ${styles.x}`}
                 aria-label="Share on X"
-              >
-                𝕏
-              </button>
+              />
               <button
                 onClick={() => {
                   handleShare('linkedin');
                   setIsOpen(false);
                 }}
-                className={styles.shareButton}
+                className={`${styles.footerIcon} ${styles.linkedin}`}
                 aria-label="Share on LinkedIn"
-              >
-                in
-              </button>
+              />
             </div>
           </div>
         </div>

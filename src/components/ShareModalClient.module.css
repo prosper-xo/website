@@ -60,47 +60,64 @@
 }
 
 .shareButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
+  font-family: var(--font-poppins), sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: bold;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #ffd700;
+  color: #000;
 }
 
-.shareButton:nth-child(1) {
-  background-color: #1877f2;
-  color: #fff;
-}
-
-.shareButton:nth-child(1):hover {
-  background-color: #0a66c2;
+.shareButton:hover {
   transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.shareButton:nth-child(2) {
-  background-color: #000;
-  color: #fff;
+/* Footer Icons */
+.footerIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 0.2s ease;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 10px;
 }
 
-.shareButton:nth-child(2):hover {
-  background-color: #333;
-  transform: scale(1.1);
+.footerIcon.x {
+  background-image: url('/assets/icons/prosper-website-social-x.svg');
 }
 
-.shareButton:nth-child(3) {
-  background-color: #0a66c2;
-  color: #fff;
+.footerIcon.facebook {
+  background-image: url('/assets/icons/prosper-website-social-fb.svg');
 }
 
-.shareButton:nth-child(3):hover {
-  background-color: #054399;
-  transform: scale(1.1);
+.footerIcon.linkedin {
+  background-image: url('/assets/icons/prosper-website-social-linkedin.svg');
+}
+
+/* Hover States (Solid Black) */
+.footerIcon.x:hover {
+  background-image: url('/assets/icons/prosper-website-social-x-footer-ro.svg');
+}
+
+.footerIcon.facebook:hover {
+  background-image: url('/assets/icons/prosper-website-social-fb.svg');
+  filter: brightness(0);
+}
+
+.footerIcon.linkedin:hover {
+  background-image: url('/assets/icons/prosper-website-social-linkedin-ro.svg');
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     {
       href: 'https://instagram.com/prosperxo',
@@ -31,11 +28,33 @@ export default function Footer() {
       src: '/assets/icons/prosper-website-social-youtube-footer-ro.svg',
       alt: 'YouTube',
     },
+    {
+      href: 'https://facebook.com/prosperxoxo',
+      src: '/assets/icons/prosper-website-social-fb.svg',
+      alt: 'Facebook',
+    },
   ];
 
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
+        <p className={styles.footerText}>WE WANT TO HEAR FROM YOU</p>
+
+        <div className={styles.footerContact}>
+          <div className={styles.footerColumn}>
+            <p className={styles.pressInquiries}>
+              PRESS INQUIRIES{' '}
+              <a href="mailto:press@prosperxo.com">press@prosperxo.com</a>
+            </p>
+          </div>
+          <div className={styles.footerColumn}>
+            <p className={styles.getInvolved}>
+              GET INVOLVED{' '}
+              <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
+            </p>
+          </div>
+        </div>
+
         <div className={styles.socialLinks}>
           {socialLinks.map((link) => (
             <a
@@ -44,26 +63,21 @@ export default function Footer() {
               aria-label={link.alt}
               target="_blank"
               rel="noopener noreferrer"
+              className={styles.socialLink}
             >
-              <Image
-                src={link.src}
-                alt={link.alt}
-                width={24}
-                height={24}
-              />
+              <Image src={link.src} alt={link.alt} width={24} height={24} />
             </a>
           ))}
         </div>
 
-        <nav className={styles.footerNav}>
-          <Link href="/">Home</Link>
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms-of-use">Terms of Use</Link>
-          <Link href="/code-of-conduct">Code of Conduct</Link>
-        </nav>
-
-        <div className={styles.copyright}>
-          <p>&copy; {currentYear} Prosper XO. All rights reserved.</p>
+        <div className={styles.footerLogo}>
+          <Image
+            src="/assets/logos/prosperxo-website-logo-melty-rainbow.png"
+            alt="Prosper XO"
+            width={150}
+            height={50}
+            style={{ width: 'auto', height: 'auto' }}
+          />
         </div>
       </div>
     </footer>

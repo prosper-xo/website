@@ -67,7 +67,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div id="header-top-bottom-container">
+      <div id="header-top-bottom-container" className="max-w-7xl mx-auto w-full">
         <div className={styles.headerTop}>
           <div className={styles.logoContainer}>
             <div className={styles.logoXo}>

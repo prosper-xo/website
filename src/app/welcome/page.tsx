@@ -64,6 +64,14 @@ export default function WelcomePage() {
           />
         </div>
         <Image
+          src="/assets/graphics/prosper-website-monitorscreen.png"
+          alt="Monitor Screen"
+          width={800}
+          height={600}
+          className={styles.mobileWidth}
+          style={{ width: '100%', height: 'auto' }}
+        />
+        <Image
           src="/assets/text/prosper-website-stylizedtext-rooted.svg"
           alt="Prosper XO is a movement rooted in artist sustainability, radical transparency, and true equity."
           width={600}
@@ -101,7 +109,16 @@ export default function WelcomePage() {
           width={400}
           height={100}
           className={styles.readMeText}
-          style={{ width: '100%', height: 'auto' }}
+          style={{ width: '35%', height: 'auto' }}
+        />
+
+        <Image
+          src="/assets/graphics/prosper-website-graphics-arrows.svg"
+          alt="arrows"
+          width={200}
+          height={100}
+          className={styles.threeArrows}
+          style={{ width: '50%', height: 'auto' }}
         />
 
         <div className={styles.readButtonWrap}>
@@ -137,11 +154,44 @@ export default function WelcomePage() {
         </div>
 
         <Image
+          src="/assets/text/prosper-website-stylizedtext-yourvoice.svg"
+          alt="Survey"
+          width={600}
+          height={100}
+          className={styles.mobileWidth}
+        />
+
+        <Image
+          src="/assets/text/prosper-website-stylizedtext-rainbow.png"
+          alt="Your Voice"
+          width={600}
+          height={100}
+          className={styles.mobileWidth}
+        />
+
+        <Image
           src="/assets/logos/prosper-website-logo-face.png"
           alt="Prosper XO"
           width={200}
           height={200}
           className={styles.logoFace}
+          style={{ width: '25%', height: 'auto' }}
+        />
+
+        <Image
+          src="/assets/placeholders/prosper-website-placeholder3.svg"
+          alt="We want to know more about what you want"
+          width={600}
+          height={200}
+          className={styles.mobileWidth}
+        />
+
+        <Image
+          src="/assets/text/prosper-website-stylizedtext-survey.svg"
+          alt="Take a Survey Below"
+          width={600}
+          height={100}
+          className={styles.mobileWidth}
         />
 
         <div className={styles.surveyButtons}>
