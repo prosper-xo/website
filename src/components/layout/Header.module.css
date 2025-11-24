@@ -7,8 +7,7 @@
 .header {
   margin: 0 auto;
   width: 100%;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 40;
 }
 
@@ -53,7 +52,7 @@
 }
 
 .hamburgerMenu {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   left: 2rem;

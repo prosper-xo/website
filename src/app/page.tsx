@@ -41,6 +41,7 @@ export default function Home() {
           width={280}
           height={47}
           className={styles.default}
+          priority
         />
         <Image
           src="/assets/text/prosper-website-stylizedtext-enterhere-ro.svg"
@@ -48,6 +49,7 @@ export default function Home() {
           width={280}
           height={47}
           className={styles.hover}
+          priority
         />
       </Link>
     </main>

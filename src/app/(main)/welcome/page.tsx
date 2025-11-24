@@ -159,6 +159,7 @@ export default function WelcomePage() {
           width={600}
           height={100}
           className={styles.mobileWidth}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <Image
@@ -167,6 +168,7 @@ export default function WelcomePage() {
           width={600}
           height={100}
           className={styles.mobileWidth}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <Image
@@ -184,6 +186,7 @@ export default function WelcomePage() {
           width={600}
           height={200}
           className={styles.mobileWidth}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <Image
@@ -192,6 +195,7 @@ export default function WelcomePage() {
           width={600}
           height={100}
           className={styles.mobileWidth}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <div className={styles.surveyButtons}>
@@ -237,6 +241,7 @@ export default function WelcomePage() {
           width={600}
           height={100}
           className={styles.whyTitle}
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <div className={styles.scrollMask}>
@@ -250,6 +255,7 @@ export default function WelcomePage() {
                     alt={`Moving box ${num}`}
                     width={200}
                     height={200}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
               ))}
@@ -264,6 +270,7 @@ export default function WelcomePage() {
                     alt={`Moving box ${num}`}
                     width={200}
                     height={200}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
               ))}
@@ -280,6 +287,7 @@ export default function WelcomePage() {
             alt="a letter from the founder"
             width={300}
             height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
         </Link>
         <Link href="/get-involved/" className={styles.poster}>
@@ -288,6 +296,7 @@ export default function WelcomePage() {
             alt="Press Inquiries"
             width={300}
             height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
         </Link>
         <Link href="/get-involved/" className={styles.poster}>
@@ -296,6 +305,7 @@ export default function WelcomePage() {
             alt="Join the Waitlist"
             width={300}
             height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
         </Link>
         <Link href="/why-prosper/" className={styles.poster}>
@@ -304,6 +314,7 @@ export default function WelcomePage() {
             alt="Why Prosper?"
             width={300}
             height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
         </Link>
       </section>

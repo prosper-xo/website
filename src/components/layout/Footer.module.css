@@ -1,34 +1,55 @@
 .footer {
+  background: #000000;
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 50px;
-  background: #000;
-  color: #fff;
-  font-family: var(--font-poppins), sans-serif;
 }
 
 .footerContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footerText {
-  font-size: 2rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footerContact {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerColumn p {
-  color: #fff;
+  font-family: var(--font-poppins), sans-serif;
   font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.pressInquiries {
+  background: linear-gradient(90deg, #fcc80e, #5caba4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fcc80e;
+}
+
+.getInvolved {
+  background: linear-gradient(90deg, #d96f65, #c64a96, #fe6c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #d96f65;
 }
 
 .footerColumn a {
@@ -44,34 +65,46 @@
 .socialLinks {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 1rem 0;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .socialLink {
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
+  color: #fced18;
 }
 
 .socialLink:hover {
   transform: scale(1.1);
+  color: #fced18;
+}
+
+.socialLink img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(100%) saturate(1000%)
+    hue-rotate(0deg) brightness(1.1) contrast(1.1);
 }
 
 .footerLogo {
   margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 1rem;
-  }
+.footerLogo img {
+  width: 250px;
+  height: auto;
+}
 
-  .footerText {
-    font-size: 1.5rem;
+@media (max-width: 768px) {
+  .socialLinks {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .footerContact {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }

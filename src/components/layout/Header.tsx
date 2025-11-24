@@ -67,7 +67,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div id="header-top-bottom-container" className="max-w-7xl mx-auto w-full">
+      <div id="header-top-bottom-container" className="w-full">
         <div className={styles.headerTop}>
           <div className={styles.logoContainer}>
             <div className={styles.logoXo}>
@@ -77,6 +77,7 @@ export default function Header() {
                   alt="Prosper XO"
                   width={150}
                   height={150}
+                  style={{ width: 'auto', height: 'auto' }}
                   priority
                 />
               </Link>
@@ -107,6 +108,7 @@ export default function Header() {
                   alt={link.alt}
                   width={24}
                   height={24}
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </a>
             ))}

@@ -180,6 +180,22 @@
   overflow: hidden;
   max-width: 1200px;
   margin: 2rem auto;
+  height: 600px;
+  position: relative;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
 }
 
 .scrollColumns {
@@ -192,17 +208,14 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
   flex: 1;
   min-width: 0;
-}
-
-.column.up {
-  animation: scrollUp 20s linear infinite;
+  animation: scrollLoop 80s linear infinite;
 }
 
 .column.down {
-  animation: scrollDown 20s linear infinite;
+  animation-direction: reverse;
 }
 
 .tanBox {
@@ -218,21 +231,12 @@
   object-fit: cover;
 }
 
-@keyframes scrollUp {
+@keyframes scrollLoop {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-50%);
-  }
-}
-
-@keyframes scrollDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50%);
   }
 }
 

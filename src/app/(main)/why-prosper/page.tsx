@@ -79,6 +79,7 @@ export default function WhyProsperPage() {
                   width={200}
                   height={200}
                   className={styles.gridImage}
+                  style={{ width: '100%', height: 'auto' }}
                 />
                 <h3 className={styles.gridTitle}>{item.title}</h3>
               </div>
@@ -105,6 +106,7 @@ export default function WhyProsperPage() {
                 width={200}
                 height={200}
                 className={styles.logoImage}
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
           </div>

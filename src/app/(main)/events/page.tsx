@@ -47,6 +47,7 @@ export default function EventsPage() {
                     width={350}
                     height={437}
                     className={styles.eventImageImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -100,6 +101,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -111,6 +113,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -122,6 +125,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -133,6 +137,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -144,6 +149,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -155,6 +161,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>
@@ -166,6 +173,7 @@ export default function EventsPage() {
                     width={300}
                     height={375}
                     className={styles.posterImg}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </a>
               </div>

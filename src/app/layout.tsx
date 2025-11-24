@@ -90,9 +90,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
         {/* Google Analytics - Using Next.js recommended approach */}
         <GoogleAnalytics gaId="G-E00NWTHP4Q" />
       </body>

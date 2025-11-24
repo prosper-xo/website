@@ -42,6 +42,7 @@ export default function EthosPage() {
             width={500}
             height={150}
             className={styles.ethosTitle}
+            style={{ width: '100%', height: 'auto' }}
             priority
           />
         </section>
@@ -54,6 +55,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
               src="/assets/graphics/prosper-website-ethos-img2.jpg"
@@ -61,6 +63,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
               src="/assets/graphics/prosper-website-ethos-img3.jpg"
@@ -68,6 +71,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
               src="/assets/graphics/prosper-website-ethos-img4.jpg"
@@ -75,6 +79,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
               src="/assets/graphics/prosper-website-ethos-img5.jpg"
@@ -82,6 +87,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
               src="/assets/graphics/prosper-website-ethos-img6.jpg"
@@ -89,6 +95,7 @@ export default function EthosPage() {
               width={400}
               height={400}
               className={styles.ethosImage}
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </section>

@@ -279,6 +279,7 @@ export default function TeamPage() {
         width={800}
         height={200}
         className={styles.textHeader}
+        style={{ width: '100%', height: 'auto' }}
         priority
       />
 
@@ -292,6 +293,7 @@ export default function TeamPage() {
               width={1200}
               height={800}
               className={styles.laurenImg}
+              style={{ width: '100%', height: 'auto' }}
               priority
             />
           </div>
@@ -356,6 +358,7 @@ export default function TeamPage() {
                   width={350}
                   height={467}
                   className={styles.teamImg}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className={styles.textContainer}>

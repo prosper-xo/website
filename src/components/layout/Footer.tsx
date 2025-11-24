@@ -65,7 +65,13 @@ export default function Footer() {
               rel="noopener noreferrer"
               className={styles.socialLink}
             >
-              <Image src={link.src} alt={link.alt} width={24} height={24} />
+              <Image
+                src={link.src}
+                alt={link.alt}
+                width={24}
+                height={24}
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </a>
           ))}
         </div>
