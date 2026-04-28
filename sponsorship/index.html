@@ -8,86 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/prosperxo_header.css"> 
     <link rel="stylesheet" href="../assets/css/prosperxo_footer.css">
-
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../assets/favicon/favicon-multi.ico"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="../assets/favicon/favicon-48x48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="../assets/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="128x128"
-      href="../assets/favicon/favicon-128x128.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/favicon/favicon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="../assets/favicon/favicon-192x192.png"
-    />
-    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
-    <meta property="og:title" content="EVENTS | Prosper XO" />
-    <meta
-      property="og:description"
-      content="Discover why Prosper XO is the platform that puts artists back at the center of the industry."
-    />
-    <meta
-      property="og:image"
-      content="../assets/thumbnail/prosper-website-thumbnail.jpg"
-    />
-    <meta property="og:url" content="https://www.prosperxo.com/sponsorship" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sponsorship | Prosper XO" />
-    <meta
-      name="twitter:description"
-      content="Discover why Prosper XO is the platform that puts artists back at the center of the industry."
-    />
-    <meta
-      name="twitter:image"
-      content="../assets/thumbnail/prosper-website-thumbnail.jpg"
-    />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-E00NWTHP4Q");
-    </script>
+    
     <style>
         @font-face {
             font-family: 'Feu';
@@ -96,1038 +17,1146 @@
             font-style: normal;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #000; color: #fff; }
+        
+        .slide { width: 100%; padding: 5% 6%; position: relative; }
+        
+        h1, h2, h3 { font-family: 'Feu', sans-serif; text-transform: uppercase; line-height: 1.1; }
+        p, li { font-family: 'Poppins', sans-serif; font-size: clamp(0.9rem, 1.5vw, 1.1rem); line-height: 1.6; }
 
-        img {
-            display: block;
+        .highlight-yellow { color: #FFD600; }
+        .bg-yellow { background-color: #FFD600; color: #000; padding: 2px 6px; display: inline-block; font-family: 'Feu'; }
+
+        /* Rainbow Divider */
+        .divider {
             width: 100%;
+            height: 12px;
+            background: linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);
         }
 
-        img.photo {
-            width: auto;
-            height: auto;
-        }
-
-        .slide {
-            background: #000;
-            color: #fff;
-            width: 100%;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(0.8rem, 1.6vw, 1.2rem);
-            line-height: 1.5;
-        }
-
-        li {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(0.8rem, 1.6vw, 1.2rem);
-            line-height: 1.5;
-        }
-
-        h1 {
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(1.6rem, 4vw, 2.8rem);
-            line-height: 1.05;
-            text-transform: uppercase;
-            margin-bottom: 0.8em;
-        }
-
-        h2 {
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            text-transform: uppercase;
-            margin-bottom: 0.8em;
-        }
-
-        h3 {
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(1.44rem, 3.6vw, 2.4rem);
-            text-transform: uppercase;
-            margin-bottom: 1em;
-        }
-
-        h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 0.8em;
-        }
-
-        /* ——— SLIDE 1 ——— */
+        /* SLIDE 1: Intro */
+/* ——— SLIDE 1 RESTRUCTURED ——— */
         .slide-1 {
-            padding: 5% 6%;
+            background-color: #000;
+            padding: 60px 6%;
         }
 
-        .slide-1-header {
+        .slide-1-layout {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            align-items: center; /* Centers image vertically against the text block */
+            gap: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
         }
 
-        .slide-1-header h1 {
-            color: #FFD600;
+        .slide-1-image-container {
+            flex: 0 0 40%; /* Keeps image at roughly 40% width as seen in screenshot */
         }
 
-        .slide-1-header .logo {
-            width: clamp(140px, 25vw, 320px);
+        .slide-1-image-container .photo {
+            width: 100%;
             height: auto;
+            border-radius: 15px;
+            /* Using a clean look to match the screenshot provided */
+            display: block;
         }
 
-        .slide-1-body {
-            text-align: center;
-            padding: 6% 4% 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-
-        .slide-1-body p {
-            margin: 0 auto 1.2em;
-        }
-
-        .slide-1-body h4 {
-            margin: 0 auto 0.8em;
-        }
-
-        .slide-1-body ul {
-            list-style: none;
-            padding: 0;
-            margin: 1.5em auto;
-        }
-
-        .slide-1-body ul li {
-            font-family: 'Feu', sans-serif;
-            color: #FFD600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .slide-1-body ul li::before {
-            content: "• ";
-            color: #fff;
-        }
-
-        .slide-1-body strong {
-            color: #FFD600;
-            font-weight: 700;
-        }
-
-        /* ——— SLIDE 2 ——— */
-        .slide-2 {
-            background: #4A90B0;
-            color: #000;
-            padding: 5% 6%;
-        }
-
-        .slide-2-top {
-            display: flex;
-            gap: 4%;
-            align-items: stretch;
-            margin-bottom: 2em;
-        }
-
-        .slide-2-top-text {
+        .slide-1-content {
             flex: 1;
-        }
-
-
-        .slide-2-top-text p {
-            margin-bottom: 1em;
-        }
-
-
-        .slide-2-top .photo {
-            width: 45%;
-            flex-shrink: 0;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 12px;
-        }
-
-        .slide-2 h3 {
-            color: #000;
-        }
-
-        .slide-2 h4 {
-            color: #000;
-        }
-
-        .slide-2 p {
-            margin-bottom: 0.8em;
-        }
-
-        .slide-2 ul {
-            padding-left: 1.2em;
-            margin-bottom: 1em;
-        }
-
-        .slide-2-centered {
-            text-align: center;
-            padding: 1.5em 0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .slide-2-centered:last-of-type {
-            padding-bottom: 0;
-        }
-
-        .slide-2-centered h3 {
-            color: #000;
-        }
-
-        .slide-2-centered strong {
-            color: #FFD600;
-            font-weight: 700;
-        }
-
-        .slide-2-centered p strong:only-child {
-            color: #000;
-        }
-
-        .slide-2-centered h3.no-underline {
-            margin-top: 1.5em;
-        }
-
-        .slide-2-centered ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .slide-2-centered ul li::before {
-            content: "• ";
-            color: #000;
-        }
-
-        .slide-2-sponsors {
-            display: flex;
-            gap: 4%;
-            align-items: stretch;
-            margin: 1.5em 0;
-        }
-
-        .slide-2-sponsors .photo {
-            width: 22%;
-            flex-shrink: 0;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 12px;
-        }
-
-        .slide-2-sponsors-text {
-            flex: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .slide-2-sponsors-text strong {
-            color: #FFD600;
-            font-weight: 700;
-        }
-
-        .slide-2-sponsors-text p strong:only-child {
-            color: #000;
-        }
-
-        .slide-2-sponsors-text h3 {
-            color: #000;
-        }
-
-
-        .slide-2-sponsors-text ul {
-            padding-left: 1.2em;
-            margin-bottom: 1em;
-        }
-
-        .slide-2-sponsors-columns {
-            display: flex;
-            gap: 2em;
-        }
-
-        .slide-2-sponsors-columns .col {
-            flex: 1;
-        }
-
-        .slide-2-banner {
-            text-align: center;
-            padding: 1.5em 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .slide-2-banner p {
-            font-family: 'Feu', sans-serif;
-            color: #000;
-            font-size: clamp(1rem, 2.8vw, 1.8rem);
-            text-transform: uppercase;
-            line-height: 1.3;
-            letter-spacing: 0.03em;
-        }
-
-        @media (max-width: 600px) {
-            .slide-1-header {
-                flex-direction: column-reverse;
-                align-items: center;
-                text-align: center;
-                gap: 1.5em;
-            }
-
-            .slide-1-header h1 {
-                max-width: 100%;
-            }
-
-            .slide-2-top {
-                flex-direction: column;
-            }
-
-            .slide-2-top .photo {
-                width: 100%;
-            }
-
-            .slide-2-sponsors {
-                flex-direction: column;
-            }
-
-            .slide-2-sponsors .photo {
-                width: 100%;
-            }
-
-            .slide-2-sponsors-columns {
-                flex-direction: column;
-                gap: 1.5em;
-            }
-
-            .slide-2-top {
-                gap: 1.5em;
-                text-align: center;
-            }
-
-            .slide-2-sponsors-text {
-                text-align: center;
-            }
-
-            .slide-2 ul {
-                display: inline-block;
-                text-align: left;
-            }
-
-            .slide-2-centered {
-                padding: 1.5em 0;
-            }
-
-            .slide-2-centered:first-of-type {
-                padding-bottom: 0;
-            }
-
-            .slide-2-sponsors {
-                gap: 1.5em;
-                margin: 1.5em 0;
-            }
-
-            .slide-2-banner {
-                padding: 1.5em 2%;
-            }
-        }
-
-        /* ——— SLIDE 3 ——— */
-        .slide-3 {
-            background: #000;
-            color: #fff;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-
-
-        .slide-3 h3 {
-            color: #FFD600;
-        }
-
-        .slide-3-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2em;
-        }
-
-        .slide-3-card {
-            text-align: center;
-        }
-
-        .slide-3-card img {
-            width: clamp(80px, 14vw, 160px);
-            height: auto;
-            margin: 0 auto 1em;
-        }
-
-        .slide-3-card h4 {
-            font-family: 'Feu', sans-serif;
-        }
-
-        .slide-3-card .blue {
-            color: #4A90B0;
-        }
-
-        .slide-3-card .orange {
-            color: #f5a623;
-        }
-
-        .slide-3-card .green {
-            color: #92c741;
-        }
-
-        .slide-3-card .pink {
-            color: #e94e8a;
-        }
-
-        .slide-3-card p {
-            color: #fff;
-        }
-
-        /* Highlight Text Rules */
-        .highlight-yellow {
-            color: #FFD600;
-            font-weight: 700;
-        }
-
-        .highlight-blue {
-            color: #4A90B0;
-            font-weight: 700;
-        }
-
-        .highlight-green {
-            color: #92c741;
-            font-weight: 700;
-        }
-
-        .highlight-pink {
-            color: #e94e8a;
-            font-weight: 700;
-        }
-
-        .highlight-orange {
-            color: #f5a623;
-            font-weight: 700;
-        }
-
-        .text-bold {
-            font-weight: 700;
-        }
-
-        @media (max-width: 600px) {
-            .slide-3-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* ——— SLIDE 4 ——— */
-        .slide-4 {
-            background: #92c741;
-            color: #000;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-
-
-        .slide-4 h3 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .slide-4 ul {
-            list-style: none;
-            padding: 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: inline-block;
             text-align: left;
         }
 
-        .slide-4 ul li {
-            margin-bottom: 0.6em;
-            padding-left: 1.2em;
-            position: relative;
+        /* Brighter Yellow for the main header */
+        .bright-yellow {
+            color: #E8E11C; 
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
         }
 
-        .slide-4 ul li::before {
+        .slide-1-body p {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* List styling to match screenshot bullet points */
+        .white-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .white-bullets li {
+            color: #fff;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 600; /* Matching the bold look of the list */
+        }
+
+        .white-bullets li::before {
             content: "•";
             position: absolute;
             left: 0;
-            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Pink "Jump" Button */
+        .btn-jump {
+            background-color: #E91E63;
             color: #000;
-        }
-
-        /* ——— SLIDE 5 ——— */
-        .slide-5 {
-            background: #250F42;
-            color: #fff;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-        .slide-5 h2 {
-            margin-bottom: 0.3em;
-        }
-
-        .slide-5 .subtitle {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            font-style: italic;
-            opacity: 0.8;
-            margin-bottom: 2em;
-        }
-
-        .press-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.5em;
-            margin-top: 1.5em;
-        }
-
-        .press-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .press-card:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.14);
-        }
-
-        .press-card .press-img {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: rgba(255, 255, 255, 0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-            color: #FFD600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 1em;
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        .press-card .press-info {
-            padding: 1em 1.2em 1.2em;
-        }
-
-        .press-card .press-info h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(0.85rem, 1.5vw, 1rem);
-            font-weight: 600;
-            margin-bottom: 0.4em;
-            color: #fff;
-            text-align: left;
-        }
-
-        .press-card .press-info p {
-            font-size: clamp(0.75rem, 1.2vw, 0.85rem);
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 0.8em;
-            text-align: left;
-            line-height: 1.4;
-        }
-
-        .press-card .read-link {
-            display: inline-block;
-            font-family: 'Feu', sans-serif;
-            color: #FFD600;
+            padding: 14px 28px;
             text-decoration: none;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.12em;
+            display: inline-block;
+            margin-top: 1rem;
             text-transform: uppercase;
-            border-bottom: none;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border-radius: 4px;
             transition: opacity 0.2s ease;
         }
 
-        .press-card .read-link:hover {
-            opacity: 0.8;
+        .btn-jump:hover {
+            opacity: 0.9;
         }
 
-        .press-quotes {
-            margin-top: 2.5em;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .press-quotes blockquote {
-            font-family: 'Feu', sans-serif;
-            font-style: normal;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 0.3em;
-        }
-
-        .press-quotes cite {
-            display: block;
-            font-family: 'Feu', sans-serif;
-            font-style: normal;
-            font-weight: 700;
-            color: #FFD600;
-            font-size: clamp(0.85rem, 1.5vw, 1rem);
-            margin-bottom: 2em;
-        }
-
-        @media (max-width: 600px) {
-            .press-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1em;
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .slide-1-layout {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .slide-1-image-container {
+                max-width: 80%;
+            }
+            .white-bullets li {
+                display: inline-block;
+                padding: 0 10px;
             }
         }
 
-        @media (max-width: 400px) {
-            .press-grid {
+/* ——— SLIDE 2 (PINK SECTION) ——— */
+/* ——— SLIDE 2 (REFINED PINK & TALL IMAGE) ——— */
+        .slide-2 {
+            background-color: #ea0f8b; /* Refined Pink to match screenshot */
+            padding: 100px 8%; /* Increased vertical padding */
+            color: #000;
+        }
+
+        .slide-2-layout {
+            display: flex;
+            align-items: center; 
+            gap: 6%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .slide-2-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .slide-2-image-container {
+            flex: 1.1; /* Slightly larger flex grow to allow for height */
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .photo-tall {
+            width: 100%;
+            height: auto;
+            min-height: 550px; /* Ensures the image is taller than the text block */
+            object-fit: cover;
+            border-radius: 20px; 
+            display: block;
+        }
+
+        .black-header-large {
+            font-family: 'Feu', sans-serif;
+            color: #000;
+            font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .slide-2-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 1.8rem;
+        }
+
+        .slide-2-text-bold {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-black-caps {
+            background-color: #000;
+            color: #fff;
+            padding: 18px 36px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        /* Slim Rainbow Divider */
+        .rainbow-divider-slim {
+            width: 100%;
+            height: 12px; 
+            background: linear-gradient(to right, #ff0066, #ffcc00, #ccff00, #33cccc, #3399ff);
+        }
+
+        @media (max-width: 1024px) {
+            .slide-2-layout {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .photo-tall {
+                min-height: auto;
+                max-width: 90%;
+            }
+        }
+
+/* ——— SLIDE 3 (CULTURE BEFORE CODE) ——— */
+        .slide-3-culture {
+            background-color: #000;
+            padding: 100px 6%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .slide-3-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Large Centered Yellow Header */
+        .bright-yellow-center {
+            color: #E8E11C; /* Matching the bright yellow from slide 1 */
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro-text-center {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Bold Values List */
+        .values-list-center p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+
+        /* Thin Grey Divider */
+        .grey-divider-thin {
+            width: 100%;
+            height: 1px;
+            background-color: #333; /* Dark grey line */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide-3-culture {
+                padding: 60px 8%;
+            }
+        }
+
+        /* ——— SLIDE 4 (WHAT'S ALREADY LIVE) ——— */
+        .slide-4-live {
+            background-color: #000;
+            padding: 80px 6% 100px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .slide-4-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .subtitle-bold {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+            margin-bottom: 4rem;
+        }
+
+        .live-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .live-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .live-card img {
+            width: 140px; /* Adjust based on your asset size */
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        .card-title {
+            font-family: 'Feu', sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            min-height: 3em; /* Keeps headers aligned */
+        }
+
+        .live-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Color Classes from User Hex Codes */
+        .pink-text { color: #EA0F8B; }
+        .orange-text { color: #F2943C; }
+        .blue-text { color: #4393D0; }
+        .green-text { color: #93C840; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .live-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .live-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* ——— SLIDE 6 ——— */
-        .slide-6 {
-            background: #4393D0;
+        /* ——— SLIDE 5 (EARLY TRACTION) ——— */
+        .slide-5-traction {
+            background-color: #93C840; /* Specific green hex from user */
+            padding: 100px 8%;
             color: #000;
-            padding: 5% 6%;
-            text-align: center;
         }
 
-        .slide-6-content {
-            max-width: 1200px;
+        .slide-5-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 10%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        .slide-6 h2 {
-            text-align: center;
-            margin-bottom: 1.5em;
+        .slide-5-header-block {
+            flex: 1;
         }
 
-        .slide-6 .callout {
+        .slide-5-content-block {
+            flex: 1.2;
+        }
+
+        .black-header-traction {
             font-family: 'Feu', sans-serif;
-            font-weight: normal;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            margin-bottom: 0.2em;
+            color: #000;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
 
-        .slide-6 .quote {
+        .traction-subtitle {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-            font-weight: 600;
-            margin-bottom: 2.5em;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
-        .slide-6 h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 2.2vw, 1.5rem);
             font-weight: 700;
-            text-transform: none;
-            margin-bottom: 1em;
-            color: #000;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            line-height: 1.3;
         }
 
-        .slide-6 ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 2.5em;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .slide-6 ul li {
-            position: relative;
-            margin-bottom: 0.8em;
-            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-        }
-
-        .slide-6 ul li::before {
-            content: "•";
-            position: absolute;
-            left: -1.2em;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .slide-6 .strong-text {
-            font-weight: 700;
-            color: #FFD600;
-        }
-
-        .slide-6 .closing-statement {
+        .proof-points-title {
             font-family: 'Feu', sans-serif;
-            font-weight: normal;
-            font-size: clamp(1.3rem, 2.8vw, 2rem);
-            margin-top: 1.5em;
+            color: #000;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
 
-        /* ——— SLIDE 7 ——— */
-        .slide-7 {
-            background: #93C840;
-            color: #000;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-        .slide-7-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .slide-7 h2 {
-            margin-bottom: 1.5em;
-        }
-
-        .slide-7 h3.section-title {
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-            margin-bottom: 1.2em;
-        }
-
-        .slide-7 p.intro {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-bottom: 2em;
-        }
-
-        .slide-7 h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-            font-weight: 700;
-            margin-bottom: 1em;
-        }
-
-        .slide-7 ul {
+        .traction-list {
             list-style: none;
-            padding-left: 0;
-            margin-bottom: 3em;
-            display: inline-block;
-            text-align: left;
+            padding: 0;
         }
 
-        .slide-7 ul li {
-            position: relative;
-            margin-bottom: 1em;
-            padding-left: 1.5em;
-            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+        .traction-list li {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1rem, 1.3vw, 1.2rem);
             line-height: 1.5;
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-left: 20px;
         }
 
-        .slide-7 ul li::before {
+        .traction-list li::before {
             content: "•";
             position: absolute;
             left: 0;
             font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .slide-5-layout {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+
+        /* ——— SLIDE 6 (PRESS GRID) ——— */
+        .slide-6-press {
+            background-color: #000;
+            padding: 80px 6%;
+            text-align: center;
+        }
+
+        .slide-6-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .press-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .press-card-box {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 280px;
+        }
+
+        .press-logo-small {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .press-img-full {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .press-card-box h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .press-card-box p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #fff;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .press-link {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Border Colors from User Hex Codes */
+        .border-pink { border-color: #EA0F8B; }
+        .border-orange { border-color: #F2943C; }
+        .border-blue { border-color: #4393D0; }
+        .border-green { border-color: #93C840; }
+        .border-yellow { border-color: #E8E11C; }
+
+        /* Responsive adjustments */
+        @media (max-width: 1100px) {
+            .press-grid-modern { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .press-grid-modern { grid-template-columns: 1fr; }
+        }
+
+        /* ——— SLIDE 7 (FEATURED QUOTE) ——— */
+        .slide-7-quote {
+            background-color: #4393D0; /* Specific blue from user */
+            padding: 120px 10%;
+            text-align: center;
             color: #000;
         }
 
-        .slide-7 .strong-text {
+        .slide-7-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .featured-quote {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            border: none; /* Remove default blockquote borders */
+            padding: 0;
+        }
+
+        .quote-author {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
             font-weight: 700;
-        }
-
-        .slide-7 .yellow-highlight {
-            background-color: #FFD600;
-            color: #000;
-            padding: 0 4px;
-            font-weight: 700;
-        }
-
-        .slide-7 .divider-line {
-            display: none;
-        }
-
-        .slide-7 .subtext {
-            font-size: 0.9em;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
             display: block;
-            margin-top: 0.2em;
-            color: rgba(0, 0, 0, 0.8);
         }
 
-        /* ——— SLIDE 8 (What Early Sponsors Make Possible) ——— */
-        .slide-8 {
-            background: #000;
+        /* Ensuring the dividers sandwich this slide correctly as per the screenshot */
+        @media (max-width: 768px) {
+            .slide-7-quote {
+                padding: 80px 8%;
+            }
+        }
+
+        /* ——— SLIDE 8 (MOMENTUM & MAP) ——— */
+        .slide-8-momentum {
+            background-color: #000;
+            padding: 80px 6%;
             color: #fff;
-            padding: 5% 6% 4%;
             text-align: center;
         }
 
-        .slide-8 .slide-2-centered {
-            padding: 1.5em 0;
+        .slide-8-container {
+            max-width: 1300px;
+            margin: 0 auto;
         }
 
-        .slide-8 .slide-2-centered:last-of-type {
-            padding-bottom: 3em;
-        }
-
-        .slide-8 h3 {
-            color: #fff;
-        }
-
-        .slide-8 p {
-            color: #fff;
-        }
-
-        .slide-8 ul li {
-            color: #fff;
-        }
-
-        .slide-8 strong {
-            color: #fff;
+        .subtitle-bold-white {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            margin-bottom: 0.5rem;
         }
 
-        .slide-8 em {
-            color: #fff;
+        .quote-style {
+            font-family: 'Poppins', sans-serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
         }
 
-        .slide-8 ul li::before {
-            color: #fff;
+        .map-container {
+            width: 100%;
+            margin-bottom: 4rem;
         }
 
-        /* ——— SLIDE 9 (How Sponsors Can Participate & SPONSORSHIP LEVELS) ——— */
-        .slide-9 {
-            background: #250F42;
+        .global-map {
+            width: 100%;
+            height: auto;
+            max-width: 1000px; /* Limits size to prevent stretching */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .momentum-grid {
+            display: flex;
+            gap: 60px;
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .momentum-block {
+            flex: 1;
+        }
+
+        .bright-yellow-small {
+            color: #E8E11C;
+            font-family: 'Feu', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .momentum-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .momentum-list li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .momentum-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #E8E11C;
+        }
+
+        .momentum-footer {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            text-transform: uppercase;
             color: #fff;
-            padding: 5% 6%;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .momentum-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        /* ——— SLIDE 9 (WORKING ON) ——— */
+        .slide-9-production {
+            background-color: #93C840; /* Specific Green from user */
+            padding: 100px 6%;
+            color: #000;
             text-align: center;
         }
 
-        .slide-9-content,
-        .slide-level-content {
+        .slide-9-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .black-header-traction-center {
+            font-family: 'Feu', sans-serif;
+            color: #000;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 5rem;
+            text-transform: uppercase;
+        }
+
+        .production-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px 40px;
+        }
+
+        .prod-item {
+            flex: 0 1 30%; /* Three items per row base */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 280px;
+        }
+
+        .prod-icon {
+            width: 50px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .prod-item h4 {
+            font-family: 'Feu', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .prod-item p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            line-height: 1.4;
+            max-width: 320px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .prod-item {
+                flex: 0 1 45%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .prod-item {
+                flex: 0 1 100%;
+            }
+        }
+
+/* ——— SLIDE 10 (MATCHED HEIGHT LAYOUT) ——— */
+        .slide-10-impact {
+            background-color: #000;
+            padding: 80px 6%;
+            color: #fff;
+        }
+
+        .slide-10-layout {
+            display: flex;
+            /* Stretch ensures both columns are the same height */
+            align-items: stretch; 
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .slide-10-image-container {
+            flex: 1;
+            max-width: 500px;
+            /* Container will naturally match the height of the content column */
+        }
+
+        .photo-impact {
+            width: 100%;
+            /* Forces the image to fill the container's height */
+            height: 100%; 
+            /* Ensures the image covers the area without being squished */
+            object-fit: cover; 
+            border-radius: 12px;
+            display: block;
+        }
+
+        .slide-10-content {
+            flex: 1.2;
+            text-align: left;
+            /* Padding ensures the text doesn't feel cramped next to the tall image */
+            padding: 10px 0; 
+        }
+
+        .impact-intro {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .impact-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-category h3 {
+            font-family: 'Feu', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .impact-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-category ul li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        .impact-category ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .small-margin {
+            margin-top: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-outro {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        /* Responsive */
+        @media (max-width: 950px) {
+            .slide-10-layout {
+                flex-direction: column;
+                align-items: center;
+            }
+            .slide-10-image-container {
+                max-width: 100%;
+                /* Reset height for mobile so it doesn't try to stretch to text below it */
+                height: 500px; 
+                margin-bottom: 40px;
+            }
+        }
+
+        /* ——— SLIDE 11 (PARTNER GAINS) ——— */
+        .slide-11-gain {
+            background-color: #000;
+            padding: 100px 6%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .slide-11-container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .level-block {
-            margin-bottom: 4em;
-            max-width: 800px;
+        .subtitle-italic {
+            font-family: 'Poppins', sans-serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+        }
+
+        .gain-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .gain-item {
+            flex: 0 1 calc(33.333% - 40px); /* 3 per row */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 280px;
+        }
+
+        .gain-item.bottom-row {
+            flex: 0 1 calc(45% - 40px); /* 2 per row for bottom */
+            margin-top: 20px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #D9D9D9; /* Light grey from screenshot */
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .image-placeholder img {
+            width: 50px; /* Icon size inside placeholder */
+            height: auto;
+            opacity: 0.5;
+        }
+
+        .gain-item h4 {
+            font-family: 'Feu', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .gain-item p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            max-width: 280px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .gain-item, .gain-item.bottom-row {
+                flex: 0 1 calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .gain-item, .gain-item.bottom-row {
+                flex: 0 1 100%;
+            }
+        }
+
+        /* ——— SLIDE 12 (SPONSORSHIP LEVELS) ——— */
+        .slide-12-levels {
+            background-color: #000;
+            padding: 80px 6%;
+            color: #fff;
+        }
+
+        .slide-12-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .levels-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        .center-btn-box {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .btn-pink-caps {
+            background-color: #E91E63;
+            color: #000;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        /* Box Layouts */
+        .level-box-full, .level-box {
+            border: 2px solid #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .level-row-2, .level-row-3 {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* ——— SLIDE 12 UPDATES ——— */
+        
+        /* Center the main title */
+        .slide-12-levels h2.bright-yellow-center {
+            text-align: center;
+            width: 100%;
+            display: block;
             margin-left: auto;
             margin-right: auto;
-            text-align: left;
         }
 
-        .level-title {
+        /* Border Color Order based on your sequence */
+        
+        /* 1. Promotional & In-Kind */
+        .border-pink-outline { border-color: #EA0F8B !important; } 
+        
+        /* 2. Friends of Prosper XO */
+        .border-orange-outline { border-color: #F2943C !important; } 
+        
+        /* 3. Community Partner */
+        .border-yellow-outline { border-color: #E8E11C !important; } 
+        
+        /* 4. Program Partner */
+        .border-blue-outline { border-color: #4393D0 !important; } 
+        
+        /* 5. Cultural Partner */
+        .border-green-outline { border-color: #93C840 !important; } 
+        
+        /* 6. Founding Prosper Partner */
+        .border-pink-founding-outline { border-color: #EA0F8B !important; }
+
+        /* Ensure boxes use these classes */
+        .level-box-full, .level-box {
+            border-width: 2px;
+            border-style: solid;
+            background-color: transparent;
+        }
+
+        .level-row-2 { grid-template-columns: repeat(2, 1fr); }
+        .level-row-3 { grid-template-columns: repeat(3, 1fr); }
+
+        .level-columns-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* Typography inside boxes */
+        .level-header {
             font-family: 'Feu', sans-serif;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            margin-bottom: 0.2em;
-            text-transform: uppercase;
-        }
-
-        .slide-9 h2 {
-            color: #fff;
-            margin-bottom: 1.5em;
-        }
-
-        .slide-9 h4 {
-            color: #fff;
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            margin-bottom: 1.2em;
-            text-transform: uppercase;
-            font-weight: normal;
-        }
-
-        .slide-9 ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 3em;
-            display: inline-block;
-            text-align: left;
-            width: auto;
-        }
-
-        .slide-9 ul li {
-            position: relative;
-            margin-bottom: 1em;
-            padding-left: 1.5em;
-            font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-            font-weight: normal;
-        }
-
-        .slide-9 ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .slide-9 .closing-statement {
-            font-family: 'Poppins', sans-serif;
-            font-weight: normal;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-top: 2em;
-        }
-
-        .slide-9 strong,
-        .slide-9 .strong-text {
-            font-weight: 700;
-            color: #FFD600;
-        }
-
-        .slide-9 h2.main-title {
-            margin-bottom: 0.5em;
-            background-color: #00FF00;
-            color: #000;
-            display: inline-block;
-            padding: 0 10px;
-            text-transform: uppercase;
-        }
-
-        .slide-9 .intro-text {
-            font-style: italic;
-            margin-bottom: 3em;
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-        }
-
-        /* ——— SPONSORSHIP LEVELS (SLIDES 9-12) ——— */
-        .slide-level {
-            padding: 5% 6%;
-            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
         .level-price {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
             font-weight: 700;
-            margin-bottom: 0.8em;
-            color: #FFD600;
+            font-size: 1.2rem;
+            display: block;
         }
 
-        .level-subtitle {
+        .level-subtext {
+            font-family: 'Poppins', sans-serif;
             font-style: italic;
-            margin-bottom: 1em;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
-        .level-list-title {
-            font-weight: 700;
-            margin-bottom: 0.5em;
-            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-            color: #FFD600;
-        }
-
-        .footer-note {
-            font-weight: 700;
-            font-style: italic;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-            margin-top: 3em;
+        .level-mission {
             font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
         }
 
-        .slide-10 {
-            background: #010101;
-            color: #fff;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-        .slide-10-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .slide-10 h2 {
-            text-align: center;
-            margin-bottom: 1.5em;
-        }
-
-        .slide-10 p {
+        .level-box h4 {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            margin-bottom: 1.5em;
-            line-height: 1.6;
+            font-size: 1rem;
+            text-decoration: underline;
+            margin: 15px 0 10px;
         }
 
-        .slide-10 .callout {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-            margin: 2.5em 0;
-            line-height: 1.5;
-        }
-
-        .slide-10 h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-            font-weight: 700;
-            margin: 2em 0 1em;
-            font-style: italic;
-        }
-
-        .slide-10 ul {
+        .level-box ul {
             list-style: none;
-            padding-left: 0;
-            margin-bottom: 2.5em;
-            display: inline-block;
-            text-align: left;
+            padding: 0;
         }
 
-        .slide-10 ul li {
+        .level-box ul li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 6px;
             position: relative;
-            padding-left: 1.5em;
-            margin-bottom: 0.8em;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            font-style: italic;
+            padding-left: 15px;
         }
 
-        .slide-10 ul li::before {
+        .level-box ul li::before {
             content: "•";
             position: absolute;
             left: 0;
-            font-weight: bold;
-            font-style: normal;
-            color: #fff;
         }
 
-        .slide-10 .contact-info {
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .level-row-2, .level-row-3, .level-columns-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ——— SLIDE 13 (FINAL CLOSING) ——— */
+        .slide-13-closing {
+            background-color: #4393D0; /* Specific blue from user */
+            padding: 100px 8%;
+            text-align: center;
+            color: #000;
+        }
+
+        .slide-13-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .black-header-large-center {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .closing-body-text {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            font-style: italic;
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            line-height: 1.5;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .black-header-medium-center {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .closing-subtext {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            margin-bottom: 2em;
+            font-size: clamp(1rem, 1.3vw, 1.2rem);
+            margin-bottom: 3rem;
+            line-height: 1.4;
         }
 
-        .slide-10 .contact-info p {
-            margin-bottom: 0.5em;
-        }
-
-        .slide-10 .contact-info span.emoji {
-            font-style: normal;
-            margin-right: 0.5em;
-        }
-
-        .slide-10 .closing-statement {
+        .btn-pink-caps-large {
+            background-color: #E91E63; /* Matching pink from screenshot */
+            color: #000;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-style: italic;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            border-radius: 4px;
         }
 
-        .slide-10 strong {
-            font-weight: 700;
+        @media (max-width: 768px) {
+            .slide-13-closing {
+                padding: 60px 8%;
+            }
         }
+
     </style>
 </head>
 
 <body>
-
-<!--header code for html docs. place directly under first <body> tag with one indent-->
-
     <header> <!--consists of two layered parts - 1.) header-top 2.) header-bottom-nav -->
         <div id="header-top-bottom-container">
             <div class="header-top">
@@ -1183,685 +1212,632 @@
         </div>
     </header>
 
-    <!--divider-->
-    <!--
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
--->
-    <!-- SLIDE 1 -->
+<!-- SLIDE 1 -->
     <section class="slide slide-1">
-        <div class="slide-1-header">
-            <h1>Sponsors &amp; Partner<br> Opportunities</h1>
-            <img class="logo" src="prosperxo-sponsorshipdeck-logo.png" alt="Prosper XO">
-        </div>
-        <div class="slide-1-body">
-            <h2>Who We Are</h2>
-            <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural
-                initiative building digital and physical leverage for music labor.</p>
-            <p>Rooted in community and informed by academic collaboration, our work bridges:</p>
-            <ul>
-                <li>Ethical technology development</li>
-                <li>Public education and dialogue</li>
-                <li>Community-led cultural programming</li>
-                <li>Uplifting artist and industry voices and lived experiences</li>
-                <li>Measurable economic impact</li>
-                <li>XO TV media production</li>
-            </ul>
-            <p>This deck reflects what is already <strong>active and in motion</strong>, and how aligned <span
-                    class="highlight-yellow">sponsors</span> and <strong>partners can grow alongside it.</strong></p>
-            <p>What you'll see here is not theory, but a living, <strong>expanding cultural infrastructure</strong>
-                model <strong>ready to scale with the right partners.</strong></p>
+        <div class="slide-1-layout">
+            <div class="slide-1-image-container">
+                <img class="photo" src="../assets/graphics/sponsorship/rainblow-vertical-fan-heart.jpeg" alt="Prosper XO Community">
+            </div>
+            <div class="slide-1-content">
+                <h1 class="bright-yellow">SPONSOR &amp; PARTNER<br>OPPORTUNITIES</h1>
+                
+                <div class="slide-1-body">
+                    <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural initiative building digital and physical leverage for music labor. Rooted in community and informed by academic collaboration, our work bridges:</p>
+                    
+                    <ul class="white-bullets">
+                        <li>Ethical Technology Development</li>
+                        <li>Public Education and Dialogue</li>
+                        <li>Community-led Cultural Programming</li>
+                        <li>Uplifting Artist and Industry Voices and Lived Experiences</li>
+                        <li>Measurable Economic Impact</li>
+                        <li>XO TV Media Production</li>
+                    </ul>
+
+                    <p>Below reflects what is already <strong>active and in motion</strong>, and how <strong>aligned sponsors and partners can grow alongside it.</strong> What you'll see here is not theory, but a living, <strong>expanding cultural infrastructure model ready to scale with the right partners.</strong></p>
+                    
+                    <a href="#sponsorship-levels" class="btn-jump">JUMP TO THE OPPORTUNITIES</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="divider"></div>
 
-    <!-- SLIDE 2 -->
+
+<div class="rainbow-divider-slim"></div>
+
+<!-- SLIDE 2 -->    
     <section class="slide slide-2">
+        <div class="slide-2-layout">
+            <div class="slide-2-content">
+                <h2 class="black-header-large">
+                    ARTISTS POWER CULTURE, BUT THE SYSTEMS AROUND THEM EXTRACT, EXPLOIT, AND SILENCE THEM.
+                </h2>
+                
+                <p class="slide-2-text">
+                    Music shapes identity, community, and local economies, yet the people who create it are often the least protected. Artists generate billions in cultural and economic value, while most independent musicians struggle to earn sustainable income. Mental health resources for creatives remain underfunded. Data, labor, and intellectual property are controlled by platforms, not creators, and the public has little visibility into how the industry truly operates.
+                </p>
 
-        <div class="slide-2-top">
-            <div class="slide-2-top-text">
-                <h2>Why This Matters</h2>
-                <h4>Artists power culture, but the systems around them extract, exploit, and silence them.</h4>
-                <p>Music shapes <strong>identity, community, and local economies</strong>, yet the people who
-                    create it are often the least protected. <strong>Artists generate billions in cultural and economic
-                        value</strong>, while most independent musicians <strong>struggle to earn sustainable
-                        income</strong>. Mental health resources for
-                    creatives remain underfunded. Data, labor, and intellectual property are controlled by platforms,
-                    not creators, and the public has little visibility into how the industry truly operates.</p>
-                <h4>Prosper XO exists to change this through education, cultural infrastructure, and ethical technology
-                </h4>
+                <p class="slide-2-text-bold">
+                    Prosper XO exists to change this through education, cultural infrastructure, and ethical technology.
+                </p>
+                
+                <a href="mailto:info@prosperxo.com" class="btn-black-caps">CONTACT US TO SUPPORT</a>
             </div>
-            <img class="photo" src="prosperxo-sponsorship-photo1.jpg" alt="">
-        </div>
 
-        <div class="slide-2-sponsors">
-            <img class="photo" src="prosperxo-sponsorship-photo2.jpg" alt="">
-            <div class="slide-2-sponsors-text">
-                <h3>Building Culture Before Code</h3>
-                <h4>Most platforms launch technology first and attempt to fix harm later.</h4>
-                <p>Prosper XO Is Doing the Opposite:</p>
-                <ul>
-                    <li>Listening Before Building</li>
-                    <li>Educating Before Scaling</li>
-                    <li>Establishing Values Before Monetization</li>
-                    <li>Designing Systems With Artists, Not Just For Them</li>
+            <div class="slide-2-image-container">
+                <img class="photo-tall" src="../assets/graphics/horizontal-rainbow-glitch-stage-fans.jpeg" alt="Rainbow Glitch Stage">
+            </div>
+        </div>
+    </section>
+
+    <div class="rainbow-divider-slim"></div>
+
+    <div class="divider"></div>
+
+<!-- SLIDE 3 -->    
+    <section class="slide slide-3-culture">
+        <div class="slide-3-content">
+            <h2 class="bright-yellow-center">BUILDING CULTURE BEFORE CODE</h2>
+            
+            <p class="intro-text-center">
+                Most platforms launch technology first and attempt to fix harm later. Prosper XO Is Doing the Opposite:
+            </p>
+
+            <div class="values-list-center">
+                <p>Listening Before Building</p>
+                <p>Educating Before Scaling</p>
+                <p>Establishing Values Before Monetization</p>
+                <p>Designing Systems With Artists, Not Just For Them</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="grey-divider-thin"></div>
+
+    <div class="divider"></div>
+
+<!-- SLIDE 4 -->    
+    <section class="slide slide-4-live">
+        <div class="slide-4-container">
+            <h2 class="bright-yellow-center">WHAT’S ALREADY LIVE</h2>
+            <p class="subtitle-bold">This is not an idea. This is an active, growing movement.</p>
+
+            <div class="live-grid">
+                <div class="live-card">
+                    <img src="prosperxo-sponsorship-programs-townhalls.png" alt="Town Halls" class="icon-pink">
+                    <h3 class="card-title pink-text">PROSPER XO TOWN HALLS</h3>
+                    <p><strong>Monthly in-person gatherings</strong> featuring artist-led conversations, mental health topics, education, and advocacy.</p>
+                </div>
+
+                <div class="live-card">
+                    <img src="prosperxo-sponsorship-programs-newsletters.png" alt="Newsletter" class="icon-orange">
+                    <h3 class="card-title orange-text">XO INSIDER NEWSLETTER</h3>
+                    <p><strong>~700</strong> highly engaged subscribers receiving education, resources, and artist perspectives. Open Rate: over <strong>50%</strong></p>
+                </div>
+
+                <div class="live-card">
+                    <img src="prosperxo-sponsorship-programs-surveys.png" alt="Surveys" class="icon-blue">
+                    <h3 class="card-title blue-text">SURVEYS: ARTISTS, FANS, BRANDS, & INDUSTRY</h3>
+                    <p>Feeding product development, cultural policy research, and artist needs assessments.</p>
+                </div>
+
+                <div class="live-card">
+                    <img src="prosperxo-sponsorship-programs-education.png" alt="Social Ed" class="icon-green">
+                    <h3 class="card-title green-text">SOCIAL EDUCATION CONTENT</h3>
+                    <p>Ongoing Instagram, TikTok, YouTube, and LinkedIn campaigns featuring artist voices, cited industry data, and mental health resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="rainbow-divider-slim"></div>
+
+<!-- SLIDE 5 -->    
+    <section class="slide slide-5-traction">
+        <div class="slide-5-layout">
+            <div class="slide-5-header-block">
+                <h2 class="black-header-traction">EARLY TRACTION &amp; COMMUNITY SIGNALS</h2>
+                <p class="traction-subtitle">Even pre-MVP, the community is already speaking.</p>
+            </div>
+
+            <div class="slide-5-content-block">
+                <h3 class="proof-points-title">KEY PROOF POINTS</h3>
+                <ul class="traction-list">
+                    <li><strong>40%+ of surveyed artists</strong> have requested beta access</li>
+                    <li><strong>75% of artists</strong> say they would onboard Day One</li>
+                    <li><strong>2,000+ artists engaged</strong> through Town Halls, newsletters, and surveys</li>
+                    <li><strong>800+ fans</strong> signed up via Prosper QR codes and newsletter</li>
+                    <li><strong>Multiple brand partners</strong> in preliminary MOU discussions for pilot activations</li>
                 </ul>
             </div>
         </div>
-
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="rainbow-divider-slim"></div>
 
+<!-- SLIDE 6 -->    
+    <section class="slide slide-6-press">
+        <div class="slide-6-container">
+            <h2 class="bright-yellow-center">PRESS, TRUST, &amp; THIRD-PARTY VALIDATION</h2>
+            <p class="subtitle-bold">The community is speaking publicly.</p>
 
-    <!-- SLIDE 3 -->
-    <section class="slide slide-3">
-        <h2>What’s Already Live</h2>
-        <h4>This is not an idea. This is an active, growing movement.</h4>
-        <div class="slide-3-grid">
-            <div class="slide-3-card">
-                <img src="prosperxo-sponsorship-programs-townhalls.png" alt="Town Halls">
-                <h4 class="blue">Prosper XO Town Halls</h4>
-                <p><span class="highlight-blue">Monthly in-person gatherings</span> featuring artist-led conversations,
-                    mental health topics, education, and
-                    advocacy.</p>
-            </div>
-            <div class="slide-3-card">
-                <img src="prosperxo-sponsorship-programs-newsletters.png" alt="Newsletter">
-                <h4 class="orange">XO Insider Newsletter</h4>
-                <p><span class="highlight-orange">~700</span> highly engaged subscribers receiving education, resources,
-                    and artist perspectives. Open Rate:
-                    over <span class="highlight-orange">50%</span></p>
-            </div>
-            <div class="slide-3-card">
-                <img src="prosperxo-sponsorship-programs-surveys.png" alt="Surveys">
-                <h4 class="green">Surveys: Artists, Fans, Brands &amp; Industry</h4>
-                <p>Feeding product development, cultural policy research, and artist needs assessments.</p>
-            </div>
-            <div class="slide-3-card">
-                <img src="prosperxo-sponsorship-programs-education.png" alt="Education">
-                <h4 class="pink">Social Education Content</h4>
-                <p>Ongoing Instagram, TikTok, YouTube, and LinkedIn campaigns featuring artist voices, cited industry
-                    data, and mental health resources.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
-
-
-    <!-- SLIDE 4 -->
-    <section class="slide slide-4">
-        <h2>Early Traction &amp; Community Signals</h2>
-        <h4>Even pre-MVP, the community is already speaking</h4>
-
-        <h3>Key Proof Points</h3>
-        <ul>
-            <li><span class="text-bold">40%+ of surveyed artists</span> have requested beta access</li>
-            <li><span class="text-bold">75% of artists</span> say they would onboard Day One</li>
-            <li><span class="text-bold">2,000+ artists engaged</span> through Town Halls, newsletters, and surveys</li>
-            <li><span class="text-bold">800+ fans</span> signed up via Prosper QR codes and newsletter</li>
-            <li><span class="text-bold">Multiple brand partners</span> in preliminary MOU discussions for pilot
-                activations</li>
-        </ul>
-    </section>
-
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
-
-    <!-- SLIDE 5 -->
-    <section class="slide slide-5">
-        <h2>Press, Trust &amp; Third-Party Validation</h2>
-        <p class="subtitle">The Community Is Speaking: Publicly</p>
-        <h3>Press &amp; Media Recognition · 2025–2026</h3>
-
-        <div class="press-grid">
-            <div class="press-card">
-                <div class="press-img">NPR</div>
-                <div class="press-info">
-                    <h4>NPR (National)</h4>
+            <div class="press-grid-modern">
+                <div class="press-card-box border-pink">
+                    <img src="../assets/graphics/sponsorship/npr-lgo.png" alt="NPR" class="press-logo-small">
+                    <h4>NPR (NATIONAL)</h4>
                     <p>The next battle for Austin's music scene is against the algorithms</p>
-                    <a class="read-link"
-                        href="https://www.npr.org/2025/11/08/nx-s1-5599528/the-next-battle-for-austins-music-scene-is-against-the-algorithms"
-                        target="_blank">Read Here →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">KUTX 98.9</div>
-                <div class="press-info">
+
+                <div class="press-card-box border-orange">
+                    <img src="../assets/graphics/sponsorship/koop-logo.png" alt="KOOP" class="press-logo-small">
+                    <h4>KOOP RADIO 91.7FM "PEOPLE UNITED"</h4>
+                    <p>Live radio feature</p>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
+                </div>
+
+                <div class="press-card-box border-yellow">
+                    <img src="../assets/graphics/sponsorship/npr-music-logo.jpg" alt="NPR Music Social" class="press-img-full">
+                </div>
+
+                <div class="press-card-box border-green">
+                    <img src="../assets/graphics/sponsorship/kutx-logo.png" alt="KUTX" class="press-logo-small">
                     <h4>KUTX 98.9</h4>
                     <p>Prosper XO: Austin's music streaming alternative</p>
-                    <a class="read-link"
-                        href="https://www.kut.org/life-arts/2025-08-11/prosper-xo-austin-tx-music-streaming-lauren-bruno-spotify-alternative"
-                        target="_blank">Read Here →</a>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">KOOP Radio<br>91.7fm</div>
-                <div class="press-info">
-                    <h4>KOOP Radio 91.7fm · "People United"</h4>
-                    <p>Live radio feature</p>
-                    <a class="read-link" href="https://archive.org/details/people-united-2026-02-06"
-                        target="_blank">Listen Here →</a>
-                </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Pause/Play<br>Podcast</div>
-                <div class="press-info">
-                    <h4>Pause/Play Podcast · Ft. CEO Lauren Bruno</h4>
+
+                <div class="press-card-box border-blue">
+                    <img src="../assets/graphics/sponsorship/kut-logo.png" alt="KUT" class="press-logo-small">
+                    <h4>PAUSE/PLAY PODCAST - FT. CEO LAUREN BRUNO</h4>
                     <p>Streaming sucks: the good, the bad, and the future of music platforms</p>
-                    <a class="read-link"
-                        href="https://kutkutx.studio/pause-play/streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms"
-                        target="_blank">Listen Here →</a>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Pause/Play<br>Podcast</div>
-                <div class="press-info">
-                    <h4>Pause/Play Podcast · Ft. CMO Zeale &amp; Jonny Johnson</h4>
+
+                <div class="press-card-box border-orange">
+                    <img src="../assets/graphics/sponsorship/kut-logo.png" alt="KUT" class="press-logo-small">
+                    <h4>PAUSE/PLAY PODCAST - FT. CMO ZEALE &amp; JONNY JOHNSON</h4>
                     <p>AI and the future of music</p>
-                    <a class="read-link" href="https://kutkutx.studio/pause-play/ai-and-the-future-of-music"
-                        target="_blank">Listen Here →</a>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">NPR Music<br>on Amazon</div>
-                <div class="press-info">
-                    <h4>NPR Music · Amazon Music</h4>
+
+                <div class="press-card-box border-pink">
+                    <img src="../assets/graphics/sponsorship/npr-music-logo.jpg" alt="NPR Music" class="press-logo-small">
+                    <h4>NPR MUSIC - AMAZON MUSIC</h4>
                     <p>Pause/Play episode available on Amazon Music</p>
-                    <a class="read-link"
-                        href="https://music.amazon.com/podcasts/f5963ce5-c041-47bd-8d8c-82b8c218f64a/episodes/3feddf06-750e-497c-812e-45c6b0edd78b/pause-play-streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms"
-                        target="_blank">Listen Here →</a>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">HerTexas</div>
-                <div class="press-info">
-                    <h4>HerTexas</h4>
-                    <p>Meet the Austin founder building a music streaming alternative that actually works for artists
-                    </p>
-                    <a class="read-link"
-                        href="https://hertexas.co/meet-the-austin-founder-building-a-music-streaming-alternative-that-actually-works-for-artists/"
-                        target="_blank">Read Here →</a>
+
+                <div class="press-card-box border-orange">
+                    <img src="../assets/graphics/sponsorship/her-texas-logo.png" alt="HER" class="press-logo-small">
+                    <h4>HERTEXAS</h4>
+                    <p>Meet the Austin founder building a music streaming alternative that actually works for artists</p>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Heaven's<br>Metal</div>
-                <div class="press-info">
-                    <h4>Heaven's Metal Magazine</h4>
+
+                <div class="press-card-box border-yellow">
+                    <img src="../assets/graphics/sponsorship/heavens-metal-logo.png" alt="Heavens Metal" class="press-logo-small">
+                    <h4>HEAVEN’S METAL MAGAZINE</h4>
                     <p>Prosper XO launches bold campaign to reimagine the music industry from the ground up</p>
-                    <a class="read-link"
-                        href="https://heavensmetalmagazine.com/index.php/2025/05/26/news-prosper-xo-launches-bold-campaign-to-reimagine-the-music-industry-from-the-ground-up/"
-                        target="_blank">Read Here →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Voyage<br>Austin</div>
-                <div class="press-info">
-                    <h4>Voyage Austin</h4>
+
+                <div class="press-card-box border-blue">
+                    <img src="../assets/graphics/sponsorship/voyage-austin-logo.png" alt="Voyage Austin" class="press-logo-small">
+                    <h4>VOYAGE AUSTIN</h4>
                     <p>Life &amp; work with Lauren Bruno of Austin</p>
-                    <a class="read-link"
-                        href="https://voyageaustin.com/interview/life-work-with-lauren-bruno-of-austin/"
-                        target="_blank">Read Here →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Austin Music<br>People</div>
-                <div class="press-info">
-                    <h4>Austin Music People Podcast</h4>
+
+                <div class="press-card-box border-green">
+                    <img src="../assets/graphics/sponsorship/amp-logo.png" alt="AMP" class="press-logo-small">
+                    <h4>AUSTIN MUSIC PEOPLE PODCAST</h4>
                     <p>Ft. Lauren Bruno, Sue Zoch, Gabe Phoenix &amp; Terrany Johnson</p>
-                    <a class="read-link"
-                        href="https://austinmusicpeople.podbean.com/e/18-prosper-xo-lauren-bruno-sue-zoch-gabe-phoenix-terrany-johnson/"
-                        target="_blank">Listen Here →</a>
+                    <a href="#" class="press-link">LISTEN HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Austin<br>Commons</div>
-                <div class="press-info">
-                    <h4>The Austin Common</h4>
+
+                <div class="press-card-box border-pink">
+                    <img src="../assets/graphics/sponsorship/austin-common-logo.png" alt="Austin Common" class="press-logo-small">
+                    <h4>THE AUSTIN COMMON</h4>
                     <p>Prosper XO community profile</p>
-                    <a class="read-link" href="https://theaustincommon.com/organizer/prosper-xo/" target="_blank">Read
-                        Here →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Medium</div>
-                <div class="press-info">
-                    <h4>Medium</h4>
+
+                <div class="press-card-box border-orange">
+                    <img src="../assets/graphics/sponsorship/medium-logo.png" alt="Medium" class="press-logo-small">
+                    <h4>MEDIUM</h4>
                     <p>The hidden cost of exposure: how SXSW and streaming platforms exploit artist data</p>
-                    <a class="read-link"
-                        href="https://medium.com/@lauren_33237/the-hidden-cost-of-exposure-how-sxsw-and-streaming-platforms-exploit-artist-data-c69ba1781288"
-                        target="_blank">Read Here →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
-            </div>
-            <div class="press-card">
-                <div class="press-img">Kera News</div>
-                <div class="press-info">
-                    <h4>Kera News</h4>
+
+                <div class="press-card-box border-yellow">
+                    <img src="../assets/graphics/sponsorship/kera-news-logo.png" alt="KERA" class="press-logo-small">
+                    <h4>KERA NEWS</h4>
                     <p>Feature by Abigail Breyfogle</p>
-                    <a class="read-link" href="https://www.keranews.org/abigail-breyfogle-kut" target="_blank">Read Here
-                        →</a>
+                    <a href="#" class="press-link">READ HERE ></a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="press-quotes">
-            <blockquote>"A new Austin startup hopes to bring an artist-centric model…by connecting musicians with
-                sponsors and giving them better access to their data."</blockquote>
-            <cite>— Abigail Breyfogle, KUT Pause/Play Podcast</cite>
-
-            <blockquote>"It's more than a platform; it's an ecosystem."</blockquote>
-            <cite>— Heaven's Metal Magazine</cite>
+<!-- SLIDE 7 -->    
+    <section class="slide slide-7-quote">
+        <div class="slide-7-container">
+            <blockquote class="featured-quote">
+                "A NEW AUSTIN STARTUP HOPES TO BRING AN ARTIST-CENTRIC MODEL...BY CONNECTING MUSICIANS WITH SPONSORS AND GIVING THEM BETTER ACCESS TO THEIR DATA."
+            </blockquote>
+            <cite class="quote-author">— Abigail Breyfogle, KUT Pause/Play Podcast</cite>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="rainbow-divider-slim"></div>
 
-    <!-- SLIDE 6 -->
-    <section class="slide slide-6">
-        <h2>Momentum, Reach &amp; Data Snapshot</h2>
+<!-- SLIDE 8 -->    
+    <section class="slide slide-8-momentum">
+        <div class="slide-8-container">
+            <h2 class="bright-yellow-center">MOMENTUM, REACH & DATA SNAPSHOT</h2>
+            <p class="subtitle-bold-white">Unusually Strong Early Engagement for a Pre-Product Platform</p>
+            <p class="quote-style">"Highly engaged Gen Z and Millennial creatives, local tastemakers, and ethical consumers"</p>
 
-        <div class="slide-6-content">
-            <p class="callout">Unusually Strong Early Engagement for a Pre-Product Platform</p>
-            <p class="quote">"Highly engaged Gen Z and Millennial creatives, local tastemakers, and ethical consumers"
-            </p>
+            <div class="map-container">
+                <img src="../assets/graphics/sponsorship/map.png" alt="Global Reach Map" class="global-map">
+            </div>
 
-            <h3>90-Day Performance Snapshot</h3>
-            <ul>
-                <li><span class="strong-text">11K page views / 3.3K users (GA4) (This is organic)</span></li>
-                <li>Traffic driven by NPR/KUT coverage and sustained by <span class="strong-text">organic
-                        discovery</span></li>
-                <li><span class="strong-text">357 event RSVPs</span></li>
-                <li><span class="strong-text">205 speakers</span> across Town Halls and cultural activations</li>
-                <li><span class="strong-text">300 survey respondents</span> across artists, fans, brands, and venues
-                </li>
-                <li>One of the <span class="strong-text">largest independent music-ecosystem datasets in Austin</span>
-                </li>
-            </ul>
+            <div class="momentum-grid">
+                <div class="momentum-block">
+                    <h3 class="bright-yellow-small">90-DAY PERFORMANCE SNAPSHOT</h3>
+                    <ul class="momentum-list">
+                        <li><strong>11K page views / 3.3K users (GA4)</strong> (This is organic)</li>
+                        <li>Traffic driven by NPR/KUT coverage and sustained by <strong>organic discovery</strong></li>
+                        <li><strong>357 event RSVPs</strong></li>
+                        <li><strong>205 speakers</strong> across Town Halls and cultural activations</li>
+                        <li><strong>300 survey respondents</strong> across artists, fans, brands, and venues</li>
+                        <li>One of the <strong>largest independent music-ecosystem datasets in Austin</strong></li>
+                    </ul>
+                </div>
 
-            <p class="callout">[map placeholder]]</p>
+                <div class="momentum-block">
+                    <h3 class="bright-yellow-small">GEOGRAPHIC REACH</h3>
+                    <ul class="momentum-list">
+                        <li><strong>Top Countries:</strong> United States, United Kingdom, India, Brazil, Mexico, France, Germany, Canada, Australia</li>
+                        <li><strong>Top U.S. Cities:</strong> Austin, Los Angeles, New York, Chicago, Houston, Dallas</li>
+                        <li><strong>Top International Cities:</strong> London, Berlin, Mexico City, São Paulo, Toronto</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h3>Geographic Reach</h3>
-            <ul>
-                <li><span class="strong-text">Top Countries:</span> United States, United Kingdom, India, Brazil,
-                    Mexico, France, Germany, Canada, Australia</li>
-                <li><span class="strong-text">Top U.S. Cities:</span> Austin, Los Angeles, New York, Chicago, Houston,
-                    Dallas</li>
-                <li><span class="strong-text">Top International Cities:</span> London, Berlin, Mexico City, São Paulo,
-                    Toronto</li>
-            </ul>
-
-            <p class="closing-statement">This depth of trust, participation, and global discovery is rare at this stage.
-            </p>
+            <p class="momentum-footer">This depth of trust, participation, and global discovery is rare at this stage.</p>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="rainbow-divider-slim"></div>
 
-     <!-- SLIDE 7 -->
-    <section class="slide slide-7">
-        <h2>What We're Working On</h2>
+<!-- SLIDE 9 -->    
+    <section class="slide slide-9-production">
+        <div class="slide-9-container">
+            <h2 class="black-header-traction-center">WHAT WE’RE WORKING ON</h2>
 
-        <div class="slide-7-content">
-            <h3 class="section-title">In Production</h3>
+            <div class="production-grid">
+                <div class="prod-item">
+                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
+                    <h4>UNMUTED PODCAST</h4>
+                    <p>2 episodes filmed</p>
+                </div>
 
-            <ul>
-                <li><span class="strong-text">UNMUTED Podcast:</span> 2 episodes filmed</li>
-                <li><span class="strong-text">Unfiltered Artist + Industry Video Series:</span> 2 episodes filmed <span
-                        class="yellow-highlight">(PUT LOGOS ON THIS PAGE)</span></li>
-                <li><span class="strong-text">XO Insider Blog:</span> op-eds, interviews, research highlights, and
-                    cultural policy breakdowns (maybe put screenshot of blog design or attach it to full deck)</li>
-                <li><span class="strong-text">XOtV-</span> A Modern Public-Access, Inspired Cultural Channel <span
-                        class="yellow-highlight">(PUT LOGOS on this page)</span></li>
-                <li><span class="strong-text">SXSW</span> city-wide <span class="strong-text">public education
-                        campaign</span></li>
-                <li><span class="strong-text">"Power to the Creator"</span> Educational Merch Drop <span
-                        class="yellow-highlight">(Include merch photos)</span></li>
-            </ul>
+                <div class="prod-item">
+                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
+                    <h4>UNFILTERED ARTIST + INDUSTRY VIDEO SERIES</h4>
+                    <p>2 episodes filmed</p>
+                </div>
+
+                <div class="prod-item">
+                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
+                    <h4>XO INSIDER BLOG</h4>
+                    <p>Op-eds, interviews, research highlights, and cultural policy breakdowns</p>
+                </div>
+
+                <div class="prod-item">
+                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
+                    <h4>XOTV</h4>
+                    <p>A Modern Public-Access, Inspired Cultural Channel</p>
+                </div>
+
+                <div class="prod-item">
+                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
+                    <h4>“POWER TO THE CREATOR”</h4>
+                    <p>City-wide public education wheat paste poster campaign during SXSW 2026</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="rainbow-divider-slim"></div>
 
-    <!-- SLIDE 8 -->
-    <section class="slide slide-8">
+<!-- SLIDE 10 -->    
+    <section class="slide slide-10-impact">
+        <div class="slide-10-layout">
+            <div class="slide-10-image-container">
+                <img class="photo-impact" src="../assets/graphics/sponsorship/vertical-rainbow-glitch-guitar-keyboard-1.jpeg" alt="Artist with guitar and keyboard">
+            </div>
+            
+            <div class="slide-10-content">
+                <h2 class="bright-yellow">WHAT EARLY SPONSORS<br>MAKE POSSIBLE</h2>
+                
+                <p class="impact-intro">Early sponsorship is active participation in rebuilding the cultural economy. Your support directly funds:</p>
 
-        <div class="slide-2-centered">
-            <h3>What Early Sponsors Make Possible</h3>
-            <p>Early sponsorship is <strong><i>not</i></strong> <strong>passive support.</strong><br>
-                It is <strong>active participation</strong> in rebuilding the cultural economy.</p>
-            <p>Your investment directly fuels:</p>
-            <p><strong>Artist Storytelling &amp; Visibility</strong></p>
-            <ul>
-                <li>XO TV media features spotlighting real artist journeys</li>
-                <li><em>Unmuted</em> one-on-one podcast conversations with artists and industry leaders</li>
-                <li><em>Unfiltered</em> short documentary artist series</li>
-            </ul>
-            <p><strong>Direct Artist Compensation</strong></p>
-            <ul>
-                <li>Paying artists featured across our media platforms and events</li>
-                <li>Fair compensation for guest speakers at our monthly Prosper XO Town Halls</li>
-            </ul>
-            <p><strong>Program Continuity &amp; Growth</strong></p>
-            <ul>
-                <li>Sustaining our monthly Town Halls and public-facing cultural programming</li>
-                <li>Expanding access to artist-first education and advocacy</li>
-            </ul>
-            <p><strong>The XO Team Powering the Ecosystem</strong></p>
-            <ul>
-                <li>Fair pay for the creatives, producers, researchers, technologists, and organizers building this work
-                </li>
-                <li>Sustainable operational infrastructure to ensure long-term program quality and growth</li>
-                <li>Ethical leadership and execution behind every activation, campaign, and pilot</li>
-            </ul>
-            <p><strong>Industry Transparency Campaigns</strong></p>
-            <ul>
-                <li>Social campaigns that uplift industry truths</li>
-                <li>Mission-aligned merch that amplifies artist advocacy and awareness</li>
-            </ul>
-            <p>Early sponsors are not funding content.<br>
-                They are funding <strong>equity, transparency, and infrastructure.</strong></p>
-        </div>
+                <div class="impact-category">
+                    <h3>XO TV MEDIA & STORYTELLING</h3>
+                    <ul>
+                        <li>Unfiltered artist & industry series</li>
+                        <li>Unmuted long-form podcast</li>
+                        <li>Real stories that elevate artist voices</li>
+                    </ul>
+                </div>
 
-        <div class="slide-2-centered">
-            <h3>What Partners Gain</h3>
-            <p><em>(Without Compromising Values)</em></p>
+                <div class="impact-category">
+                    <h3>ARTIST COMPENSATION</h3>
+                    <ul>
+                        <li>Paying artists featured across media + events</li>
+                        <li>Fair pay for Town Hall speakers</li>
+                    </ul>
+                </div>
 
-            <p><strong>Authentic Presence in Artist-Led Spaces</strong></p>
-            <p>Be embedded in trusted cultural environments</p>
+                <div class="impact-category">
+                    <h3>TOWN HALLS & CULTURAL PROGRAMMING</h3>
+                    <ul>
+                        <li>Monthly Prosper XO Town Halls</li>
+                        <li>In-person community, education, and connection</li>
+                    </ul>
+                </div>
 
-            <p><strong>Measurable Community Reach &amp; Engagement</strong></p>
-            <p>Real attendance, participation, and verified engagement data, not vanity metrics.</p>
+                <div class="impact-category">
+                    <h3>EDUCATION & AWARENESS CAMPAIGNS</h3>
+                    <ul>
+                        <li>Social campaigns exposing industry realities</li>
+                        <li>Mission-aligned merch driving awareness + advocacy</li>
+                    </ul>
+                </div>
 
-            <p><strong>Long-Term Brand Trust</strong></p>
-            <p>Sustained alignment with ethical innovation and artist empowerment.</p>
+                <div class="impact-category">
+                    <h3>THE XO ECOSYSTEM</h3>
+                    <ul>
+                        <li>Creatives, producers, researchers, and builders</li>
+                        <li>Infrastructure to sustain long-term impact</li>
+                    </ul>
+                </div>
 
-            <p><strong>Early Access to Ethical Technology Pilots</strong></p>
-            <p>Be first in line for responsible tech pilots that center transparency and community.</p>
-
-            <p><strong>Cultural Relevance That Can't Be Bought Through Ads</strong></p>
-            <p>Participation in movements builds legacy. Ads build impressions.</p>
-        </div>
-
-        <div class="slide-2-centered">
-            <p>By supporting Prosper XO's early programs, sponsors help ensure the technology we build is humane,
-                ethical, and accountable to the people it serves.</p>
+                <h2 class="bright-yellow small-margin">THIS ISN’T FUNDING CONTENT.</h2>
+                <p class="impact-outro">It’s funding equity, transparency, and cultural infrastructure.</p>
+            </div>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+    <div class="rainbow-divider-slim"></div>
 
+<!-- SLIDE 11 -->    
+    <section class="slide slide-11-gain">
+        <div class="slide-11-container">
+            <h2 class="bright-yellow-center">WHAT PARTNERS GAIN</h2>
+            <p class="subtitle-italic">(Without compromising values)</p>
 
-    <!-- SLIDE 9 -->
-    <section class="slide slide-9">
-        <h2>How Sponsors Can Participate</h2>
+            <div class="gain-grid">
+                <div class="gain-item">
+                    <div class="image-placeholder">
+                        <img src="insert-image.png" alt="Icon Placeholder">
+                    </div>
+                    <h4>AUTHENTIC CULTURAL PRESENCE</h4>
+                    <p>Embedded in trusted, artist-led spaces</p>
+                </div>
 
-        <div class="slide-9-content">
-            <h4>Sponsors may support:</h4>
-            <ul>
-                <li>Everything we do</li>
-                <li>One specific program</li>
-                <li>Education and policy work</li>
-                <li>Cultural campaigns</li>
-                <li>Technology pilots</li>
-            </ul>
+                <div class="gain-item">
+                    <div class="image-placeholder">
+                        <img src="insert-image.png" alt="Icon Placeholder">
+                    </div>
+                    <h4>REAL ENGAGEMENT DATA</h4>
+                    <p>Measured participation — not vanity metrics</p>
+                </div>
 
-            <p class="closing-statement"><span class="strong-text">We intentionally offer flexible entry points</span>,
-                from grassroots support to founding partnership.</p>
-        </div>
+                <div class="gain-item">
+                    <div class="image-placeholder">
+                        <img src="insert-image.png" alt="Icon Placeholder">
+                    </div>
+                    <h4>LONG-TERM BRAND TRUST</h4>
+                    <p>Alignment with ethical innovation and artist empowerment</p>
+                </div>
 
-        <div class="slide-level-content" style="margin-top: 6em;">
-            <div style="text-align: center;">
-                <h2>Sponsorship Levels</h2>
+                <div class="gain-item bottom-row">
+                    <div class="image-placeholder">
+                        <img src="insert-image.png" alt="Icon Placeholder">
+                    </div>
+                    <h4>EARLY ACCESS</h4>
+                    <p>First look at responsible tech + cultural pilots</p>
+                </div>
+
+                <div class="gain-item bottom-row">
+                    <div class="image-placeholder">
+                        <img src="insert-image.png" alt="Icon Placeholder">
+                    </div>
+                    <h4>CULTURAL RELEVANCE</h4>
+                    <p>Participation builds legacy. Ads build impressions.</p>
+                </div>
             </div>
-
-            <p class="intro-text">
-                Prosper XO sponsorship is designed as a pathway into the community, not a transaction.<br>
-                Partners may enter at any level and deepen involvement over time.
-            </p>
-
-            <div class="level-block">
-                <h3 class="level-title">Promotional &amp; In-Kind Community Partner</h3>
-                <p class="level-price">$0–$5,000 value (product, food, drink, gift cards, services etc)</p>
-                <p class="level-subtitle">A way to show up physically for artists and the community.</p>
-
-                <p class="level-desc">
-                    This level is for brands and local businesses who want to <strong>support artists in real-world,
-                        tangible ways</strong>, by nourishing, resourcing, and caring for the community during Prosper
-                    XO programs and events.
-                </p>
-
-                <p class="level-list-title">Ideal for:</p>
-                <ul class="level-list">
-                    <li>Food &amp; beverage brands</li>
-                    <li>Restaurants, coffee shops</li>
-                    <li>Wellness and mental health partners</li>
-                    <li>Retail brands</li>
-                    <li>Local businesses offering gift cards, services, or materials</li>
-                </ul>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Recognition as an <em>In-Kind Community Partner</em> on Prosper XO website</li>
-                    <li>Verbal thank-you during the supported event or program</li>
-                    <li>Logo or name on event signage (when appropriate)</li>
-                    <li>Mention in XO Insider Newsletter (1x, non-promotional)</li>
-                    <li>Social media acknowledgment tied to the supported activation (1x)</li>
-                </ul>
-
-                <p class="level-list-title">Examples of Support:</p>
-                <ul class="level-list">
-                    <li>Food or drinks for Town Halls or panels</li>
-                    <li>Gift cards for artist stipends or raffles</li>
-                    <li>Wellness offerings (mental health, body care, recovery resources)</li>
-                    <li>Product support for SXSW education campaigns or pop-ups</li>
-                </ul>
-            </div>
-
-            <div class="level-block">
-                <h3 class="level-title">✨ Friends of Prosper XO</h3>
-                <p class="level-price">$500–$1,500</p>
-                <p class="level-subtitle">A meaningful way to stand with artists, education, and ethical culture.</p>
-
-                <p class="level-desc">
-                    This level is for individuals, small businesses, and values-aligned brands who want to participate
-                    in the movement and help sustain artist-led education and public culture.
-                </p>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Name or logo listed on the Prosper XO Supporters Page</li>
-                    <li>Thank-you mention in XO Insider Newsletter (1x)</li>
-                    <li>Social media acknowledgment (1x)</li>
-                    <li>Invitation for 1–2 guests to a Prosper XO Town Hall</li>
-                    <li>Inclusion in the Annual Community Impact Report</li>
-                </ul>
-
-                <p class="level-list-title">Optional Add-On (choose one):</p>
-                <ul class="level-list">
-                    <li>Newsletter feature blurb</li>
-                    <li>Podcast verbal thank-you</li>
-                    <li>SXSW education campaign supporter credit <em>(non-promotional)</em></li>
-                </ul>
-            </div>
-
-            <div class="level-block">
-                <h3 class="level-title">🌱 Community Partner</h3>
-                <p class="level-price">$5,000</p>
-                <p class="level-subtitle">A visible commitment to artist sustainability and ethical culture.</p>
-
-                <p class="level-desc">
-                    Community Partners publicly align with Prosper XO's mission and help ensure our education, advocacy,
-                    and community programming remains accessible and artist-first.
-                </p>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Logo on sponsor page</li>
-                    <li>Quarterly acknowledgment in XO Insider Newsletter</li>
-                    <li>Invitations to Prosper XO Town Halls</li>
-                    <li>Community impact summary (reach + engagement)</li>
-                </ul>
-            </div>
-
-            <div class="level-block">
-                <h3 class="level-title">🌿 Program Partner</h3>
-                <p class="level-price">$10,000–$15,000</p>
-                <p class="level-subtitle">Support a specific program with clear, tangible impact.</p>
-
-                <p class="level-desc">
-                    Program Partners sponsor one core Prosper XO initiative and directly enable its success.
-                </p>
-
-                <p class="level-list-title">Choose one:</p>
-                <ul class="level-list">
-                    <li>XO Insider Newsletter</li>
-                    <li>UNMUTED Podcast</li>
-                    <li>Prosper XO Town Hall Series</li>
-                    <li>SXSW Public Education Campaign</li>
-                </ul>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Program-level recognition</li>
-                    <li>Co-branded content credit</li>
-                    <li>Social and newsletter mentions</li>
-                    <li>Program-specific impact recap</li>
-                </ul>
-            </div>
-
-            <div class="level-block">
-                <h3 class="level-title">🌳 Cultural Partner</h3>
-                <p class="level-price">$25,000</p>
-                <p class="level-subtitle">Help shape the cultural conversation.</p>
-
-                <p class="level-desc">
-                    Cultural Partners support multiple Prosper XO initiatives and play a visible role in expanding our
-                    public education, media, and cultural reach.
-                </p>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Support across multiple programs</li>
-                    <li>Featured presence across Town Halls, newsletter, and media</li>
-                    <li>Priority involvement in SXSW campaigns</li>
-                    <li>Early visibility into Prosper XO's technology roadmap</li>
-                    <li>Category Exclusivity</li>
-                </ul>
-            </div>
-
-            <div class="level-block">
-                <h3 class="level-title">🌈 Founding Prosper Partner</h3>
-                <p class="level-price">$50,000+</p>
-                <p class="level-subtitle">Build the future alongside us.</p>
-
-                <p class="level-desc">
-                    Founding Prosper Partners are foundational collaborators, helping shape Prosper XO's long-term
-                    impact, ethical technology, and creative infrastructure.
-                </p>
-
-                <p class="level-list-title">Includes:</p>
-                <ul class="level-list">
-                    <li>Naming-level recognition</li>
-                    <li>Full campaign integration</li>
-                    <li>Advisory seat for ethical collaboration</li>
-                    <li>Priority access to technology pilots</li>
-                    <li>Long-term alignment as Prosper XO scales</li>
-                    <li>Category Exclusivity</li>
-                </ul>
-            </div>
-
-            <p class="footer-note">Many partners begin at one level and deepen their involvement over time as the work
-                grows.</p>
         </div>
     </section>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
-    <!-- SLIDE 10 -->
-    <section class="slide slide-10">
-        <h2>LET'S BUILD THIS TOGETHER</h2>
+    <div class="rainbow-divider-slim"></div>
 
-        <div class="slide-10-content">
-
-            <p>
-                Prosper XO is building something rare:<br>
-                <strong>a cultural ecosystem where artists are supported, communities are strengthened, and technology
-                    is designed with care instead of extraction.</strong>
+<!-- SLIDE 12 -->    
+    <section class="slide slide-12-levels">
+        <div class="slide-12-container">
+            <h2 class="bright-yellow-center">SPONSORSHIP LEVELS</h2>
+            <p class="levels-intro">
+                We intentionally offer flexible entry points, from grassroots support to founding partnership. Prosper XO sponsorship is designed as a pathway into the community, not a transaction. Partners may enter at any level and deepen involvement over time. Sponsors can support everything we do, one specific program, education and policy work, cultural campaigns, or technology pilots.
             </p>
-
-            <p>
-                Our education programs, public conversations, and community-led initiatives are not side projects, they
-                are the foundation of an ethical creative economy we are building together.
-            </p>
-
-            <div class="callout">
-                We are inviting you to anchor the ethical infrastructure of the future creative economy.<br>
-                The music industry is shifting. The next era will be defined by transparency, artist ownership, and
-                community-led growth. Prosper XO is already leading that conversation in Austin and beyond.
+            <div class="center-btn-box">
+                <a href="mailto:sponsorships@prosperxo.com" class="btn-pink-caps">CONTACT US TO SUPPORT</a>
             </div>
 
-            <p>Let's discuss how your brand can champion the creators who power culture.</p>
-
-            <p>
-                <strong>When artists prosper, culture thrives.<br>
-                    And when culture thrives, everyone benefits.</strong>
-            </p>
-
-            <h4>Next Steps</h4>
-            <ul>
-                <li>Explore sponsorship or partnership fit</li>
-                <li>Support an existing program</li>
-                <li>Co-create a pilot or activation</li>
-                <li>Learn more about Prosper XO's technology roadmap</li>
-            </ul>
-
-            <div class="contact-info">
-                <p><span class="emoji">💌</span> Contact: sponsorships@prosperxo.com</p>
-                <p><span class="emoji">🌐</span> Website: prosperxo.com</p>
-                <p><span class="emoji">📆</span> Schedule a conversation</p>
+            <div class="level-box-full border-pink-outline">
+                <h3 class="level-header">PROMOTIONAL & IN-KIND COMMUNITY PARTNER</h3>
+                <span class="level-price">$0–$5,000 value</span>
+                <p class="level-subtext">(product, food, drink, gift cards, services etc)</p>
+                <p class="level-mission"><strong>A way to show up physically for artists and the community.</strong> This level is for brands and local businesses who want to support artists in real-world, tangible ways, by nourishing, resourcing, and caring for the community during Prosper XO programs and events.</p>
+                
+                <div class="level-columns-3">
+                    <div class="col">
+                        <h4>Ideal for:</h4>
+                        <ul>
+                            <li>Food & beverage brands</li>
+                            <li>Restaurants, coffee shops</li>
+                            <li>Wellness and mental health partners</li>
+                            <li>Retail brands</li>
+                            <li>Local businesses offering gift cards, services, or materials</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>Recognition as an In-Kind Community Partner on Prosper XO website</li>
+                            <li>Verbal thank-you during the supported event or program</li>
+                            <li>Logo or name on event signage (when appropriate)</li>
+                            <li>Mention in XO Insider Newsletter (1x, non-promotional)</li>
+                            <li>Social media acknowledgment tied to the supported activation (1x)</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Examples of Support:</h4>
+                        <ul>
+                            <li>Food or drinks for Town Halls or panels</li>
+                            <li>Gift cards for artist stipends or raffles</li>
+                            <li>Wellness offerings (mental health, body care, recovery resources)</li>
+                            <li>Product support for SXSW education campaigns or pop-ups</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <p class="closing-statement">Thank you for standing with us.</p>
+            <div class="level-row-2">
+                <div class="level-box border-orange-outline">
+                    <h3 class="level-header">FRIENDS OF PROSPER XO</h3>
+                    <span class="level-price">$500–$1,500</span>
+                    <p class="level-subtext">(product, food, drink, gift cards, services etc)</p>
+                    <p class="level-mission"><strong>A meaningful way to stand with artists, education, and ethical culture.</strong> This level is for individuals, small businesses, and values-aligned brands who want to participate in the movement and help sustain artist-led education and public culture.</p>
+                    <h4>Includes:</h4>
+                    <ul>
+                        <li>Name or logo listed on the Prosper XO Supporters Page</li>
+                        <li>Thank-you mention in XO Insider Newsletter (1x)</li>
+                        <li>Social media acknowledgment (1x)</li>
+                        <li>Invitation for 1–2 guests to a Prosper XO Town Hall</li>
+                        <li>Inclusion in the Annual Community Impact Report</li>
+                    </ul>
+                    <h4>Optional add-ons:</h4>
+                    <ul>
+                        <li>Newsletter feature blurb</li>
+                        <li>Podcast verbal thank-you</li>
+                        <li>SXSW education campaign supporter credit (non-promotional)</li>
+                    </ul>
+                </div>
+
+                <div class="level-box border-yellow-outline">
+                    <h3 class="level-header">COMMUNITY PARTNER</h3>
+                    <span class="level-price">$5,000</span>
+                    <p class="level-mission"><strong>A visible commitment to artist sustainability and ethical culture.</strong> Community Partners publicly align with Prosper XO’s mission and help ensure our education, advocacy, and community programming remains accessible and artist-first.</p>
+                    <h4>Includes:</h4>
+                    <ul>
+                        <li>Logo on sponsor page</li>
+                        <li>Quarterly acknowledgment in XO Insider Newsletter</li>
+                        <li>Invitations to Prosper XO Town Halls</li>
+                        <li>Community impact summary (reach + engagement)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="level-row-3">
+                <div class="level-box border-blue-outline">
+                    <h3 class="level-header">PROGRAM PARTNER</h3>
+                    <span class="level-price">$10,000–$15,000</span>
+                    <p class="level-mission"><strong>Support a specific program with clear, tangible impact.</strong> Program Partners sponsor one core Prosper XO initiative and directly enable its success.</p>
+                    <h4>Choose one:</h4>
+                    <ul>
+                        <li>XO Insider Newsletter</li>
+                        <li>UNMUTED Podcast</li>
+                        <li>Prosper XO Town Hall Series</li>
+                        <li>SXSW Public Education Campaign</li>
+                    </ul>
+                    <h4>Includes:</h4>
+                    <ul>
+                        <li>Program-level recognition</li>
+                        <li>Co-branded content credit</li>
+                        <li>Social and newsletter mentions</li>
+                        <li>Program-specific impact recap</li>
+                    </ul>
+                </div>
+
+                <div class="level-box border-green-outline">
+                    <h3 class="level-header">CULTURAL PARTNER</h3>
+                    <span class="level-price">$25,000</span>
+                    <p class="level-mission"><strong>Help shape the cultural conversation.</strong> Cultural Partners support multiple Prosper XO initiatives and play a visible role in expanding our public education, media, and cultural reach.</p>
+                    <h4>Includes:</h4>
+                    <ul>
+                        <li>Support across multiple programs</li>
+                        <li>Featured presence across Town Halls, newsletter, and media</li>
+                        <li>Priority involvement in SXSW campaigns</li>
+                        <li>Early visibility into Prosper XO’s technology roadmap</li>
+                        <li>Category Exclusivity</li>
+                    </ul>
+                </div>
+
+                <div class="level-box border-pink-founding-outline">
+                    <h3 class="level-header">FOUNDING PROSPER PARTNER</h3>
+                    <span class="level-price">$50,000+</span>
+                    <p class="level-mission"><strong>Build the future alongside us.</strong> Founding Prosper Partners are foundational collaborators, helping shape Prosper XO’s long-term impact, ethical technology, and creative infrastructure.</p>
+                    <h4>Includes:</h4>
+                    <ul>
+                        <li>Naming-level recognition</li>
+                        <li>Full campaign integration</li>
+                        <li>Advisory seat for ethical collaboration</li>
+                        <li>Priority access to technology pilots</li>
+                        <li>Long-term alignment as Prosper XO scales</li>
+                        <li>Category Exclusivity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center-btn-box" style="margin-top: 60px;">
+                <a href="mailto:sponsorships@prosperxo.com" class="btn-pink-caps">CONTACT US TO SUPPORT</a>
+            </div>
         </div>
     </section>
-    <!-- Footer html template-->
-    <!--to be copy/pasted after </section> tag and before <script> tag-->
 
+    <div class="divider"></div>
 
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
+<!-- SLIDE 13 -->    
+    <section class="slide slide-13-closing">
+        <div class="slide-13-container">
+            <h2 class="black-header-large-center">LET’S BUILD THIS TOGETHER</h2>
+            
+            <p class="closing-body-text">
+                Prosper XO is building a new cultural ecosystem — where artists are supported, communities are strengthened, and technology serves people, not extraction. Our education, town halls, and community initiatives are the foundation of a more ethical creative economy. 
+                <br><br>
+                We’re inviting you to help shape that future. 
+                <br>
+                The industry is shifting toward transparency, artist ownership, and community-led growth — and Prosper XO is leading that conversation in Austin and beyond.
+            </p>
 
-        <footer class="footer">
+            <h2 class="black-header-medium-center">WHEN ARTISTS PROSPER, CULTURE THRIVES.</h2>
+
+            <p class="closing-subtext">
+                If you’re interested in learning more about Prosper XO’s technology, or investment opportunities, we’d love to start a conversation.
+            </p>
+            
+            <div class="center-btn-box">
+                <a href="mailto:sponsorships@prosperxo.com" class="btn-pink-caps-large">CONTACT US TO SUPPORT</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
     <div class="footer-content">
         <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
         <div class="footer-contact">
@@ -1941,7 +1917,7 @@
         </div>
     </div>
     </footer>
-    <script src="../assets/js/hamburger-menu.js"></script> <!-- Updated path to hamburger-menu.js -->
-</body>
 
+    <script src="../assets/js/hamburger-menu.js"></script>
+</body>
 </html>
