@@ -744,73 +744,149 @@
         }
 
         /* ——— SLIDE 9 (WORKING ON) ——— */
+/* ——— SLIDE 9 (PHONE CAROUSEL & CONTENT) ——— */
         .slide-9-production {
-            background-color: #93C840; /* Specific Green from user */
-            padding: 100px 6%;
+            background-color: #93C840; /* Your green */
+            padding: 80px 6%;
             color: #000;
-            text-align: center;
         }
 
-        .slide-9-container {
+        .slide-9-layout {
+            display: flex;
+            align-items: center;
+            gap: 8%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .black-header-traction-center {
-            font-family: 'Feu', sans-serif;
-            color: #000;
-            font-size: clamp(2rem, 3.5vw, 3rem);
-            margin-bottom: 5rem;
-            text-transform: uppercase;
-        }
-
-        .production-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 60px 40px;
-        }
-
-        .prod-item {
-            flex: 0 1 30%; /* Three items per row base */
+        /* Phone Styling */
+        .phone-column {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 280px;
         }
 
-        .prod-icon {
-            width: 50px;
-            height: auto;
-            margin-bottom: 20px;
+        .phone-frame {
+            position: relative;
         }
 
-        .prod-item h4 {
-            font-family: 'Feu', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            line-height: 1.2;
+        .phone-viewport {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
 
-        .prod-item p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            line-height: 1.4;
+        .phone-scroll-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .phone-scroll-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Nav Controls */
+        .carousel-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
             max-width: 320px;
+            margin-top: 30px;
+            align-items: center;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .prod-item {
-                flex: 0 1 45%;
-            }
+        .dot-indicators { display: flex; gap: 8px; }
+        .dot { width: 8px; height: 8px; background: rgba(0,0,0,0.3); border-radius: 50%; }
+        .dot.active { background: #000; }
+
+        .arrow-buttons { display: flex; gap: 15px; }
+        .arrow-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: 0.2s;
+        }
+        .arrow-btn:hover { background: #000; color: #fff; }
+
+        /* Content Column Styling */
+        .content-column { flex: 1.5; }
+
+        .section-title-right {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            text-align: right;
+            margin-bottom: 50px;
         }
 
-        @media (max-width: 650px) {
-            .prod-item {
-                flex: 0 1 100%;
-            }
+        .work-grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .work-item h4 {
+            font-family: 'Feu', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 15px 0 5px;
+        }
+
+        .work-item p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .work-item img {
+            max-width: 60%;
+            height: auto;
+        }
+
+        /* Target the specific grid cell containing the wheatpaste image */
+        .work-item-center-container {
+            display: flex;
+            justify-content: center; /* Centers the image horizontally in the cell */
+            align-items: center;     /* Centers the image vertically in the cell */
+            width: 100%;
+        }
+
+        /* Your existing class with display: block to ensure margin: auto works if needed */
+        .work-item-wheatpaste {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            /* Optional: add the black shadow from your screenshot */
+            box-shadow: 10px 10px 0px #000; 
+        }
+
+        .work-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .work-poster {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 10px 10px 0px #000;
+        }
+
+        @media (max-width: 1100px) {
+            .slide-9-layout { flex-direction: column; }
+            .section-title-right { text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .work-item p { font-size: 1rem; }
         }
 
 /* ——— SLIDE 10 (MATCHED HEIGHT LAYOUT) ——— */
@@ -959,8 +1035,6 @@
 
         .image-placeholder {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            background-color: #D9D9D9; /* Light grey from screenshot */
             border-radius: 4px;
             margin-bottom: 20px;
             display: flex;
@@ -970,9 +1044,8 @@
         }
 
         .image-placeholder img {
-            width: 50px; /* Icon size inside placeholder */
+            width: 100%;
             height: auto;
-            opacity: 0.5;
         }
 
         .gain-item h4 {
@@ -1592,46 +1665,80 @@
 
     <div class="divider"></div>
 
-<!-- SLIDE 9 What We're Working On -->    
+<!-- SLIDE 9 -- In Production -->
     <section class="slide slide-9-production">
-        <div class="slide-9-container">
-            <h2 class="black-header-traction-center">WHAT WE’RE WORKING ON</h2>
-
-            <div class="production-grid">
-                <div class="prod-item">
-                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
-                    <h4>UNMUTED PODCAST</h4>
-                    <p>2 episodes filmed</p>
+    <div class="slide-9-container">
+        <div class="slide-9-layout">
+            
+            <div class="phone-column">
+                <div class="phone-frame">
+                    <div class="phone-viewport">
+                        <div class="phone-scroll-container" id="phoneSlider">
+                            <img src="../assets/graphics/sponsorship/poster.png" alt="Sustainability = Survival">
+                            <img src="../assets/graphics/sponsorship/unmuted-1.png" alt="Artist Talk">
+                            <img src="../assets/graphics/sponsorship/unmuted-2.png" alt="Artist Talk">
+                            <img src="../assets/graphics/sponsorship/wheatpaste@2x.png" alt="Artist Talk">
+                            <img src="../assets/graphics/sponsorship/xotv@2x.png" alt="Artist Talk">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="prod-item">
-                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
-                    <h4>UNFILTERED ARTIST + INDUSTRY VIDEO SERIES</h4>
-                    <p>2 episodes filmed</p>
-                </div>
-
-                <div class="prod-item">
-                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
-                    <h4>XO INSIDER BLOG</h4>
-                    <p>Op-eds, interviews, research highlights, and cultural policy breakdowns</p>
-                </div>
-
-                <div class="prod-item">
-                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
-                    <h4>XOTV</h4>
-                    <p>A Modern Public-Access, Inspired Cultural Channel</p>
-                </div>
-
-                <div class="prod-item">
-                    <img src="insert-box-icon.png" alt="Box Icon" class="prod-icon">
-                    <h4>“POWER TO THE CREATOR”</h4>
-                    <p>City-wide public education wheat paste poster campaign during SXSW 2026</p>
+                <div class="carousel-nav">
+                    <div class="dot-indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="arrow-buttons">
+                        <button class="arrow-btn" onclick="moveSlider(-1)">←</button>
+                        <button class="arrow-btn" onclick="moveSlider(1)">→</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <br>
 
-    <div class="divider"></div>
+            <div class="content-column">
+                <h2 class="section-title-right">WHAT WE’RE WORKING ON</h2>
+                
+                <div class="work-grid-2col">
+                    <div class="work-item">
+                        <img src="../assets/graphics/sponsorship/unmuted-logo.svg" alt="Unmuted" class="work-logo">
+                        <h4>UNMUTED PODCAST</h4>
+                        <p>2 episodes filmed</p>
+                    </div>
+
+                    <div class="work-item">
+                        <img src="../assets/graphics/sponsorship/ProsperXO-Unfiltered-Logo 1.svg" alt="Unfiltered" class="work-logo">
+                        <h4>UNFILTERED ARTIST + INDUSTRY VIDEO SERIES</h4>
+                        <p>2 episodes filmed</p>
+                    </div>
+
+                    <div class="work-item">
+                        <img src="../assets/graphics/sponsorship/xo-insider-logo.svg" alt="XO Insider" class="work-logo">
+                        <h4>XO INSIDER BLOG</h4>
+                        <p>Op-eds, interviews, research highlights, and cultural policy breakdowns</p>
+                    </div>
+
+                    <div class="work-item">
+                        <img src="../assets/graphics/sponsorship/XOTV-MicSticker@2x 1.png" alt="XOTV" class="work-logo">
+                        <h4>XOTV</h4>
+                        <p>A Modern Public-Access, Inspired Cultural Channel</p>
+                    </div>
+  
+                    <div class="work-item work-item-center-container">
+                        <img src="../assets/graphics/sponsorship/poster@2x.png" alt="Poster" class="work-item-wheatpaste">
+                    </div>
+
+                    <div class="work-item">
+                        <h4>“POWER TO THE CREATOR”</h4>
+                        <p>City-wide public education wheat paste poster campaign during SXSW 2026</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- SLIDE 10 What Early Sponsors Make Possible -->    
     <section class="slide slide-10-impact">
@@ -1691,8 +1798,6 @@
             </div>
         </div>
     </section>
-
-    <div class="divider"></div>
 
 <!-- SLIDE 11 What Partners Gain -->    
     <section class="slide slide-11-gain">
@@ -1998,5 +2103,21 @@
     </footer>
 
     <script src="../assets/js/hamburger-menu.js"></script>
+
+    <script>
+    let currentSlide = 0;
+    function moveSlider(direction) {
+        const slider = document.getElementById('phoneSlider');
+        const slides = slider.children.length;
+        currentSlide = (currentSlide + direction + slides) % slides;
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update dots
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    </script>
 </body>
 </html>
