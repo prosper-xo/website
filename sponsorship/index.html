@@ -157,6 +157,14 @@
             text-transform: uppercase;
         }
 
+        .bright-yellow-sponsor{
+            color: #E8E11C; 
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(2rem, 4vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;}
+
         .slide-1-body p {
             color: #fff;
             margin-bottom: 1.2rem;
@@ -413,13 +421,13 @@
             font-family: 'Feu', sans-serif;
             font-size: 1.25rem;
             line-height: 1.2;
-            margin-bottom: 1.2rem;
+            margin-bottom: .5rem;
             min-height: 3em; /* Keeps headers aligned */
         }
 
         .live-card p {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
@@ -550,6 +558,17 @@
             min-height: 280px;
         }
 
+        .press-card-box-lauren {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 280px;
+        }
+
         .press-logo-small {
             height: 40px;
             width: auto;
@@ -558,11 +577,22 @@
             align-self: flex-start;
         }
 
+        .press-logo-voyage {
+            height: 20px !important;
+            width: auto;
+        }
+
+        .press-logo-redefining {
+            height: 55px !important;
+            width: auto;
+        }
+
         .press-img-full {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+            margin: 0 auto;
         }
 
         .press-card-box h4 {
@@ -746,147 +776,140 @@
         /* ——— SLIDE 9 (WORKING ON) ——— */
 /* ——— SLIDE 9 (PHONE CAROUSEL & CONTENT) ——— */
         .slide-9-production {
-            background-color: #93C840; /* Your green */
+            background-color: #93C840;
             padding: 80px 6%;
             color: #000;
         }
 
-        .slide-9-layout {
-            display: flex;
-            align-items: center;
-            gap: 8%;
+        .slide-9-container {
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* Phone Styling */
+        .section-title-center {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .slide-9-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 5%;
+        }
+
+        /* Phone Column */
         .phone-column {
-            flex: 1;
+            flex: 0 0 350px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .phone-frame {
+            width: 300px;
+            height: 600px;
+            background: #000;
+            border: 10px solid #fff;
+            border-radius: 40px;
+            overflow: hidden;
             position: relative;
         }
 
-        .phone-viewport {
+        .phone-viewport { width: 100%; height: 100%; overflow: hidden; }
+        .phone-scroll-container { display: flex; transition: transform 0.5s ease-in-out; height: 100%; }
+        .phone-scroll-container img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+
+        /* Navigation below phone */
+        .carousel-nav-container {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .phone-scroll-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
-
-        .phone-scroll-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        /* Nav Controls */
-        .carousel-nav {
             display: flex;
             justify-content: space-between;
-            width: 100%;
-            max-width: 320px;
-            margin-top: 30px;
             align-items: center;
+            margin-top: 25px;
+            padding: 0 10px;
         }
 
-        .dot-indicators { display: flex; gap: 8px; }
-        .dot { width: 8px; height: 8px; background: rgba(0,0,0,0.3); border-radius: 50%; }
+        .dot-indicators { display: flex; gap: 6px; }
+        .dot { width: 7px; height: 7px; background: rgba(0,0,0,0.3); border-radius: 50%; }
         .dot.active { background: #000; }
 
-        .arrow-buttons { display: flex; gap: 15px; }
+        .arrow-buttons { display: flex; gap: 10px; }
         .arrow-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 1px solid #000;
-            background: transparent;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: 0.2s;
+            width: 40px; height: 40px; border-radius: 50%;
+            border: 1px solid #000; background: transparent;
+            cursor: pointer; font-size: 1rem;
         }
         .arrow-btn:hover { background: #000; color: #fff; }
 
-        /* Content Column Styling */
-        .content-column { flex: 1.5; }
-
-        .section-title-right {
-            font-family: 'Feu', sans-serif;
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            text-align: right;
-            margin-bottom: 50px;
-        }
+        /* Content Grid */
+        .content-column { flex: 1; }
 
         .work-grid-2col {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            text-align: left;
+            grid-template-columns: 200px 1fr; /* Fixed logo width, flexible text */
+            gap: 40px 30px;
+            align-items: center;
         }
 
-        .work-item h4 {
-            font-family: 'Feu', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin: 15px 0 5px;
-        }
-
-        .work-item p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-        }
-
-        .work-item img {
-            max-width: 60%;
-            height: auto;
-        }
-
-        /* Target the specific grid cell containing the wheatpaste image */
-        .work-item-center-container {
-            display: flex;
-            justify-content: center; /* Centers the image horizontally in the cell */
-            align-items: center;     /* Centers the image vertically in the cell */
-            width: 100%;
-        }
-
-        /* Your existing class with display: block to ensure margin: auto works if needed */
-        .work-item-wheatpaste {
-            max-width: 200px;
+        .work-item-logo img {
+            max-width: 100%;
             height: auto;
             display: block;
-            /* Optional: add the black shadow from your screenshot */
-            box-shadow: 10px 10px 0px #000; 
         }
 
-        .work-logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
+        .work-item-text h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
-        .work-poster {
-            width: 100%;
-            border-radius: 4px;
-            box-shadow: 10px 10px 0px #000;
+        .work-item-text p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        /* Specific helper to center content within a grid cell */
+        .center-logo-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
+            width: 100%;             /* Ensures it fills the 200px column */
+        }
+    
+
+        .watch-link {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            color: #000;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Centering the Poster Image */
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .work-item-wheatpaste {
+            max-width: 160px !important;
+            height: auto;
         }
 
         @media (max-width: 1100px) {
-            .slide-9-layout { flex-direction: column; }
-            .section-title-right { text-align: center; }
-        }
-
-        @media (max-width: 768px) {
-            .work-item p { font-size: 1rem; }
+            .slide-9-layout { flex-direction: column; align-items: center; }
+            .work-grid-2col { grid-template-columns: 1fr; text-align: center; }
+            .work-item-logo { margin: 0 auto; }
         }
 
 /* ——— SLIDE 10 (MATCHED HEIGHT LAYOUT) ——— */
@@ -1179,6 +1202,20 @@
             margin-top: 20px;
         }
 
+        .level-columns-3 h4 {
+            font-family: poppins, sans-serif;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        .level-columns-3 ul li {
+            font-family: poppins, sans-serif;
+            font-size: 18px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
         /* Typography inside boxes */
         .level-header {
             font-family: 'Feu', sans-serif;
@@ -1202,14 +1239,14 @@
 
         .level-mission {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
+            font-size: 18px;
             line-height: 1.4;
             margin-bottom: 20px;
         }
 
         .level-box h4 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
+            font-size: 18px;
             text-decoration: underline;
             margin: 15px 0 10px;
         }
@@ -1221,7 +1258,7 @@
 
         .level-box ul li {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
+            font-size: 18px;
             line-height: 1.4;
             margin-bottom: 6px;
             position: relative;
@@ -1372,7 +1409,7 @@
                 <img class="photo" src="../assets/graphics/sponsorship/rainblow-vertical-fan-heart.jpeg" alt="Prosper XO Community">
             </div>
             <div class="slide-1-content">
-                <h1 class="bright-yellow">SPONSOR &amp; PARTNER<br>OPPORTUNITIES</h1>
+                <h1 class="bright-yellow-sponsor">SPONSOR &amp; PARTNER<br>OPPORTUNITIES</h1>
                 
                 <div class="slide-1-body">
                     <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural initiative building digital and physical leverage for music labor. Rooted in community and informed by academic collaboration, our work bridges:</p>
@@ -1456,7 +1493,7 @@
             <div class="live-grid">
                 <div class="live-card">
                     <img src="prosperxo-sponsorship-programs-townhalls.png" alt="Town Halls" class="icon-pink">
-                    <h3 class="card-title pink-text">PROSPER XO TOWN HALLS</h3>
+                    <h3 class="card-title blue-text">PROSPER XO TOWN HALLS</h3>
                     <p><strong>Monthly in-person gatherings</strong> featuring artist-led conversations, mental health topics, education, and advocacy.</p>
                 </div>
 
@@ -1468,13 +1505,13 @@
 
                 <div class="live-card">
                     <img src="prosperxo-sponsorship-programs-surveys.png" alt="Surveys" class="icon-blue">
-                    <h3 class="card-title blue-text">SURVEYS: ARTISTS, FANS, BRANDS, & INDUSTRY</h3>
+                    <h3 class="card-title green-text">SURVEYS: ARTISTS, FANS, BRANDS, & INDUSTRY</h3>
                     <p>Feeding product development, cultural policy research, and artist needs assessments.</p>
                 </div>
 
                 <div class="live-card">
                     <img src="prosperxo-sponsorship-programs-education.png" alt="Social Ed" class="icon-green">
-                    <h3 class="card-title green-text">SOCIAL EDUCATION CONTENT</h3>
+                    <h3 class="card-title pink-text">SOCIAL EDUCATION CONTENT</h3>
                     <p>Ongoing Instagram, TikTok, YouTube, and LinkedIn campaigns featuring artist voices, cited industry data, and mental health resources.</p>
                 </div>
             </div>
@@ -1527,7 +1564,7 @@
                     <a href="https://archive.org/details/people-united-2026-02-06" target="_blank" class="press-link">LISTEN HERE ></a>
                 </div>
 
-                <div class="press-card-box border-yellow">
+                <div class="press-card-box-lauren border-yellow">
                     <img src="../assets/graphics/sponsorship/npr-lauren.jpg" alt="NPR Music Social" class="press-img-full">
                 </div>
 
@@ -1560,7 +1597,7 @@
                 </div>
 
                 <div class="press-card-box border-orange">
-                    <img src="../assets/graphics/sponsorship/redefining-music.jpg" alt="Redefining Music" class="press-logo-small">
+                    <img src="../assets/graphics/sponsorship/redefining-music-logo.jpg" alt="Redefining Music" class="press-logo-small press-logo-redefining">
                     <h4>Redefining Music Podcast</h4>
                     <p>More Than Music: Redefining the Texas EDM Scene with Leaders in the Industry</p>
                     <a href="https://youtu.be/YsMq1u_LApQ?si=qgz9At3DHZULsUwj" class="press-link">LISTEN HERE ></a>
@@ -1574,7 +1611,7 @@
                 </div>
 
                 <div class="press-card-box border-blue">
-                    <img src="../assets/graphics/sponsorship/voyage-austin-logo.png" alt="Voyage Austin" class="press-logo-small">
+                    <img src="../assets/graphics/sponsorship/voyage-austin-logo.png" alt="Voyage Austin" class="press-logo-small press-logo-voyage">
                     <h4>VOYAGE AUSTIN</h4>
                     <p>Life &amp; work with Lauren Bruno of Austin</p>
                     <a href="https://voyageaustin.com/interview/life-work-with-lauren-bruno-of-austin/" class="press-link" target="_blank">READ HERE ></a>
@@ -1667,78 +1704,91 @@
 
 <!-- SLIDE 9 -- In Production -->
     <section class="slide slide-9-production">
-    <div class="slide-9-container">
-        <div class="slide-9-layout">
-            
-            <div class="phone-column">
-                <div class="phone-frame">
-                    <div class="phone-viewport">
-                        <div class="phone-scroll-container" id="phoneSlider">
-                            <img src="../assets/graphics/sponsorship/poster.png" alt="Sustainability = Survival">
-                            <img src="../assets/graphics/sponsorship/unmuted-1.png" alt="Artist Talk">
-                            <img src="../assets/graphics/sponsorship/unmuted-2.png" alt="Artist Talk">
-                            <img src="../assets/graphics/sponsorship/wheatpaste@2x.png" alt="Artist Talk">
-                            <img src="../assets/graphics/sponsorship/xotv@2x.png" alt="Artist Talk">
+        <div class="slide-9-container">
+            <h2 class="section-title-center">WHAT WE’RE WORKING ON</h2>
+
+            <div class="slide-9-layout">
+                
+                <div class="phone-column">
+                    <div class="phone-frame">
+                        <div class="phone-viewport">
+                            <div class="phone-scroll-container" id="phoneSlider">
+                                <img src="../assets/graphics/sponsorship/poster.png" alt="Sustainability = Survival">
+                                <img src="../assets/graphics/sponsorship/unmuted-1.png" alt="Artist Talk">
+                                <img src="../assets/graphics/sponsorship/unmuted-2.png" alt="Artist Talk">
+                                <img src="../assets/graphics/sponsorship/blog@2x.png" alt="Artist Talk">
+                                <img src="../assets/graphics/sponsorship/xotv@2x.png" alt="Artist Talk">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-nav-container">
+                        <div class="dot-indicators">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="arrow-buttons">
+                            <button class="arrow-btn" onclick="moveSlider(-1)">←</button>
+                            <button class="arrow-btn" onclick="moveSlider(1)">→</button>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-nav">
-                    <div class="dot-indicators">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <div class="arrow-buttons">
-                        <button class="arrow-btn" onclick="moveSlider(-1)">←</button>
-                        <button class="arrow-btn" onclick="moveSlider(1)">→</button>
+
+                <div class="content-column">
+                    <div class="work-grid-2col">
+                        
+                        <div class="work-item-logo">
+                            <img src="../assets/graphics/sponsorship/unmuted-logo.svg" alt="Unmuted">
+                        </div>
+                        <div class="work-item-text">
+                            <h4>UNMUTED PODCAST</h4>
+                            <p>2 episodes filmed.</p>
+                            <a href="https://www.dropbox.com/scl/fi/47q9wl6vx1hwwltghd6qb/UNMUTED-PREVIEW-PATTY.mov?rlkey=6vaj7vm5pdvfj2k8p0llktzva&e=3&dl=0" class="watch-link" target="_blank">WATCH UNMUTED SAMPLE &gt;</a>
+                        </div>
+
+                        <div class="work-item-logo">
+                            <img src="../assets/graphics/sponsorship/ProsperXO-Unfiltered-Logo 1.svg" alt="Unfiltered">
+                        </div>
+                        <div class="work-item-text">
+                            <h4>UNFILTERED ARTIST + INDUSTRY VIDEO SERIES</h4>
+                            <p>2 episodes filmed</p>
+                            <a href="https://www.instagram.com/reel/DUMhZnUDcWw/" class="watch-link" target="_blank">WATCH UNFILTERED WITH MAGGIE KOERNER &gt;</a>
+                            <a href="https://www.instagram.com/reel/DXscD09jWlH/" class="watch-link" target="_blank">WATCH UNFILTERED WITH STAR PARKS &gt;</a>
+                        </div>
+
+                        <div class="work-item-logo">
+                            <img src="../assets/graphics/sponsorship/xo-insider-logo.svg" alt="XO Insider">
+                        </div>
+                        <div class="work-item-text">
+                            <h4>XO INSIDER BLOG</h4>
+                            <p>Op-eds, interviews, research highlights, and cultural policy breakdowns</p>
+                        </div>
+
+                        <div class="work-item-logo center-logo-flex">
+                            <img src="../assets/graphics/sponsorship/XOTV-MicSticker@2x 1.png" alt="XOTV">
+                        </div>
+                        <div class="work-item-text">
+                            <h4>XOTV</h4>
+                            <p>A Modern Public-Access, Inspired Cultural Channel</p>
+                        </div>
+
+                        <div class="work-item-logo center-flex">
+                            <img src="../assets/graphics/sponsorship/poster@2x.png" alt="Poster" class="work-item-wheatpaste">
+                        </div>
+                        <div class="work-item-text">
+                            <h4>“POWER TO THE CREATOR”</h4>
+                            <p>City-wide public education wheat paste poster campaign during SXSW 2026</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <br>
-
-            <div class="content-column">
-                <h2 class="section-title-right">WHAT WE’RE WORKING ON</h2>
-                
-                <div class="work-grid-2col">
-                    <div class="work-item">
-                        <img src="../assets/graphics/sponsorship/unmuted-logo.svg" alt="Unmuted" class="work-logo">
-                        <h4>UNMUTED PODCAST</h4>
-                        <p>2 episodes filmed</p>
-                    </div>
-
-                    <div class="work-item">
-                        <img src="../assets/graphics/sponsorship/ProsperXO-Unfiltered-Logo 1.svg" alt="Unfiltered" class="work-logo">
-                        <h4>UNFILTERED ARTIST + INDUSTRY VIDEO SERIES</h4>
-                        <p>2 episodes filmed</p>
-                    </div>
-
-                    <div class="work-item">
-                        <img src="../assets/graphics/sponsorship/xo-insider-logo.svg" alt="XO Insider" class="work-logo">
-                        <h4>XO INSIDER BLOG</h4>
-                        <p>Op-eds, interviews, research highlights, and cultural policy breakdowns</p>
-                    </div>
-
-                    <div class="work-item">
-                        <img src="../assets/graphics/sponsorship/XOTV-MicSticker@2x 1.png" alt="XOTV" class="work-logo">
-                        <h4>XOTV</h4>
-                        <p>A Modern Public-Access, Inspired Cultural Channel</p>
-                    </div>
-  
-                    <div class="work-item work-item-center-container">
-                        <img src="../assets/graphics/sponsorship/poster@2x.png" alt="Poster" class="work-item-wheatpaste">
-                    </div>
-
-                    <div class="work-item">
-                        <h4>“POWER TO THE CREATOR”</h4>
-                        <p>City-wide public education wheat paste poster campaign during SXSW 2026</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
+
 
 <!-- SLIDE 10 What Early Sponsors Make Possible -->    
     <section class="slide slide-10-impact">
@@ -1793,7 +1843,7 @@
                     </ul>
                 </div>
 
-                <h2 class="bright-yellow small-margin">THIS ISN’T FUNDING CONTENT.</h2>
+                <h2 class="bright-yellow-small">THIS ISN’T FUNDING CONTENT.</h2>
                 <p class="impact-outro">It’s funding equity, transparency, and cultural infrastructure.</p>
             </div>
         </div>
