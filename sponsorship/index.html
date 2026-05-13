@@ -313,16 +313,26 @@
             background: linear-gradient(to right, #ff0066, #ffcc00, #ccff00, #33cccc, #3399ff);
         }
 
-        @media (max-width: 1024px) {
-            .slide-2-layout {
-                flex-direction: column;
-                gap: 50px;
-            }
-            .photo-tall {
-                min-height: auto;
-                max-width: 90%;
-            }
+    @media (max-width: 1024px) {
+        .slide-2-layout {
+            flex-direction: column;
+            gap: 50px;
         }
+        
+        /* Move the image container above the content container */
+        .slide-2-image-container {
+            order: 1; /* Image will appear first */
+        }
+        
+        .slide-2-content {
+            order: 2; /* Text content will appear second */
+        }
+        
+        .photo-tall {
+            min-height: auto;
+            max-width: 100%;
+        }
+}
 
 /* ——— SLIDE 3 (CULTURE BEFORE CODE) ——— */
         .slide-3-culture {
@@ -866,9 +876,9 @@
             display: block;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             .watch-link { font-size: 0.8rem; }
-            .work-grid-2col { margin-bottom: 5px;}
+            .work-grid-2col { margin-bottom: 5px; margin-top: 25px;}
         }
 
         .work-item-text h4 {
