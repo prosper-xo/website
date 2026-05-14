@@ -855,7 +855,7 @@
         .arrow-btn:hover { background: #000; color: #fff; }
 
         /* Content Grid */
-        .content-column { flex: 1; }
+        .content-column { flex: 3; }
 
         .work-grid-2col {
             display: grid;
@@ -876,10 +876,52 @@
             display: block;
         }
 
-        @media (max-width: 1024px) {
-            .watch-link { font-size: 0.8rem; }
-            .work-grid-2col { margin-bottom: 5px; margin-top: 25px;}
+        .work-item-logo-insider {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
+
+    @media (max-width: 1024px) {
+        .slide-9-layout { 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        
+        .work-grid-2col { 
+            grid-template-columns: 1fr; 
+            text-align: left;  
+            margin-top: 2rem; 
+            gap: 20px;
+        }
+        
+        .work-item-logo img { 
+            margin: 0 auto; 
+            margin-top: 20px;
+            
+        }
+        
+        .work-item-logo { 
+            margin: 0 auto; 
+        }
+        
+        .watch-link { 
+            font-size: 0.8rem; 
+        }
+        
+        /* Fix for the disappearing logo */
+        .work-item-logo-insider {
+            display: block !important;
+            /* Change 'auto' to a specific width to force the browser to render it */
+            width: 250px !important; 
+            max-width: 100% !important;
+            height: auto !important;
+            margin: 1rem 0 .25rem auto !important;
+        }
+    }
+
+        .work-item-text {
+            margin-bottom: 2rem;}
 
         .work-item-text h4 {
             font-family: 'Poppins', sans-serif;
@@ -887,12 +929,25 @@
             font-size: 1.2rem;
             margin-bottom: 5px;
             text-transform: uppercase;
+            text-align: left;
         }
 
         .work-item-text p {
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .work-item-text a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: underline;
+            color: #000;
+            margin-top: 5px;
+            text-transform: uppercase;
+            text-align: left;
         }
 
         /* Specific helper to center content within a grid cell */
@@ -923,15 +978,10 @@
         }
 
         .work-item-wheatpaste {
-            max-width: 160px !important;
+            max-width: 200px !important;
             height: auto;
         }
 
-        @media (max-width: 1100px) {
-            .slide-9-layout { flex-direction: column; align-items: center; }
-            .work-grid-2col { grid-template-columns: 1fr; text-align: center; }
-            .work-item-logo { margin: 0 auto; }
-        }
 
 /* ——— SLIDE 10 (MATCHED HEIGHT LAYOUT) ——— */
         .slide-10-impact {
@@ -1781,7 +1831,7 @@
                         </div>
 
                         <div class="work-item-logo">
-                            <img src="../assets/graphics/sponsorship/xo-insider-logo.svg" alt="XO Insider">
+                            <img src="../assets/graphics/sponsorship/xo-insider-logo.svg" alt="XO Insider" class="work-item-logo-insider">
                         </div>
                         <div class="work-item-text">
                             <h4>XO INSIDER BLOG</h4>
