@@ -121,14 +121,14 @@
 }
 
 .speaker-pics {
-  max-width: 100px;
+  max-width: 150px;
   display: flex;
   flex-direction: row;
   align-items: start;
 }
 
 .speaker-pics img {
-  max-width: 100px;
+  max-width: 150px;
   padding-right: .5rem;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .speaker-info p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #fff;
   text-align: left;
@@ -162,8 +162,8 @@
     }
 
     .speaker-info p {
-    font-size: 1rem;
-    line-height: 1.2;
+      font-size: 1rem;
+      line-height: 1.3;
     }
 
 }
@@ -294,5 +294,20 @@
 
   .event-image img {
     margin-bottom: 2rem;
+  }
+
+  .speaker-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .speaker-pics img {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .speaker-info p {
+    text-align: center;
   }
 }
