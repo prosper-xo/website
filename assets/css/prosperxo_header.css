@@ -152,6 +152,14 @@
   color: #ffef09 !important;
 }
 
+.text-nav-sponsorship {
+  color: #ff0080 !important;
+}
+
+.text-nav-sponsorship:hover {
+  color: #ffef09 !important;
+}
+
 .text-nav-involved {
   color: #ffb344 !important;
 }
