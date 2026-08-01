@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosper XO - Event HTML Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8">
+
+  <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+    <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2">
+      PROSPER XO HTML GENERATOR
+    </h1>
+    <p class="text-gray-400 mb-6">
+      Fill out the fields below. The app will automatically process the source code, shift the current event into the <strong>"Past Town Halls"</strong> archive, and output your clean update code.
+    </p>
+
+    <form id="eventForm" class="space-y-6">
+      
+      <div class="bg-gray-950 p-6 rounded-lg border border-purple-900/50 space-y-2">
+        <h2 class="text-lg font-bold text-purple-300">📋 Step 0: Current Live Page HTML Source</h2>
+        <p class="text-xs text-gray-400 mb-2">
+          Paste your current <code>events/index.html</code> code here to carry over your archive. 
+          <em>(Pre-loaded with your complete June update file to start immediately!)</em>
+        </p>
+        <textarea id="currentLiveHTMLBox" rows="6" class="w-full bg-gray-800 font-mono text-xs text-purple-200 p-2 rounded border border-gray-700 focus:outline-none focus:border-purple-500" placeholder="Paste current index.html source code here..."><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EVENTS | Prosper XO</title>
+</head>
+<body>
+  <section class="events-section">
+    <div class="event-item purple">
+      <div class="event-flex">
+        <div class="event-image poster">
+          <a href="https://luma.com/q81gqwtn" target="_blank" class="poster">
+            <img src="../assets/graphics/events/ProsperXO-TH-061026-Insta.jpg" alt="From Studio to Stage: What It Takes to Build a Sustainable Music Community"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="past-events-container">
+    <div class="past-text"><p>Past Town Halls</p></div>
+    <div class="past-flyers">
+        <div class="poster">
+          <a href="https://luma.com/774q8ykx" target="_blank"><img
+              src="../assets/graphics/events/ProsperXO-TH-050626-1440x1080.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/4c1tj8tq" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-260408-1080x1440.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/99nadvwe" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-260304-1080x1440.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/fjhahpqh" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-260211-1080x1440.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/xjil98rj" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-260114-1080x1440.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/tr7hnhdr" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-251105-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/iam23xom" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-251008-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/pe001dzs" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-250910-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/ejjgtdfu" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-250813-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/askhi13d" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-250709-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/msjie2wy" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-250617-1080x1350.jpg"></a>
+        </div>
+        <div class="poster">
+          <a href="https://luma.com/8dl5lzo0" target="_blank"><img
+              src="../assets/graphics/events/prosperxo-event-250514-1080x1350.jpg"></a>
+        </div>     
+    </div>
+  </section>
+</body>
+</html></textarea>
+      </div>
+
+      <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 space-y-4">
+        <h2 class="text-xl font-bold text-purple-400 border-b border-gray-700 pb-2">1. Upcoming Event Details</h2>
+        
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Event Title / Subtitle</label>
+            <input type="text" id="eventTitle" placeholder="e.g., From Studio to Stage: What It Takes to Build a Sustainable Music Community" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Date</label>
+            <input type="text" id="eventDate" placeholder="e.g., Wednesday, June 10, 2026" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Time Range</label>
+            <input type="text" id="eventTime" placeholder="e.g., 6:00pm - 8:30pm" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Location</label>
+            <input type="text" id="eventLocation" placeholder="e.g., Capital Factory, Austin, TX" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium mb-1">Flyer Image Path from GitHub - ../assets/graphics/events/</label>
+            <input type="text" id="flyerSrc" placeholder="e.g., ../assets/graphics/events/ProsperXO-TH-061026-Insta.jpg" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Luma RSVP Link</label>
+            <input type="text" id="lumaLink" placeholder="https://luma.com/q81gqwtn" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Main Description (HTML formatting tags like &lt;br&gt; allowed)</label>
+          <textarea id="eventDesc" rows="5" class="w-full bg-gray-700 border border-gray-600 rounded p-2 text-white focus:outline-none focus:border-purple-500" placeholder="Austin’s music scene doesn’t happen by accident..."></textarea>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 space-y-4">
+        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+          <h2 class="text-xl font-bold text-purple-400">2. Featured Speakers</h2>
+          <button type="button" onclick="addSpeaker()" class="bg-purple-600 hover:bg-purple-700 text-sm font-bold px-3 py-1 rounded transition">+ Add Speaker</button>
+        </div>
+        <div id="speakersContainer" class="space-y-4 divide-y divide-gray-700"></div>
+      </div>
+
+      <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 space-y-4">
+        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+          <h2 class="text-xl font-bold text-purple-400">3. "Together, we will explore" Bullets</h2>
+          <button type="button" onclick="addBullet()" class="bg-purple-600 hover:bg-purple-700 text-sm font-bold px-3 py-1 rounded transition">+ Add Bullet</button>
+        </div>
+        <div id="bulletsContainer" class="space-y-2"></div>
+      </div>
+
+      <div class="pt-4">
+        <button type="button" onclick="generateHTML()" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 rounded-lg shadow-lg transform transition active:scale-95 text-lg">
+          ⚙️ Generate New Layout Code
+        </button>
+      </div>
+    </form>
+
+    <div id="outputContainer" class="mt-8 hidden space-y-4">
+      <div class="flex justify-between items-center">
+        <h3 class="text-lg font-bold text-green-400">🎉 HTML Generation Complete!</h3>
+        <button onclick="copyToClipboard()" class="bg-purple-600 hover:bg-purple-700 text-xs font-bold px-4 py-2 rounded transition">
+          Copy to Clipboard
+        </button>
+      </div>
+      <p class="text-xs text-gray-400">Select all, copy the box contents below, and paste it directly over everything inside your <code>events/index.html</code> file.</p>
+      <textarea id="outputTextArea" rows="12" class="w-full bg-gray-950 font-mono text-xs text-green-300 p-4 rounded border border-gray-700 focus:outline-none" readonly></textarea>
+    </div>
+
+  </div>
+
+  <script>
+    function addSpeaker(speaker = { name: '', role: '', bio: '', url: '', img: '' }) {
+      const container = document.getElementById('speakersContainer');
+      const div = document.createElement('div');
+      div.className = "speaker-item pt-4 grid grid-cols-1 md:grid-cols-2 gap-3";
+      div.innerHTML = `
+        <div><label class="block text-xs text-gray-400">Speaker Name</label><input type="text" value="${speaker.name}" class="sp-name w-full bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none"></div>
+        <div><label class="block text-xs text-gray-400">Role / Company Title</label><input type="text" value="${speaker.role}" class="sp-role w-full bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none"></div>
+        <div><label class="block text-xs text-gray-400">Bio Description</label><input type="text" value="${speaker.bio}" class="sp-bio w-full bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none"></div>
+        <div><label class="block text-xs text-gray-400">Link to Website/Bio</label><input type="text" value="${speaker.url}" class="sp-url w-full bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none"></div>
+        <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div><label class="block text-xs text-gray-400">Speaker image from GitHub - assets/graphics/events/speaker-pics</label><input type="text" value="${speaker.img}" placeholder="e.g., ../assets/graphics/events/speaker-pics/kelsea-pinkston.jpg" class="sp-img w-full bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none"></div>
+          <div class="flex items-end justify-end"><button type="button" onclick="this.parentElement.parentElement.parentElement.remove()" class="bg-red-900/50 text-red-300 hover:bg-red-800 text-xs font-bold px-3 py-1 rounded">Remove</button></div>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    function addBullet(text = '') {
+      const container = document.getElementById('bulletsContainer');
+      const div = document.createElement('div');
+      div.className = "flex items-center space-x-2 mt-2";
+      div.innerHTML = `
+        <input type="text" value="${text}" placeholder="Bullet point detail..." class="bullet-input flex-1 bg-gray-700 border border-gray-600 rounded p-1 text-sm text-white focus:outline-none">
+        <button type="button" onclick="this.parentElement.remove()" class="text-red-400 hover:text-red-500 font-bold px-2">✕</button>
+      `;
+      container.appendChild(div);
+    }
+
+    addSpeaker();
+    addBullet();
+
+    function generateHTML() {
+      let pastFlyersHTML = "";
+      
+      // Fixed: Swapped DOMParser for native innerHTML compilation to eliminate local environment parsing crashes
+      const rawBaseHTML = document.getElementById('currentLiveHTMLBox').value;
+      
+      if (rawBaseHTML.trim() !== "") {
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = rawBaseHTML;
+        
+        // Extract history listings
+        const existingPast = tempContainer.querySelector('.past-flyers');
+        if (existingPast) {
+          pastFlyersHTML = existingPast.innerHTML.trim();
+        }
+
+        // Capture previous flyer to push it down into history archive
+        const liveFlyerLink = tempContainer.querySelector('.event-image.poster a');
+        const liveFlyerImg = tempContainer.querySelector('.event-image.poster img');
+        
+        if (liveFlyerLink && liveFlyerImg) {
+          const oldHref = liveFlyerLink.getAttribute('href');
+          const oldSrc = liveFlyerImg.getAttribute('src');
+          
+          const archivedBlock = `
+        <div class="poster">
+          <a href="${oldHref}" target="_blank"><img src="${oldSrc}"></a>
+        </div>`;
+          pastFlyersHTML = archivedBlock + "\n        " + pastFlyersHTML;
+        }
+      }
+
+      // Collect form content
+      const title = document.getElementById('eventTitle').value || "Event Details Coming Soon";
+      
+      const inputDate = document.getElementById('eventDate').value || "TBA";
+      const inputTime = document.getElementById('eventTime').value || "TBA";
+      const inputLoc = document.getElementById('eventLocation').value || "TBA";
+      const combinedDateTime = `${inputDate} | ${inputTime} | ${inputLoc}`;
+
+      let rawFlyer = document.getElementById('flyerSrc').value || "event_placeholder.avif";
+      let flyerSrc = rawFlyer;
+      if (!rawFlyer.startsWith('../') && !rawFlyer.startsWith('assets/')) {
+        flyerSrc = `../assets/graphics/events/${rawFlyer}`;
+      } else if (rawFlyer.startsWith('assets/')) {
+        flyerSrc = `../${rawFlyer}`;
+      }
+      const flyerAlt = title;
+      
+      const lumaLink = document.getElementById('lumaLink').value || "#";
+      const desc = document.getElementById('eventDesc').value || "More details coming soon.";
+
+      let speakersHTML = '';
+      document.querySelectorAll('.speaker-item').forEach(item => {
+        const name = item.querySelector('.sp-name').value;
+        const role = item.querySelector('.sp-role').value;
+        const bio = item.querySelector('.sp-bio').value;
+        const url = item.querySelector('.sp-url').value;
+        let imgRaw = item.querySelector('.sp-img').value;
+        
+        if(name) {
+          let imgSrc = imgRaw;
+          if (!imgRaw.startsWith('../') && !imgRaw.startsWith('assets/')) {
+            imgSrc = `../assets/graphics/events/speaker-pics/${imgRaw}`;
+          } else if (imgRaw.startsWith('assets/')) {
+            imgSrc = `../${imgRaw}`;
+          }
+
+          speakersHTML += `
+            <div class="speaker-info">
+                <a href="${url}" class="speaker-pics" target="_blank">
+                    <img src="${imgSrc}" alt="${name}">
+                </a>
+                <p>
+                    <strong>${name}</strong>  <br>${role}
+                    <br>
+                    <br>${bio}
+                </p>
+                <br>
+            </div>\n            <br>`;
+        }
+      });
+
+      let bulletsHTML = '';
+      document.querySelectorAll('.bullet-input').forEach(input => {
+        if(input.value.trim() !== '') {
+          bulletsHTML += `            • ${input.value.trim()}<br>\n`;
+        }
+      });
+
+      const tailwindScript = '<script src="https://cdn.tailwindcss.com"><' + '/script>';
+      const gaScript1 = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"><' + '/script>';
+      const gaScript2 = '<script>' + 
+                        'window.dataLayer = window.dataLayer || [];' + 
+                        'function gtag() { dataLayer.push(arguments); }' + 
+                        'gtag("js", new Date());' + 
+                        'gtag("config", "G-E00NWTHP4Q");' + 
+                        '<' + '/script>';
+      const menuScript = '<script src="../assets/js/hamburger-menu.js"><' + '/script>';
+
+      const finalOutputHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ${tailwindScript}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <title>EVENTS | Prosper XO</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/events.css" />
+  <link rel="stylesheet" href="../assets/css/prosperxo_header.css" />
+  <link rel="stylesheet" href="../assets/css/prosperxo_footer.css" />
+
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+  <meta property="og:title" content="EVENTS | Prosper XO" />
+  <meta property="og:description" content="Discover why Prosper XO is the platform that puts artists back at the center of the industry." />
+  <meta property="og:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg" />
+  <meta property="og:url" content="https://www.prosperxo.com/events" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EVENTS | Prosper XO" />
+  <meta name="twitter:description" content="Discover why Prosper XO is the platform that puts artists back at the center of the industry." />
+  <meta name="twitter:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg" />
+
+  ${gaScript1}
+  ${gaScript2}
+</head>
+
+<body>
+  <header>
+    <div id="header-top-bottom-container">
+      <div class="header-top">
+        <div class="logo-container">
+          <div class="logo-xo">
+            <a href="../welcome/">
+              <img src="../assets/logos/prosper-website-logo.png" alt="XO" />
+            </a>
+          </div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank">
+            <img src="../assets/icons/prosper-website-social-ig.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@prosper_xo_" aria-label="TikTok" target="_blank">
+            <img src="../assets/icons/prosper-website-social-tiktok.svg" alt="TikTok" />
+          </a>
+          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
+            <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
+          </a>
+          <a href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn" target="_blank">
+            <img src="../assets/icons/prosper-website-social-linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank">
+            <img src="../assets/icons/prosper-website-social-youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/prosperxoxo" aria-label="Facebook" target="_blank">
+            <img src="../assets/icons/prosper-website-social-fb.svg" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+
+      <div class="header-bottom-nav">
+        <nav class="text-nav">
+          <a href="../why-prosper" class="text-nav-link text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-link text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-link text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-link text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-link text-nav-involved">GET INVOLVED</a>
+        </nav>
+        <div class="secondary-nav">
+          <a href="../why-prosper" class="text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-involved">GET INVOLVED</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="events-section">
+    <div class="event-item purple">
+      <div class="event-flex">
+        <div class="event-image poster">
+          <a href="${lumaLink}" target="_blank" class="poster">
+            <img src="${flyerSrc}" alt="${flyerAlt}"/>
+          </a>
+        </div>
+        <div class="event-details">
+          <span class="event-title">Upcoming Events</span>
+          <p class="event-subtitle">${title}</p>
+          <p class="event-body-head">${combinedDateTime}</p>
+          <p class="event-body">${desc}</p>
+          <p class="event-body-head">Featuring:</p>
+          <div class="speaker-pic-container">
+            ${speakersHTML}
+          </div>
+          <br>
+          <p class="event-body-head">Hosted by Lauren Bruno</p>
+          <br>
+          <p class="event-body">
+            Join us for an evening of honest conversation, community connection, and insight from leaders actively shaping Austin’s music landscape.
+            <br><br>
+          </p>
+          <br>
+          <p class="event-body-head">
+            <strong>This event is free and open to the public.<br>Because when artists prosper, culture thrives.</strong>
+          </p>
+          <p class="event-body" style="font-size: 0.85em;">
+            Parking: Park in the Omni Hotel garage below Capital Factory and pick up a voucher at the event for a reduced $8 fee.
+          </p>
+          <p class="event-body" style="font-size: 0.85em;">
+            Thank you to Station Austin for sponsoring Prosper XO and Sage & Hollow for supporting this gathering and helping create space for meaningful cultural dialogue.
+          </p>
+          <br>
+          <div class="event-body-head">
+            <a href="${lumaLink}" class="btn-lg btn-blue" target="_blank">RSVP HERE!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow-box">
+    <div class="follow-inner">
+      <p class="follow-text">Check out our calendar for more upcoming events!</p>
+      <a href="https://luma.com/user/usr-sLauKNtXyDIh5hD" class="btn-lg btn-blue" target="_blank">VIBE WITH US</a>
+    </div>
+  </section>
+
+  <section class="past-events-container">
+    <div class="past-text"><p>Past Town Halls</p></div>
+    <div class="past-flyers">
+      ${pastFlyersHTML}
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
+      <div class="footer-contact">
+        <div class="footer-column">
+          <p class="press-inquiries">PRESS INQUIRIES <a href="mailto:press@prosperxo.com">press@prosperxo.com</a></p>
+        </div>
+        <div class="footer-column">
+          <p class="get-involved">GET INVOLVED <a href="mailto:info@prosperxo.com">info@prosperxo.com</a></p>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@prosper_xo_" aria-label="tiktok" target="_blank"><img src="../assets/icons/prosper-website-social-tiktok.svg" alt="tiktok" /></a>
+        <a href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank"><img src="../assets/icons/prosper-website-social-ig.svg" alt="Instagram" /></a>
+        <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"><img src="../assets/icons/prosper-website-social-x.svg" alt="X" /></a>
+        <a href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn" target="_blank"><img src="../assets/icons/prosper-website-social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank"><img src="../assets/icons/prosper-website-social-youtube.svg" alt="YouTube" /></a>
+        <a href="https://facebook.com/prosperxoxo" aria-label="Facebook" target="_blank"><img src="../assets/icons/prosper-website-social-fb.svg" alt="Facebook" /></a>
+      </div>
+      <div class="footer-logo"><img src="../assets/logos/prosperxo-website-logo-melty-rainbow.png" alt="Prosper XO" /></div>
+    </div>
+  </footer>
+
+  ${menuScript}
+</body>
+</html>`;
+
+      document.getElementById('outputTextArea').value = finalOutputHTML;
+      document.getElementById('outputContainer').classList.remove('hidden');
+      document.getElementById('outputContainer').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function copyToClipboard() {
+      const textArea = document.getElementById('outputTextArea');
+      textArea.select();
+      document.execCommand('copy');
+      alert('HTML Code Copied! Ready to overwrite index.html.');
+    }
+  </script>
+</body>
+</html>
