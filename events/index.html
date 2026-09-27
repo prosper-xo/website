@@ -1,253 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- WELCOME -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+  <title>EVENTS | Prosper XO</title>
 
-    <title>EVENTS | Prosper XO</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/events.css" />
+  <link rel="stylesheet" href="../assets/css/prosperxo_header.css" />
+  <link rel="stylesheet" href="../assets/css/prosperxo_footer.css" />
 
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- Updated path to styles.css -->
-    <link rel="stylesheet" href="../assets/css/events.css" />
-    <link rel="stylesheet" href="../assets/css/prosperxo_header.css" />
-    <link rel="stylesheet" href="../assets/css/prosperxo_footer.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../assets/favicon/favicon-multi.ico"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="../assets/favicon/favicon-48x48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="../assets/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="128x128"
-      href="../assets/favicon/favicon-128x128.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/favicon/favicon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="../assets/favicon/favicon-192x192.png"
-    />
-    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <meta property="og:title" content="EVENTS | Prosper XO" />
+  <meta property="og:description" content="Discover why Prosper XO is the platform that puts artists back at the center of the industry." />
+  <meta property="og:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg" />
+  <meta property="og:url" content="https://www.prosperxo.com/events" />
+  <meta property="og:type" content="website" />
 
-    <meta property="og:title" content="EVENTS | Prosper XO" />
-    <meta
-      property="og:description"
-      content="Discover why Prosper XO is the platform that puts artists back at the center of the industry."
-    />
-    <meta
-      property="og:image"
-      content="../assets/thumbnail/prosper-website-thumbnail.jpg"
-    />
-    <meta property="og:url" content="https://www.prosperxo.com/events" />
-    <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EVENTS | Prosper XO" />
+  <meta name="twitter:description" content="Discover why Prosper XO is the platform that puts artists back at the center of the industry." />
+  <meta name="twitter:image" content="../assets/thumbnail/prosper-website-thumbnail.jpg" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EVENTS | Prosper XO" />
-    <meta
-      name="twitter:description"
-      content="Discover why Prosper XO is the platform that puts artists back at the center of the industry."
-    />
-    <meta
-      name="twitter:image"
-      content="../assets/thumbnail/prosper-website-thumbnail.jpg"
-    />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"></script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag("js", new Date());gtag("config", "G-E00NWTHP4Q");</script>
+</head>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-E00NWTHP4Q");
-    </script>
-  </head>
-
-  <body>
-    <header>
-      <!--consists of two layered parts - 1.) header-top 2.) header-bottom-nav -->
-      <div id="header-top-bottom-container">
-        <div class="header-top">
-          <div class="logo-container">
-            <div class="logo-xo">
-              <a href="../welcome/">
-                <img src="../assets/logos/prosper-website-logo.png" alt="XO" />
-              </a>
-            </div>
-            <div class="hamburger-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+<body>
+  <header>
+    <div id="header-top-bottom-container">
+      <div class="header-top">
+        <div class="logo-container">
+          <div class="logo-xo">
+            <a href="../welcome/">
+              <img src="../assets/logos/prosper-website-logo.png" alt="XO" />
+            </a>
           </div>
-          <!--Social Media-->
-          <div class="social-icons">
-            <a
-              href="https://instagram.com/prosperxo"
-              aria-label="Instagram"
-              target="_blank"
-            >
-              <img
-                src="../assets/icons/prosper-website-social-ig.svg"
-                alt="Instagram"
-              />
-            </a>
-            <a
-              href="https://www.tiktok.com/@prosper_xo_"
-              aria-label="TikTok"
-              target="_blank"
-            >
-              <img
-                src="../assets/icons/prosper-website-social-tiktok.svg"
-                alt="TikTok"
-              />
-            </a>
-            <a
-              href="https://x.com/prosperxoxoxo"
-              aria-label="X"
-              target="_blank"
-            >
-              <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/prosper-xo/"
-              aria-label="LinkedIn"
-              target="_blank"
-            >
-              <img
-                src="../assets/icons/prosper-website-social-linkedin.svg"
-                alt="LinkedIn"
-              />
-            </a>
-            <a
-              href="https://youtube.com/@prosperxo"
-              aria-label="YouTube"
-              target="_blank"
-            >
-              <img
-                src="../assets/icons/prosper-website-social-youtube.svg"
-                alt="YouTube"
-              />
-            </a>
-            <a
-              href="https://facebook.com/prosperxo"
-              aria-label="Facebook"
-              target="_blank"
-            >
-              <img
-                src="../assets/icons/prosper-website-social-fb.svg"
-                alt="Facebook"
-              />
-            </a>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
-        <!--End of header-top (the top half)-->
-
-        <div class="header-bottom-nav">
-          <!--black navigation bar-->
-          <nav class="text-nav">
-            <a href="../why-prosper" class="text-nav-link text-nav-why"
-              >WHY PROSPER</a
-            >
-            <a href="../team" class="text-nav-link text-nav-team">TEAM</a>
-            <a href="../ethos" class="text-nav-link text-nav-ethos">ETHOS</a>
-            <a href="../events" class="text-nav-link text-nav-events">EVENTS</a>
-            <a href="../get-involved" class="text-nav-link text-nav-involved"
-              >GET INVOLVED</a
-            >
-          </nav>
-          <!-- Text-based Secondary Navigation Bar -->
-          <div class="secondary-nav">
-            <a href="../why-prosper" class="text-nav-why">WHY PROSPER</a>
-            <a href="../team" class="text-nav-team">TEAM</a>
-            <a href="../ethos" class="text-nav-ethos">ETHOS</a>
-            <a href="../events" class="text-nav-events">EVENTS</a>
-            <a href="../get-involved" class="text-nav-involved">GET INVOLVED</a>
-          </div>
+        <div class="social-icons">
+          <a href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank">
+            <img src="../assets/icons/prosper-website-social-ig.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@prosper_xo_" aria-label="TikTok" target="_blank">
+            <img src="../assets/icons/prosper-website-social-tiktok.svg" alt="TikTok" />
+          </a>
+          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
+            <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
+          </a>
+          <a href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn" target="_blank">
+            <img src="../assets/icons/prosper-website-social-linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank">
+            <img src="../assets/icons/prosper-website-social-youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://facebook.com/prosperxoxo" aria-label="Facebook" target="_blank">
+            <img src="../assets/icons/prosper-website-social-fb.svg" alt="Facebook" />
+          </a>
         </div>
       </div>
-    </header>
 
-    <section class="events-section">
-      <!-- Black Full-Width Panel -->
-      <div class="event-item purple">
-        <div class="event-flex">
-          <div class="event-image">
-            <a href="https://www.instagram.com/prosperxo" target="_blank"
-              ><img
-                src="../assets/graphics/events/event_placeholder.avif"
-                alt="Join us every second Wednesday of the month for the ProsperXO town halls"
-            /></a>
-          </div>
-          <div class="event-details">
-            <span class="event-title"
-              >Next town hall is October 14, 2026</span
-            >
-            <p class="event-subtitle">
-              Check back in for more info. See you soon!
-            </p>
+      <div class="header-bottom-nav">
+        <nav class="text-nav">
+          <a href="../why-prosper" class="text-nav-link text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-link text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-link text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-link text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-link text-nav-involved">GET INVOLVED</a>
+        </nav>
+        <div class="secondary-nav">
+          <a href="../why-prosper" class="text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-involved">GET INVOLVED</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="events-section">
+    <div class="event-item purple">
+      <div class="event-flex">
+        <div class="event-image poster">
+          <a href="https://luma.com/1pc2rol6" target="_blank" class="poster">
+            <img src="../assets/graphics/events/October-event.jpg" alt="Inside the Creative Mind: Art,Design, & Imagination ft. Dax Norman"/>
+          </a>
+        </div>
+        <div class="event-details">
+          <span class="event-title">Upcoming Events</span>
+          <p class="event-subtitle">Inside the Creative Mind: Art,Design, & Imagination ft. Dax Norman</p>
+          <p class="event-body-head">Wednesday, October 14 | 6:00pm - 8:30pm | Capital Factory, Austin TX</p>
+          <p class="event-body"><strong>What does it mean to build a life around creativity? Where do ideas come from? And how do we hold onto curiosity and imagination as we grow?</strong>
+<br><br>
+​Join Prosper XO for an intimate conversation with Dax Norman—an award-winning multidisciplinary artist, animator, designer, musician, and former University of Texas professor whose creative career has moved across fine art, animation, commercial design, music, and education.
+<br><br>
+​Dax's work has reached audiences through projects connected to MTV, Pepsi, and the Guggenheim, while his personal artistic practice has remained deeply rooted in experimentation, curiosity, and imagination. He is also a musician with Austin band Smoking Hand, bringing yet another dimension to a creative life that refuses to fit neatly into one category.
+<br><br>
+<strong>​For this Town Hall, we're going inside the creative mind.</strong>
+<br><br>
+​We'll explore Dax's story, his artistic process, the experiences that shaped the way he sees the world, and how he moves between different creative mediums. We'll talk about inspiration, experimentation, failure, finding your artistic voice, making a living while protecting your creativity, and what it takes to continue creating over a lifetime.
+<br><br>
+​We'll also explore something especially important right now: the value of human imagination in a world increasingly shaped by technology and AI. What makes human creativity unique? How do we protect curiosity and creative freedom? And what can artists teach us about seeing possibilities that don't exist yet?
+<br><br>
+​At Prosper XO, we believe artists are essential cultural partners—and that creativity, imagination, and human expression are things worth protecting, investing in, and celebrating.
+<br><br>
+​Whether you're an artist, musician, designer, filmmaker, animator, entrepreneur, student, educator, or simply someone curious about how creative people think, this conversation is for you.
+<br><br>
+​Come meet other members of Austin's creative community, share ideas, and spend an evening celebrating the strange, beautiful, unpredictable process of making something that didn't exist before.
+<br><br></p>
+          <p class="event-body-head">Featuring:</p>
+          <div class="speaker-pic-container">
             
+            <div class="speaker-info">
+                <a href="https://www.youtube.com/daximonious" class="speaker-pics" target="_blank">
+                    <img src="../assets/graphics/events/speaker-pics/dax3.jpg" alt="Dax Norman">
+                </a>
+                <p>
+                    <strong><a href="https://www.youtube.com/daximonious" target="_blank">Dax Norman</a></strong>  <br>
+                    <br>
+                    <br>
+                </p>
+            </div>
+            <br>
+            <div class="speaker-info">
+                <p>
+                <a href="https://www.youtube.com/daximonious" class="speaker-pics" target="_blank">
+                    <img src="../assets/graphics/events/speaker-pics/dax-norman2.GIF" alt="Dax Norman">
+                </a>
+                </p>
+                <br>
+            </div>
+            <br>
+          </div>
+          <br>
+          <p class="event-body-head">Hosted by Lauren Bruno</p>
+          <br>
+          <p class="event-body">
+            Join us for an evening of honest conversation, community connection, and insight from leaders actively shaping Austin’s music landscape.
+            <br><br>
+          </p>
+          <br>
+          <p class="event-body-head">
+            <strong>This event is free and open to the public.<br>Because when artists prosper, culture thrives.</strong>
+          </p>
+          <p class="event-body" style="font-size: 0.85em;">
+            Parking: Park in the Omni Hotel garage below Capital Factory and pick up a voucher at the event for a reduced $8 fee.
+          </p>
+          <p class="event-body" style="font-size: 0.85em;">
+            Thank you to Station Austin for sponsoring Prosper XO and Sage & Hollow for supporting this gathering and helping create space for meaningful cultural dialogue.
+          </p>
+          <br>
+          <div class="event-body-head">
+            <a href="https://luma.com/1pc2rol6" class="btn-lg btn-blue" target="_blank">RSVP HERE!</a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Gradient Full-Width CTA -->
-      <div class="follow-box">
-        <div class="follow-inner">
-          <p class="follow-text">
-            Check out our calendar for more upcoming events!
-          </p>
-          <a
-            href="https://lu.ma/prosperxo"
-            class="btn-lg btn-blue"
-            target="_blank"
-            >VIBE WITH US</a
-          >
-        </div>
-      </div>
-      <div class="past-events-container">
-        <div class="past-text">
-          <p>Past Town Halls</p>
-        </div>
-        <div class="past-flyers">
-          <div class="poster">
+  <section class="follow-box">
+    <div class="follow-inner">
+      <p class="follow-text">Check out our calendar for more upcoming events!</p>
+      <a href="https://luma.com/user/usr-sLauKNtXyDIh5hD" class="btn-lg btn-blue" target="_blank">VIBE WITH US</a>
+    </div>
+  </section>
+
+  <section class="past-events-container">
+    <div class="past-text"><p>Past Town Halls</p></div>
+    <div class="past-flyers">
+      <div class="poster">
             <a href="https://luma.com/8dl5lzo0" target="_blank"><img src="../assets/graphics/events/prosperxo-event-250514-1080x1350.jpg"></a>
           </div>
           <div class="poster">
@@ -283,102 +217,42 @@
           <!--June Town Hall-->
           <div class="poster">
             <a href="https://luma.com/q81gqwtn" target="_blank" class="poster">
-            <img src="../assets/graphics/events/ProsperXO-TH-061026-Insta.jpg" alt="From Studio to Stage: What It Takes to Build a Sustainable Music Community"/></a>
+            <img src="../assets/graphics/events/ProsperXO-TH-061026-Insta.jpg" alt="From Studio to Stage: What It Takes to Build a Sustainable Music Community"></a>
           </div>
           <!--July Town Hall-->
           <div class="poster">
-            <a href="https://luma.com/ju3d23tb" target="_blank" class="poster"><img src="../assets/graphics/events/prosperxo-event-260708-1080x1440.jpeg" alt="The Long Game: Artist Development, Community, & Career Sustainability"/></a>
+            <a href="https://luma.com/ju3d23tb" target="_blank" class="poster"><img src="../assets/graphics/events/prosperxo-event-260708-1080x1440.jpeg" alt="The Long Game: Artist Development, Community, &amp; Career Sustainability"></a>
           </div>    
           <!--September Town Hall-->
           <div class="poster">
-            <a href="https://luma.com/blrcvdux" target="_blank" class="poster"><img src="../assets/graphics/events/ProsperXO-TH-9-26-Insta.jpg"/></a>
-          </div>      
+            <a href="https://luma.com/blrcvdux" target="_blank" class="poster"><img src="../assets/graphics/events/ProsperXO-TH-9-26-Insta.jpg"></a>
+          </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
+      <div class="footer-contact">
+        <div class="footer-column">
+          <p class="press-inquiries">PRESS INQUIRIES <a href="mailto:press@prosperxo.com">press@prosperxo.com</a></p>
+        </div>
+        <div class="footer-column">
+          <p class="get-involved">GET INVOLVED <a href="mailto:info@prosperxo.com">info@prosperxo.com</a></p>
         </div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
-        <div class="footer-contact">
-          <div class="footer-column">
-            <p class="press-inquiries">
-              PRESS INQUIRIES
-              <a href="mailto:press@prosperxo.com">press@prosperxo.com</a>
-            </p>
-          </div>
-          <div class="footer-column">
-            <p class="get-involved">
-              GET INVOLVED
-              <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
-            </p>
-          </div>
-        </div>
-        <div class="footer-social">
-          <a
-            href="https://www.tiktok.com/@prosper_xo_"
-            aria-label="tiktok"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-tiktok.svg"
-              alt="tiktok"
-            />
-          </a>
-          <a
-            href="https://instagram.com/prosperxo"
-            aria-label="Instagram"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-ig.svg"
-              alt="Instagram"
-            />
-          </a>
-          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
-            <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/prosper-xo/"
-            aria-label="LinkedIn"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-linkedin.svg"
-              alt="LinkedIn"
-            />
-          </a>
-          <a
-            href="https://youtube.com/@prosperxo"
-            aria-label="YouTube"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-youtube.svg"
-              alt="YouTube"
-            />
-          </a>
-          <a
-            href="https://facebook.com/prosperxo"
-            aria-label="Facebook"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-fb.svg"
-              alt="Facebook"
-            />
-          </a>
-        </div>
-        <div class="footer-logo">
-          <img
-            src="../assets/logos/prosperxo-website-logo-melty-rainbow.png"
-            alt="Prosper XO"
-          />
-        </div>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@prosper_xo_" aria-label="tiktok" target="_blank"><img src="../assets/icons/prosper-website-social-tiktok.svg" alt="tiktok" /></a>
+        <a href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank"><img src="../assets/icons/prosper-website-social-ig.svg" alt="Instagram" /></a>
+        <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank"><img src="../assets/icons/prosper-website-social-x.svg" alt="X" /></a>
+        <a href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn" target="_blank"><img src="../assets/icons/prosper-website-social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank"><img src="../assets/icons/prosper-website-social-youtube.svg" alt="YouTube" /></a>
+        <a href="https://facebook.com/prosperxoxo" aria-label="Facebook" target="_blank"><img src="../assets/icons/prosper-website-social-fb.svg" alt="Facebook" /></a>
       </div>
-    </footer>
+      <div class="footer-logo"><img src="../assets/logos/prosperxo-website-logo-melty-rainbow.png" alt="Prosper XO" /></div>
+    </div>
+  </footer>
 
-    <script src="../assets/js/hamburger-menu.js"></script>
-    <!-- Updated path to hamburger-menu.js -->
-  </body>
+  <script src="../assets/js/hamburger-menu.js"></script>
+</body>
 </html>
